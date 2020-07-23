@@ -1,0 +1,66 @@
+
+.character-container  {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    text-align: center;
+    flex-wrap: wrap;
+}
+.card-container {
+    background-color: transparent;
+    width: 14rem;
+    height: 15rem;
+    perspective: 100rem;
+}
+.cards {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: width 1s, height 1s, transform 2s;
+    transform-style: preserve-3d;
+    /*box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);*/
+}
+
+.card-container:hover .cards {
+    transform: rotateY(180deg);
+    width: calc(100% + 10vw);
+    height: calc(100% + 20vh);
+}
+.card-container:hover {
+    z-index: 9;
+}
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+.card-front {
+    background-color: #242424;
+    color: #ffffff;
+    background-image: url("images/placeholder.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 10rem;
+}
+.card-back {
+    border: solid 2px #00FFFF;
+    background-color: #242424;
+    color: #ffffff;
+    transform: rotateY(180deg);
+    /*postition after rotation*/
+    margin-left: 5vw;
+    margin-top: -5vh;
+}
+/*Cursor effect*/
+button:hover {
+    cursor: grab;
+}
+button:active {
+    cursor: grabbing;
+}
+
+#image__gladiator {
+    width: 100%;
+}

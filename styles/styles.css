@@ -58,11 +58,48 @@ body {
 h1 {
   font-family: chuck, sans-serif;
   color: #00ffff;
+  letter-spacing: 0.1em;
+}
+
+.nav-container {
+  width: 100vw;
+  height: 4rem;
+  top: 0vh;
+  left: 0vw;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: #242424;
+  position: absolute;
+  box-shadow: inset 3px 3px 7px rgba(0, 0, 0, 0.15), inset -3px -3px 7px rgba(255, 255, 255, 0.05);
+}
+
+.logo h1 {
+  position: relative;
+  top: -0.8rem;
+  left: 5rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.logo a {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  height: 23px;
+  width: 30px;
+  transition: transform ease-out 0.1s;
+}
+.logo a:hover {
+  transform: scale(0.93);
+}
+.logo a:active {
+  transform: scale(1.1);
 }
 
 footer {
   width: 100vw;
-  height: 6rem;
+  height: 6.3rem;
   bottom: 0;
   display: flex;
   justify-content: flex-end;
@@ -130,41 +167,78 @@ footer {
   color: #00ffff;
 }
 
-.nav-container {
-  width: 100vw;
-  height: 4rem;
-  top: 0vh;
-  left: 0vw;
+.character-container {
   display: flex;
-  justify-content: flex-end;
-  flex-direction: column;
-  overflow: hidden;
-  background-color: #242424;
-  position: absolute;
-  box-shadow: inset 3px 3px 7px rgba(0, 0, 0, 0.15), inset -3px -3px 7px rgba(255, 255, 255, 0.05);
+  justify-content: center;
+  flex-direction: row;
+  text-align: center;
+  flex-wrap: wrap;
 }
 
-.logo h1 {
+.card-container {
+  background-color: transparent;
+  width: 14rem;
+  height: 15rem;
+  perspective: 100rem;
+}
+
+.cards {
   position: relative;
-  top: -0.8rem;
-  left: 5rem;
-  font-size: 2rem;
-  text-transform: uppercase;
-  display: none;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: width 1s, height 1s, transform 2s;
+  transform-style: preserve-3d;
+  /*box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);*/
 }
-.logo a {
+
+.card-container:hover .cards {
+  transform: rotateY(180deg);
+  width: calc(100% + 10vw);
+  height: calc(100% + 20vh);
+}
+
+.card-container:hover {
+  z-index: 9;
+}
+
+.card-front, .card-back {
   position: absolute;
-  top: 1rem;
-  left: 1rem;
-  height: 23px;
-  width: 30px;
-  transition: transform ease-out 0.1s;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
 }
-.logo a:hover {
-  transform: scale(0.93);
+
+.card-front {
+  background-color: #242424;
+  color: #ffffff;
+  background-image: url("images/placeholder.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 10rem;
 }
-.logo a:active {
-  transform: scale(1.1);
+
+.card-back {
+  border: solid 2px #00FFFF;
+  background-color: #242424;
+  color: #ffffff;
+  transform: rotateY(180deg);
+  /*postition after rotation*/
+  margin-left: 5vw;
+  margin-top: -5vh;
+}
+
+/*Cursor effect*/
+button:hover {
+  cursor: grab;
+}
+
+button:active {
+  cursor: grabbing;
+}
+
+#image__gladiator {
+  width: 100%;
 }
 
 /*# sourceMappingURL=styles.css.map */
