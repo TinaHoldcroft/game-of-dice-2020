@@ -1,0 +1,30 @@
+/* COLOURS:
+background: #191919
+#242424
+#00ffff
+#8d8d8d
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    color: white;
+    background: #191919;
+}
+/*scrollbar*/
+::-webkit-scrollbar { /*width */
+    width: 10px;
+}
+::-webkit-scrollbar-track { /*track */
+    background: #191919; 
+}
+::-webkit-scrollbar-thumb { /*handle */
+    background: #242424; 
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover { /*handle on hover */
+    background: #8d8d8d; 
+}
