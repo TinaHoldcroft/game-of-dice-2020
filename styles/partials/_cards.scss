@@ -10,6 +10,7 @@
     width: 14rem;
     height: 15rem;
     perspective: 100rem;
+    margin: 1.5rem;
 }
 .cards {
     position: relative;
@@ -18,13 +19,12 @@
     text-align: center;
     transition: width 1s, height 1s, transform 2s;
     transform-style: preserve-3d;
-    /*box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);*/
 }
 
 .card-container:hover .cards {
     transform: rotateY(180deg);
-    width: calc(100% + 10vw);
-    height: calc(100% + 20vh);
+    width: calc(100% + 10rem);
+    height: calc(100% + 15rem);
 }
 .card-container:hover {
     z-index: 9;
@@ -42,14 +42,17 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: 10rem;
+    border-radius: 30px;
+    box-shadow: -8px -8px 18px 0 rgba(0, 0, 0, 0.55), inset 3px 3px 7px rgba(0,0,0,0.15), inset -3px -3px 7px rgba(255,255,255,0.09);
 }
 .card-back {
     border: solid 2px #00FFFF;
+    border-radius: 30px;
     background-color: #242424;
     color: #ffffff;
     transform: rotateY(180deg);
     /*postition after rotation*/
-    margin-left: 5vw;
+    margin-left: 5.5rem;
     margin-top: -5vh;
 }
 /*Cursor effect*/
@@ -62,4 +65,5 @@ button:active {
 
 #image__gladiator {
     width: 100%;
+    border-radius: 30px;
 }
