@@ -16,6 +16,37 @@ background: #191919
 
 body {
   background-color: #191919;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+main {
+  margin-left: 8vw;
+  margin-right: 8vw;
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+}
+
+/*scrollbar*/
+::-webkit-scrollbar {
+  /*width */
+  width: 10px;
+  background: #191919;
+}
+
+::-webkit-scrollbar-thumb {
+  /*handle */
+  background: #242424;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f3f;
 }
 
 body {
@@ -25,8 +56,115 @@ body {
 }
 
 h1 {
-  font-family: lores-12, sans-serif;
+  font-family: chuck, sans-serif;
   color: #00ffff;
+}
+
+footer {
+  width: 100vw;
+  height: 6rem;
+  bottom: 0;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: #242424;
+  position: relative;
+  box-shadow: inset 3px 3px 7px rgba(0, 0, 0, 0.15), inset -3px -3px 7px rgba(255, 255, 255, 0.05);
+}
+
+.bubble-container {
+  position: absolute;
+  bottom: 1rem;
+  left: 5vw;
+  display: flex;
+  justify-content: space-around;
+  width: 90vw;
+}
+
+.bubble {
+  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.15), -3px -3px 7px rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+}
+.bubble div {
+  background-color: #252525;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  margin: 2px;
+  user-select: none;
+  /*pevent text selection*/
+  cursor: pointer;
+}
+.bubble div:hover {
+  box-shadow: inset 3px 3px 7px rgba(0, 0, 0, 0.15), inset -3px -3px 7px rgba(255, 255, 255, 0.09);
+  transform: scale(0.96);
+}
+.bubble i {
+  color: #8d8d8d;
+}
+.bubble i:active {
+  color: #00ffff;
+}
+.bubble i:focus {
+  color: #00ffff;
+}
+
+.bubble:active, .bubble:focus {
+  background-color: #00ffff;
+}
+
+.active div {
+  box-shadow: inset 3px 3px 7px rgba(0, 0, 0, 0.15), inset -3px -3px 7px rgba(255, 255, 255, 0.09);
+  background-color: #242424;
+}
+.active div:hover {
+  transform: scale(1);
+}
+.active a, .active i {
+  color: #00ffff;
+}
+
+.nav-container {
+  width: 100vw;
+  height: 4rem;
+  top: 0vh;
+  left: 0vw;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: #242424;
+  position: absolute;
+  box-shadow: inset 3px 3px 7px rgba(0, 0, 0, 0.15), inset -3px -3px 7px rgba(255, 255, 255, 0.05);
+}
+
+.logo h1 {
+  position: relative;
+  top: -0.8rem;
+  left: 5rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+  display: none;
+}
+.logo a {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  height: 23px;
+  width: 30px;
+  transition: transform ease-out 0.1s;
+}
+.logo a:hover {
+  transform: scale(0.93);
+}
+.logo a:active {
+  transform: scale(1.1);
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -11,4 +11,27 @@ background: #191919
 }
 body {
     background-color: #191919;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
+main {
+    margin-left: 8vw;
+    margin-right: 8vw;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+}
+/*scrollbar*/
+::-webkit-scrollbar { /*width */
+    width: 10px;
+    background: #191919; 
+}
+::-webkit-scrollbar-thumb { /*handle */
+    background: #242424; 
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover { background: #3f3f3f; }
