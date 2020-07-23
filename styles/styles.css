@@ -75,6 +75,17 @@ h1 {
   box-shadow: inset 3px 3px 7px rgba(0, 0, 0, 0.15), inset -3px -3px 7px rgba(255, 255, 255, 0.05);
 }
 
+nav ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+nav li {
+  margin-right: 3rem;
+  margin-top: -3rem;
+}
+
 .logo h1 {
   position: relative;
   top: -0.8rem;
