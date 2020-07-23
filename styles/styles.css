@@ -3,6 +3,11 @@ light gray - #8d8d8d (contrast rating AAA)
 background: #191919
 #242424
 */
+@import url("https://use.typekit.net/xjc5qtk.css");
+@import url("https://use.typekit.net/xjc5qtk.css");
+@import url("https://use.typekit.net/xjc5qtk.css");
+@import url("https://use.typekit.net/xjc5qtk.css");
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -11,6 +16,17 @@ background: #191919
 
 body {
   background-color: #191919;
+}
+
+body {
+  font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+  color: white;
+  text-align: justify;
+}
+
+h1 {
+  font-family: lores-12, sans-serif;
+  color: #00ffff;
 }
 
 /*# sourceMappingURL=styles.css.map */
