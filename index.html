@@ -8,8 +8,7 @@
 	<meta name="description" content="Game of Dice">
 	<meta name="keywords" content="Game of Dice, Game, Dice, Board Game">
 	<!-- Style -->
-	<link rel="stylesheet" type="text/css" href="styles/styles.css">
-	<link rel="stylesheet" href="https://use.typekit.net/xjc5qtk.css">
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
 	<script src="https://kit.fontawesome.com/a83d77d417.js" crossorigin="anonymous"></script>
 	<!-- Browser Design -->
 	<link rel="icon" href="styles/images/dice-logo.svg" type="image/svg" sizes="16x16"> <!-- Favicon -->
@@ -28,26 +27,26 @@
 			<!-- top navigation bar -->
 			<nav>
 				<ul>
-					<li><i class="fas fa-dice-five"></i><a href="index.html#play">Play</a></li>
-					<li><a href="#">About</a></li>
+					<li class="active"><a href="index.html#play"><i class="fas fa-home"></i><span>Play</span></a></li>
+					<li><a href="#"><i class="fas fa-dice-five"></i><span>About</span></a></li>
 				</ul>
 			</nav>
 		</div>
 	</header>
 
 	<main>
+        <h1>Game of Dice</h1>
 	<!-- placeholder: text test-->
-	<h1>Lorem ipsum dolor sit amet</h1>
 	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 	<!-- character cards -->
-	<h1>Choose Your Player</h1>
+	<h2>Choose Your Player</h2>
 	<div id="play" class="character-container">
         <div class="card-container">
             <div class="cards">
                 <div class="card-front"></div>
                 <div class="card-back">
                     <img id="image__gladiator" src="styles/images/gladiator.jpg" alt="Gladiator">
-                    <h1>Name</h1> 
+                    <h3>Name</h1> 
                     <p>House</p> 
                     <p>Description</p>
                     <button>Pick</button>
@@ -58,7 +57,7 @@
             <div class="cards">
                 <div class="card-front"></div>
                 <div class="card-back">
-                    <h1>Name</h1> 
+                    <h3>Name</h1> 
                     <p>House</p> 
                     <p>Description</p>
                     <button>Pick</button>
@@ -69,7 +68,7 @@
             <div class="cards">
                 <div class="card-front"></div>
                 <div class="card-back">
-                    <h1>Name</h1> 
+                    <h3>Name</h1> 
                     <p>House</p> 
                     <p>Description</p>
                     <button>Pick</button>
@@ -80,7 +79,7 @@
             <div class="cards">
                 <div class="card-front"></div>
                 <div class="card-back">
-                    <h1>Name</h1> 
+                    <h3>Name</h1> 
                     <p>House</p> 
                     <p>Description</p>
                     <button>Pick</button>
@@ -91,7 +90,7 @@
             <div class="cards">
                 <div class="card-front"></div>
                 <div class="card-back">
-                    <h1>Name</h1> 
+                    <h3>Name</h1> 
                     <p>House</p> 
                     <p>Description</p>
                     <button>Pick</button>
@@ -102,7 +101,7 @@
         	<div class="cards">
             	<div class="card-front"></div>
             	<div class="card-back">
-                	<h1>Name</h1> 
+                	<h3>Name</h1> 
                 	<p>House</p> 
                 <p>Description</p>
                 <button>Pick</button>
@@ -113,7 +112,7 @@
         <div class="cards">
             <div class="card-front"></div>
             <div class="card-back">
-                <h1>Name</h1> 
+                <h3>Name</h1> 
                 <p>House</p> 
                 <p>Description</p>
                 <button>Pick</button>
@@ -124,7 +123,7 @@
         <div class="cards">
             <div class="card-front"></div>
             <div class="card-back">
-                <h1>Name</h1> 
+                <h3>Name</h1> 
                 <p>House</p> 
                 <p>Description</p>
                 <button>Pick</button>
@@ -135,7 +134,7 @@
         <div class="cards">
             <div class="card-front"></div>
             <div class="card-back">
-                <h1>Name</h1> 
+                <h3>Name</h1> 
                 <p>House</p> 
                 <p>Description</p>
                 <button>Pick</button>
@@ -146,7 +145,7 @@
         <div class="cards">
             <div class="card-front"></div>
             <div class="card-back">
-                <h1>Name</h1> 
+                <h3>Name</h1> 
                 <p>House</p> 
                 <p>Description</p>
                 <button>Pick</button>
@@ -157,6 +156,9 @@
 </main>
 	
 	<footer>
+        <div class="copy-container">
+            <span>Copyright &copy; Game of Dice 2020</span>
+        </div>
 		<div class="bubble-container">
 			<div class="bubble active">
 				<div title="Play"><a href="index.html#play"><i class="fas fa-play"></i></a></div>
@@ -165,7 +167,7 @@
 				<div title="About"><a href="#"><i class="fas fa-info"></i></a></div>
 			</div>
 			<div class="bubble">
-				<div title="Contact"><a href="#"><i class="fas fa-envelope"></i></a></div>
+                <div title="Contact"><a href="#"><i class="fas fa-envelope"></i></a></div>
 			</div>
 		</div>
 	</footer>

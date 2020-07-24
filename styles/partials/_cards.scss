@@ -4,6 +4,7 @@
     flex-direction: row;
     text-align: center;
     flex-wrap: wrap;
+    padding-bottom: 5rem;
 }
 .card-container {
     background-color: transparent;
@@ -20,14 +21,10 @@
     transition: width 1s, height 1s, transform 2s;
     transform-style: preserve-3d;
 }
-
 .card-container:hover .cards {
     transform: rotateY(180deg);
     width: calc(100% + 10rem);
     height: calc(100% + 15rem);
-}
-.card-container:hover {
-    z-index: 9;
 }
 .card-front, .card-back {
     position: absolute;

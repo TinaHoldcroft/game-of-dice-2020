@@ -1,5 +1,6 @@
 //top-navigation
 .nav-container {
+    z-index: 9;
     width: 100vw;
     height: 4rem;
     top: 0vh;
@@ -13,25 +14,41 @@
     box-shadow: inset 3px 3px 7px rgba(0,0,0,0.15), inset -3px -3px 7px rgba(255,255,255,0.05);
 }
 nav {
+    z-index: 9;
+    margin: 1rem;
     ul {
         list-style-type: none;
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
+        margin-right: 2.5rem;
+        margin-bottom: 0.1rem;
     }
     li {
-        margin-right: 3rem;
-        margin-top: -3rem;
+        color: #8d8d8d;
+        padding-left: 2rem;
+    }
+    @media only screen and (max-width: 600px) {
+        display: none;
+    }
+    span {
+        padding-left: 0.8rem;
+    }
+    i:hover, a:hover {
+        opacity: 80%;
+    }
+    i:active, a:active {
+        color: #00ffff;
     }
 }
 .logo {
+    z-index: 9;
     h1 {
+        font-size: 1.6em;
         text-align: left;
         position: relative;
-        top: -0.8rem;
-        left: 5rem;
-        font-size: 2rem;
-        text-transform: uppercase;
+        left: 4rem;
+        top: 2.7rem;
     }
     a {
         position: absolute;
@@ -46,37 +63,60 @@ nav {
 }
 //footer, bubble buttons
 footer {
-    width: 100vw;
-    height: 6.3rem;
+    width: 100%;
+    height: 16rem;
     bottom: 0;
+    position: sticky;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
     overflow: hidden;
     background-color: #242424;
-    position: relative;  
-    box-shadow: inset 3px 3px 7px rgba(0,0,0,0.15), inset -3px -3px 7px rgba(255,255,255,0.05);
+    box-shadow: inset 3px 3px 10px rgba(255, 255, 255, 0.1), inset -3px -3px 10px rgba(255,255,255,0.1);
+    @media only screen and (max-width: 600px) {
+        height: 8rem;
+        position: relative;
+    }
+}
+.copy-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-bottom: -9.5rem;
+    text-align: center;
+    font-size: 0.9em;
+    span {
+        color: #8d8d8d;
+    }
+    @media only screen and (max-width: 600px) {
+        display: none;
+    }
 }
 .bubble-container {
     position: absolute;
-    bottom: 1rem;
-    left: 5vw;
+    bottom: 7rem;
     display: flex;
-    justify-content: space-around;
-    width: 90vw;
+    justify-content: space-evenly;
+    width: 40rem;
+    @media only screen and (max-width: 600px) {
+        bottom: 1rem;
+        width: 96vw;
+        left: 2vw;
+    }
 }
 .bubble {
     box-shadow: 3px 3px 7px rgba(0,0,0,0.15), -3px -3px 7px rgba(255,255,255,0.05);
     border-radius: 50%;
     div {
         background-color: #242424;
-        width: 3.5rem;
-        height: 3.5rem;
+        width: 5rem;
+        height: 5rem;
         border-radius: 50%;
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 1.5rem;
+        font-size: 1.5em;
         margin: 2px;
         user-select: none; /*pevent text selection*/
         cursor: pointer;
@@ -88,13 +128,9 @@ footer {
     i:active { color: #00ffff; }
     i:focus { color: #00ffff; }
 }
-.bubble:active, .bubble:focus {
-    background-color: #00ffff;
-}
 .active {
-    div {
-        box-shadow: inset 3px 3px 7px rgba(0,0,0,0.15), inset -3px -3px 7px rgba(255,255,255,0.09);
-    }
+    div { box-shadow: inset 3px 3px 7px rgba(0,0,0,0.15), inset -3px -3px 7px rgba(255,255,255,0.09); }
     div:hover { transform: scale(1); }
-    i { color: #00ffff; }
+    i, span { color: #00ffff; }
 }
+.bubble:active, .bubble:focus { background-color: #00ffff; }

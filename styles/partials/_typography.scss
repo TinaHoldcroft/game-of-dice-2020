@@ -16,9 +16,31 @@ h1 {
     color: #00ffff;
     letter-spacing: 0.1em;
     text-align: center;
+    font-size: 5.5em;
+}
+h2 {
+    font-family: chuck, sans-serif;
+    color: #00ffff;
+    letter-spacing: 0.1em;
+    font-size: 4em;
+    text-align: center;
+}
+h3 {
+    font-size: 2em;
+    text-align: center;
+}
+p{
+    font-size: 1em;
 }
 a { //links
     text-decoration: none;
     color: inherit;
 }
-i { color: #8d8d8d; } //font awesome
+i { 
+    color: #8d8d8d; 
+    font-size: 1.2em;
+} //font awesome
+li {
+    font-family: open-sans, sans-serif;
+    font-size: 1.2em;
+}
