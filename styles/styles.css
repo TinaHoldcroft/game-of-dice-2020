@@ -107,6 +107,25 @@ i {
     content: '\f015';
 }
 */
+a[id]:hover:after {
+  content: attr(id);
+  position: absolute;
+  top: -0.1rem;
+  right: calc(100% - 10px);
+  max-width: 100%;
+  font-size: 0.65em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+  box-shadow: 0 1em 2em -0.5em rgba(0, 0, 0, 0.35);
+  background: #ffffff;
+  opacity: 70%;
+  color: #000000;
+  font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+}
+
 .nav-container {
   width: 100vw;
   height: 5.5rem;
