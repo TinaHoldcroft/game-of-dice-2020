@@ -43,7 +43,7 @@ main {
   z-index: 1;
 }
 
-nav, .logo, .bubble-container, .card-container:hover {
+nav, .nav-container, .logo, .bubble-container, .card-container:hover {
   z-index: 9;
 }
 
@@ -98,13 +98,15 @@ i {
   font-size: 1.2em;
 }
 
-li {
-  font-family: open-sans, sans-serif;
-  font-size: 1.2em;
+/* unicode 
+.unicode::before {
+    font-family: 'Font Awesome\ 5 Free';
 }
-
+#unicode__home::before {
+    content: '\f015';
+}
+*/
 .nav-container {
-  z-index: 9;
   width: 100vw;
   height: 4rem;
   top: 0vh;
@@ -119,7 +121,6 @@ li {
 }
 
 nav {
-  z-index: 9;
   margin: 1rem;
 }
 nav ul {
@@ -128,11 +129,12 @@ nav ul {
   flex-direction: row;
   justify-content: flex-end;
   margin-right: 2.5rem;
-  margin-bottom: 0.1rem;
+  margin-bottom: 0.3rem;
 }
 nav li {
   color: #8d8d8d;
   padding-left: 2rem;
+  font-size: 1.2em;
 }
 @media only screen and (max-width: 600px) {
   nav {
@@ -141,6 +143,10 @@ nav li {
 }
 nav span {
   padding-left: 0.8rem;
+  vertical-align: middle;
+}
+nav i {
+  vertical-align: middle;
 }
 nav i:hover, nav a:hover {
   opacity: 80%;
@@ -149,15 +155,13 @@ nav i:active, nav a:active {
   color: #00ffff;
 }
 
-.logo {
-  z-index: 9;
-}
 .logo h1 {
   font-size: 1.6em;
   text-align: left;
   position: relative;
   left: 4rem;
-  top: 2.7rem;
+  top: 2.8rem;
+  font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
 }
 .logo a {
   position: absolute;

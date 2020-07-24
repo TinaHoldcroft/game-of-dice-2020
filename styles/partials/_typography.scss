@@ -29,18 +29,23 @@ h3 {
     font-size: 2em;
     text-align: center;
 }
-p{
+p {
     font-size: 1em;
 }
 a { //links
     text-decoration: none;
     color: inherit;
 }
+//font awesome
 i { 
     color: #8d8d8d; 
     font-size: 1.2em;
-} //font awesome
-li {
-    font-family: open-sans, sans-serif;
-    font-size: 1.2em;
+} 
+/* unicode 
+.unicode::before {
+    font-family: 'Font Awesome\ 5 Free';
 }
+#unicode__home::before {
+    content: '\f015';
+}
+*/
