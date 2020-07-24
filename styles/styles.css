@@ -67,20 +67,21 @@ h1 {
   color: #00ffff;
   letter-spacing: 0.1em;
   text-align: center;
-  font-size: 5.5em;
+  font-size: 4em;
 }
 
 h2 {
   font-family: chuck, sans-serif;
   color: #00ffff;
   letter-spacing: 0.1em;
-  font-size: 4em;
+  font-size: 2.5em;
   text-align: center;
 }
 
 h3 {
   font-size: 2em;
   text-align: center;
+  font-family: montserrat, sans-serif;
 }
 
 p {
