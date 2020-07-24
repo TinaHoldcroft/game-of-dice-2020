@@ -7,7 +7,6 @@
 //font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
 
 body {
-    font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
     color: white;
     text-align: justify;
 }
@@ -30,11 +29,13 @@ h3 {
     text-align: center;
 }
 p {
+    font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
     font-size: 1em;
 }
 a { //links
     text-decoration: none;
     color: inherit;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 //font awesome
 i { 

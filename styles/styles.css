@@ -28,7 +28,7 @@ body {
 main {
   padding-left: 8vw;
   padding-right: 8vw;
-  padding-top: 5rem;
+  padding-top: 10rem;
   padding-bottom: 3rem;
   background-color: inherit;
   width: 100%;
@@ -43,7 +43,7 @@ main {
   z-index: 1;
 }
 
-nav, .nav-container, .logo, .bubble-container, .card-container:hover {
+nav, .logo, .nav-container, .bubble-container, .card-container:hover {
   z-index: 9;
 }
 
@@ -58,7 +58,6 @@ nav, .nav-container, .logo, .bubble-container, .card-container:hover {
 }
 
 body {
-  font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
   color: white;
   text-align: justify;
 }
@@ -85,12 +84,14 @@ h3 {
 }
 
 p {
+  font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
   font-size: 1em;
 }
 
 a {
   text-decoration: none;
   color: inherit;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 i {
@@ -108,12 +109,12 @@ i {
 */
 .nav-container {
   width: 100vw;
-  height: 4rem;
+  height: 5.5rem;
   top: 0vh;
   left: 0vw;
   display: flex;
-  justify-content: flex-end;
-  flex-direction: column;
+  justify-content: space-between;
+  flex-direction: row;
   overflow: hidden;
   background-color: #242424;
   position: absolute;
@@ -122,19 +123,18 @@ i {
 
 nav {
   margin: 1rem;
+  padding: 1rem;
 }
 nav ul {
   list-style-type: none;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  margin-right: 2.5rem;
-  margin-bottom: 0.3rem;
 }
 nav li {
   color: #8d8d8d;
-  padding-left: 2rem;
-  font-size: 1.2em;
+  text-transform: uppercase;
+  padding-right: 2rem;
 }
 @media only screen and (max-width: 600px) {
   nav {
@@ -144,6 +144,8 @@ nav li {
 nav span {
   padding-left: 0.8rem;
   vertical-align: middle;
+  letter-spacing: 2px;
+  font-size: 1em;
 }
 nav i {
   vertical-align: middle;
@@ -155,27 +157,39 @@ nav i:active, nav a:active {
   color: #00ffff;
 }
 
-.logo h1 {
-  font-size: 1.6em;
-  text-align: left;
-  position: relative;
-  left: 4rem;
-  top: 2.8rem;
-  font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+.logo {
+  margin-left: 1rem;
+  padding: 1rem;
+  display: block;
 }
-.logo a {
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  height: 23px;
-  width: 30px;
+.logo img {
+  height: 35px;
+  width: 35px;
   transition: transform ease-out 0.1s;
+  margin-left: 95px;
 }
-.logo a:hover {
+.logo img:hover {
   transform: scale(0.93);
 }
-.logo a:active {
+.logo img:active {
   transform: scale(1.1);
+}
+
+#logo__txt {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 10px;
+  letter-spacing: 8px;
+  color: #8d8d8d;
+  line-height: 21px;
+  margin-bottom: -35px;
+  text-transform: uppercase;
+}
+#logo__txt span {
+  letter-spacing: 2px;
+  font-weight: 900;
+  margin-left: -2px;
+  font-size: 30px;
+  color: #00ffff;
 }
 
 footer {
@@ -205,8 +219,6 @@ footer {
   margin-bottom: -9.5rem;
   text-align: center;
   font-size: 0.9em;
-}
-.copy-container span {
   color: #8d8d8d;
 }
 @media only screen and (max-width: 600px) {

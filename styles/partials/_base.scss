@@ -22,7 +22,7 @@ body {
 main {
     padding-left: 8vw;
     padding-right: 8vw;
-    padding-top: 5rem;
+    padding-top: 10rem;
     padding-bottom: 3rem;
     background-color: inherit;
     width: 100%;
@@ -33,7 +33,7 @@ main {
 main {
     z-index: 1;
 }
-nav, .nav-container, .logo, .bubble-container, .card-container:hover {
+nav, .logo, .nav-container, .bubble-container, .card-container:hover {
     z-index: 9;
 }
 //scrollbar
