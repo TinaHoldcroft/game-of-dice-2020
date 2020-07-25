@@ -42,14 +42,7 @@ i {
     color: #8d8d8d; 
     font-size: 1.2em;
 } 
-/* unicode 
-.unicode::before {
-    font-family: 'Font Awesome\ 5 Free';
-}
-#unicode__home::before {
-    content: '\f015';
-}
-*/
+.copycontainer { font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif; }
 //tooltips 
 a[id]:hover:after {
     content: attr(id);
@@ -69,3 +62,11 @@ a[id]:hover:after {
     color: #000000;
     font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
 }
+/* unicode 
+.unicode::before {
+    font-family: 'Font Awesome\ 5 Free';
+}
+#unicode__home::before {
+    content: '\f015';
+}
+*/
