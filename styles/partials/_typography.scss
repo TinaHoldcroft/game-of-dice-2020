@@ -37,14 +37,12 @@ a { //links
     color: inherit;
     font-family: montserrat, sans-serif;
 }
-//font awesome
-i { 
+i { //font awesome
     color: #8d8d8d; 
     font-size: 1.2em;
 } 
 .copycontainer { font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif; }
-//tooltips 
-a[id]:hover:after {
+a[id]:hover:after { //tooltips 
     content: attr(id);
     position: absolute;
     top: -0.1rem;
