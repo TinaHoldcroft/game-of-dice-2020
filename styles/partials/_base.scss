@@ -1,9 +1,6 @@
-/*Colours:
-light gray - #8d8d8d (contrast rating AAA)
-background: #191919
-#242424
-*/
-
+//#8d8d8d (contrast rating AAA)
+//#191919 (background)
+//#242424
 * {
     margin: 0;
     padding: 0;
@@ -29,13 +26,11 @@ main {
     z-index: 1;
 }
 ::-webkit-scrollbar-thumb:hover { background: #3f3f3f; }
+
 //layout layers
-main {
-    z-index: 1;
-}
-nav, .logo, .nav-container, .bubble-container, .card-container:hover {
-    z-index: 9;
-}
+main { z-index: 1; }
+nav, .logo, .nav-container, .bubble-container, .card-container:hover { z-index: 9; }
+
 //scrollbar
 ::-webkit-scrollbar { //width
     width: 10px;
