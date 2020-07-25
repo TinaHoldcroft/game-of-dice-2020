@@ -185,7 +185,7 @@ nav i:active, nav a:active {
   height: 35px;
   width: 35px;
   transition: transform ease-out 0.1s;
-  margin-left: 95px;
+  margin-left: 96px;
 }
 .logo img:hover {
   transform: scale(0.93);
@@ -195,19 +195,20 @@ nav i:active, nav a:active {
 }
 
 #logo__txt {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: montserrat, sans-serif;
   font-size: 10px;
   letter-spacing: 8px;
   color: #8d8d8d;
-  line-height: 21px;
-  margin-bottom: -35px;
+  line-height: 22px;
+  margin-bottom: -38px;
   text-transform: uppercase;
 }
 #logo__txt span {
-  letter-spacing: 2px;
+  font-family: chuck, sans-serif;
+  letter-spacing: 4px;
   font-weight: 900;
-  margin-left: -2px;
-  font-size: 30px;
+  margin-left: -1px;
+  font-size: 28px;
   color: #00ffff;
 }
 
