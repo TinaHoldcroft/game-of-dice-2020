@@ -33,8 +33,8 @@
     backface-visibility: hidden;
 }
 .card-front {
-    background-color: #242424;
     color: #ffffff;
+    background-color: #242424;
     background-image: url("images/placeholder.svg");
     background-position: center;
     background-repeat: no-repeat;
@@ -48,21 +48,15 @@
     background-color: #242424;
     color: #ffffff;
     transform: rotateY(180deg);
-    /*postition after rotation*/
+    //postition after rotation
     margin-left: 5.5rem;
     margin-top: -5vh;
 }
-/*Cursor effect*/
-button:hover {
-    cursor: grab;
-}
-button:active {
-    cursor: grabbing;
-}
-
+button:hover { cursor: grab; } //cursor effect
+button:active { cursor: grabbing; }
 #image__gladiator {
+    margin-bottom: 1rem;
     width: 100%;
     border-radius: 30px 30px 0px 0px;
     filter: grayscale(100%);
-    margin-bottom: 1rem;
 }
