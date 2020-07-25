@@ -10,7 +10,7 @@ footer {
     overflow: hidden;
     background-color: #242424;
     box-shadow: inset 3px 3px 10px rgba(255, 255, 255, 0.1), inset -3px -3px 10px rgba(255,255,255,0.1);
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 600px) { //phone
         position: fixed;
         bottom: 0;
         left: 0;
@@ -34,7 +34,7 @@ footer {
     display: flex;
     justify-content: space-evenly;
     width: 40rem;
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 600px) { //phone
         bottom: 1.3rem;
         width: 100vw;
     }
