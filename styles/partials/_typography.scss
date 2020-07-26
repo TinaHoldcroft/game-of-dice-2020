@@ -41,7 +41,7 @@ i { //font awesome
     color: #8d8d8d; 
     font-size: 1.2em;
 } 
-.copycontainer { font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif; }
+.copy-container { font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif; }
 a[id]:hover:after { //tooltips 
     content: attr(id);
     position: absolute;
