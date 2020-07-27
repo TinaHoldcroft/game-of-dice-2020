@@ -315,8 +315,13 @@ nav i:active, nav a:active {
   color: #00ffff;
 }
 
-.side-panel {
+.side-panel-container {
   position: fixed;
+}
+@media only screen and (min-width: 600px) {
+  .side-panel-container {
+    display: none;
+  }
 }
 
 footer {

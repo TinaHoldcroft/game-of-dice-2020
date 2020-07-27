@@ -70,6 +70,7 @@ nav {
     i:active, a:active { color: #00ffff; }
 }
 //phone navigation
-.side-panel {
-	position: fixed;
+.side-panel-container {
+    position: fixed;
+    @media only screen and (min-width: 600px) { display: none; } //hide element on big screens
 }
