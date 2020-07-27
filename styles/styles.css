@@ -278,48 +278,47 @@ button:active {
   background-color: #242424;
   box-shadow: inset 3px 3px 7px rgba(0, 0, 0, 0.15), inset -3px -3px 7px rgba(255, 255, 255, 0.05);
 }
-
-nav {
+.nav-container nav {
   margin: 1rem;
   padding: 1rem;
 }
-nav ul {
+.nav-container nav ul {
   display: flex;
   list-style-type: none;
   flex-direction: row;
   justify-content: flex-end;
 }
-nav li {
+.nav-container nav li {
   color: #8d8d8d;
   text-transform: uppercase;
   padding-right: 2rem;
 }
 @media only screen and (max-width: 600px) {
-  nav {
+  .nav-container nav {
     display: none;
   }
 }
-nav span {
+.nav-container nav span {
   padding-left: 0.8rem;
   vertical-align: middle;
   letter-spacing: 2px;
   font-size: 0.8em;
 }
-nav i {
+.nav-container nav i {
   vertical-align: middle;
 }
-nav i:hover, nav a:hover {
+.nav-container nav i:hover, .nav-container nav a:hover {
   opacity: 80%;
 }
-nav i:active, nav a:active {
+.nav-container nav i:active, .nav-container nav a:active {
   color: #00ffff;
 }
 
-.side-panel-container {
+.panel-container {
   position: fixed;
 }
 @media only screen and (min-width: 600px) {
-  .side-panel-container {
+  .panel-container {
     display: none;
   }
 }
