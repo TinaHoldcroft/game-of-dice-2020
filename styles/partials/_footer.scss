@@ -1,3 +1,4 @@
+//only visibl on large screens
 footer {
     display: flex;
     position: sticky;
@@ -10,13 +11,7 @@ footer {
     overflow: hidden;
     background-color: #242424;
     box-shadow: inset 3px 3px 10px rgba(255, 255, 255, 0.1), inset -3px -3px 10px rgba(255,255,255,0.1);
-    @media only screen and (max-width: 600px) { //phone
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        height: 8rem;
-        z-index: 9;
-    }
+    @media only screen and (max-width: 600px) { display: none; } //hide element on phone
 }
 .copy-container {
     display: flex;
@@ -26,7 +21,6 @@ footer {
     text-align: center;
     font-size: 0.9em;
     color: #8d8d8d;
-    @media only screen and (max-width: 600px) { display: none; } //hide element on phone
 }
 .bubble-container {
     position: absolute;

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://use.typekit.net/xjc5qtk.css");
 @import url("https://use.typekit.net/xjc5qtk.css");
 @import url("https://use.typekit.net/xjc5qtk.css");
@@ -37,7 +38,8 @@ main {
   z-index: 1;
 }
 
-nav, .logo, .nav-container, .bubble-container, .card-container:hover, .side-panel-container {
+nav, .logo, .nav-container, .panel-container, .toggle-icon, .bubble-container,
+.card-container:hover {
   z-index: 9;
 }
 
@@ -98,7 +100,7 @@ i {
   font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
 }
 
-a[id]:hover:after {
+a[id]:hover::after {
   content: attr(id);
   position: absolute;
   top: -0.1rem;
@@ -117,14 +119,6 @@ a[id]:hover:after {
   font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
 }
 
-/* unicode 
-.unicode::before {
-    font-family: 'Font Awesome\ 5 Free';
-}
-#unicode__home::before {
-    content: '\f015';
-}
-*/
 .character-container {
   display: flex;
   justify-content: center;
@@ -234,6 +228,12 @@ button:active {
   margin-left: 1rem;
   padding: 1rem;
 }
+@media only screen and (max-width: 600px) {
+  .logo {
+    margin-left: 8rem;
+    padding: 0.5rem;
+  }
+}
 .logo img {
   height: 35px;
   width: 35px;
@@ -278,6 +278,13 @@ button:active {
   background-color: #242424;
   box-shadow: inset 3px 3px 7px rgba(0, 0, 0, 0.15), inset -3px -3px 7px rgba(255, 255, 255, 0.05);
 }
+@media only screen and (max-width: 600px) {
+  .nav-container {
+    position: fixed;
+    box-shadow: none;
+    height: 4.5rem;
+  }
+}
 .nav-container nav {
   margin: 1rem;
   padding: 1rem;
@@ -317,10 +324,97 @@ button:active {
 .panel-container {
   position: fixed;
 }
+.panel-container nav {
+  position: absolute;
+  display: block;
+  left: -200px;
+  top: 4.5rem;
+  width: 16.2rem;
+  /*12.8 = 0*/
+  transition: all 0.45s cubic-bezier(0.77, 0, 0.175, 1);
+  background-color: #242424;
+  height: 100vh;
+}
+.panel-container nav ul {
+  padding: 1.7rem;
+  list-style-type: none;
+}
+.panel-container nav li {
+  position: relative;
+  padding-bottom: 2rem;
+}
+.panel-container nav a {
+  display: block;
+  white-space: nowrap;
+  text-decoration: none;
+  position: relative;
+}
+.panel-container nav i {
+  position: absolute;
+  top: 0rem;
+  left: 12.1rem;
+}
+.panel-container nav i + i {
+  left: 4.5rem;
+}
 @media only screen and (min-width: 600px) {
   .panel-container {
     display: none;
   }
+}
+
+.unicode {
+  position: relative;
+  display: block;
+  left: 0;
+  top: 0;
+  padding-top: 1.35rem;
+  padding-left: 1.1rem;
+  cursor: pointer;
+}
+.unicode ::before {
+  font-family: "Font Awesome 5 Free";
+}
+
+#unicode__toggle::before {
+  content: "";
+  font-size: 1.5em;
+  display: block;
+  position: relative;
+}
+
+.openPanel nav {
+  transform: translate3d(12.2rem, 0, 0);
+}
+.openPanel #unicode__toggle::before {
+  content: "";
+  display: block;
+  position: relative;
+  font-size: 1.5em;
+  color: #00ffff;
+}
+
+#dropdown {
+  position: relative;
+}
+#dropdown :after {
+  position: absolute;
+  content: "";
+  left: 80px;
+  top: 8px;
+  width: 0;
+  height: 0;
+}
+
+#dropdown-menu {
+  display: none;
+}
+#dropdown-menu li + li {
+  margin-bottom: -2.8rem;
+}
+
+.showDropdown #dropdown-menu {
+  display: block;
 }
 
 footer {
@@ -338,11 +432,7 @@ footer {
 }
 @media only screen and (max-width: 600px) {
   footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    height: 8rem;
-    z-index: 9;
+    display: none;
   }
 }
 
@@ -354,11 +444,6 @@ footer {
   text-align: center;
   font-size: 0.9em;
   color: #8d8d8d;
-}
-@media only screen and (max-width: 600px) {
-  .copy-container {
-    display: none;
-  }
 }
 
 .bubble-container {

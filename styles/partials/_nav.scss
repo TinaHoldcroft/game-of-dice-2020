@@ -3,6 +3,10 @@
     display: block;
     margin-left: 1rem;
     padding: 1rem;
+    @media only screen and (max-width: 600px) { 
+        margin-left: 8rem;
+        padding: 0.5rem; 
+    }
     //logo icon
     img { 
         height: 35px;
@@ -43,6 +47,11 @@
     overflow: hidden;
     background-color: #242424; 
     box-shadow: inset 3px 3px 7px rgba(0,0,0,0.15), inset -3px -3px 7px rgba(255,255,255,0.05);
+    @media only screen and (max-width: 600px) { 
+        position: fixed;
+        box-shadow: none; 
+        height: 4.5rem;
+    }
     nav {
         margin: 1rem;
         padding: 1rem;
@@ -72,5 +81,88 @@
 //phone navigation
 .panel-container {
     position: fixed;
-    @media only screen and (min-width: 600px) { display: none; } //hide element on big screens
+    nav {
+        position: absolute;
+        display: block;
+        left: -200px;
+        top: 4.5rem;
+        width: 16.2rem; /*12.8 = 0*/
+        transition: all 0.45s cubic-bezier(0.77, 0, 0.175, 1);
+        background-color: #242424;
+        height: 100vh;
+        ul {
+            padding: 1.7rem;
+            list-style-type: none;
+        }
+        li {
+            position: relative;
+            padding-bottom: 2rem;
+        }
+        a {
+            display: block;
+            white-space: nowrap;
+            text-decoration: none; 
+            position: relative;
+        }
+        i {
+            position: absolute;
+            top: 0rem;
+            left: 12.1rem;
+        }
+        i + i {
+            left: 4.5rem;
+        }
+    }
+    @media only screen and (min-width: 600px) { display: none; }
+}
+//font awesome unicode
+.unicode {
+    position: relative;
+	display: block;
+	left: 0;
+    top: 0;
+    padding-top: 1.35rem;
+    padding-left: 1.1rem;
+    cursor: pointer;
+    ::before {
+        font-family: 'Font Awesome\ 5 Free';
+    }
+}
+#unicode__toggle::before {
+    content: '\f35a'; //arrow pointing right
+    font-size: 1.5em;
+    display: block;
+    position: relative;
+}
+.openPanel { //after panel is open
+    nav {
+        transform: translate3d(12.2rem, 0, 0);
+    }
+    #unicode__toggle::before {
+	content: '\f410'; //close x
+	display: block;
+    position: relative;
+    font-size: 1.5em;
+    color: #00ffff;
+    }
+}
+#dropdown{
+    position: relative;
+    :after {
+        position: absolute;
+        content:'';
+        left: 80px;
+        top: 8px;
+          width: 0;
+          height: 0;
+    }
+}
+#dropdown-menu { 
+    display:none; 
+        li + li {
+        margin-bottom: -2.8rem;
+    }
+}
+.showDropdown #dropdown-menu {  
+    display: block; 
 }

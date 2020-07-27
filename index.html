@@ -11,7 +11,9 @@
     <link rel="stylesheet" type="text/css" href="styles/styles.css">
     <link rel="stylesheet" href="https://use.typekit.net/xjc5qtk.css"> <!-- adobe fonts -->
     <script src="https://kit.fontawesome.com/a83d77d417.js" crossorigin="anonymous"></script> <!-- icons -->
-	<!-- browser design -->
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- browser design -->
 	<link rel="icon" href="styles/images/diceLogo.svg" type="image/svg" sizes="16x16"> <!-- favicon -->
 	<meta name="theme-color" content="#242424"> <!-- color of browser banner on phone -->
 	<title>Game of Dice</title> <!-- page title -->
@@ -45,18 +47,27 @@
         </div>
         <!-- phone navigation bar -->
         <div class="panel-container">
-            <div id="navToggle"></div>
+            <div id="navToggle" class="unicode"><i id="unicode__toggle" class="fa"></i></div>
             <nav>
-                <div class="panel-wrapper">
-                    <ul>
-                        <li><a href="#"></a></li>
-                        <li><a href="#"></a>
-                            <li><a href="#"></a></li>
-                            <li><a href="#"></a></li>
+                <ul>
+                    <li>
+                        <a href="#">Play</a>
+                        <i class="fa fa-play"></i>
+                    </li>
+                    <li id="dropdown">
+                        <a href="#">About</a>
+                        <i class="fas fa-question-circle"></i>
+                        <i class="fa fa-caret-down"></i>
+                            <ul id="dropdown-menu">
+                                <li><a href="#">Information</a></li>
+                                <li id="dropdown-xxx"><a href="#">How to play</a></li>
+                            </ul>
                         </li>
-                        <li><a href="#"></a></li>
+                        <li>
+                            <a href="#">Contact</a>
+                            <i class="fa fa-envelope"></i>
+                        </li>
                     </ul>
-                </div>
             </nav>
         </div>
 	</header>

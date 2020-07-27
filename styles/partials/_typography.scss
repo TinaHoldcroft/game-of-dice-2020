@@ -42,7 +42,7 @@ i { //font awesome
     font-size: 1.2em;
 } 
 .copy-container { font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif; }
-a[id]:hover:after { //tooltips 
+a[id]:hover::after { //tooltips 
     content: attr(id);
     position: absolute;
     top: -0.1rem;
@@ -60,11 +60,3 @@ a[id]:hover:after { //tooltips
     color: #000000;
     font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
 }
-/* unicode 
-.unicode::before {
-    font-family: 'Font Awesome\ 5 Free';
-}
-#unicode__home::before {
-    content: '\f015';
-}
-*/
