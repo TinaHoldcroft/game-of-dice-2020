@@ -119,6 +119,21 @@ a[id]:hover::after {
   font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
 }
 
+a[id]:active::after {
+  background: transparent;
+  color: transparent;
+}
+
+.active div {
+  box-shadow: inset 3px 3px 7px rgba(0, 0, 0, 0.15), inset -3px -3px 7px rgba(255, 255, 255, 0.09);
+}
+.active div:hover {
+  transform: scale(1);
+}
+.active i, .active span, .active a {
+  color: #00ffff;
+}
+
 .character-container {
   display: flex;
   justify-content: center;
@@ -524,16 +539,6 @@ footer {
   color: #00ffff;
 }
 .bubble i:focus {
-  color: #00ffff;
-}
-
-.active div {
-  box-shadow: inset 3px 3px 7px rgba(0, 0, 0, 0.15), inset -3px -3px 7px rgba(255, 255, 255, 0.09);
-}
-.active div:hover {
-  transform: scale(1);
-}
-.active i, .active span {
   color: #00ffff;
 }
 
