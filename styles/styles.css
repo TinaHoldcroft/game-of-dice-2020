@@ -54,7 +54,12 @@ button:hover {
 button:active {
   color: #242424;
   background-color: #00ffff;
-  scale: 0.98;
+  outline: none;
+  transform: scale(0.98);
+}
+
+button:focus {
+  outline: none;
 }
 
 main {
