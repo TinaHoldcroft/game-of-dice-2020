@@ -90,10 +90,10 @@
         width: 4rem;
     }
     img { //logo icon
-        width: 30px;
-        height: 30px;
-        margin-top: 1rem;
-        margin-left: 1rem;
+        width: 35px;
+        height: 35px;
+        margin-top: 0.8rem;
+        margin-left: 0.8rem;
         transition: transform ease-out 0.1s;
     }
     #navToggle {
@@ -102,8 +102,6 @@
         width: 4rem;
         i { padding: 1rem; }
     }
-    img:hover { transform: scale(0.93); }
-    img:active { transform: scale(1.1); }
     nav {
         position: absolute;
         display: block;
@@ -131,9 +129,11 @@
             position: absolute;
             top: 0rem;
             left: 12.1rem;
+            font-size: 1.5em;
         }
         i + i { //only applies to an i following (+) i
             left: 4.5rem;
+            font-size: 1em;
         }
     }
     @media only screen and (min-width: 600px) { display: none; }
@@ -179,6 +179,6 @@
         margin-top: 1rem;
         margin-bottom: -1rem;
     }
-    li + li { margin-bottom: -5rem; }
+    li + li { margin-bottom: -4.5rem; }
 }
 .showDropdown #dropdown-menu { display: block; }
