@@ -128,7 +128,7 @@ a[id]:active::after {
   box-shadow: inset 3px 3px 7px rgba(0, 0, 0, 0.15), inset -3px -3px 7px rgba(255, 255, 255, 0.09);
 }
 .active div:hover {
-  transform: scale(1);
+  transform: scale(1) !important;
 }
 .active i, .active span, .active a {
   color: #00ffff;
@@ -210,32 +210,67 @@ button:active {
 }
 
 #index {
-  padding-top: 42rem;
+  padding-top: 40rem;
+}
+
+.intro-container {
+  width: 100vw;
+  top: 0;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.intro-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.intro-btn button {
+  width: 15vw;
+  height: 4rem;
+  text-align: center;
+  border: 2px solid;
+  background-color: transparent;
+  font-size: 1.5em;
+  padding: 10px 20px;
+  color: #00ffff;
+  border-radius: 18px;
+}
+.intro-btn button:hover {
+  color: #242424;
+  border: 0;
+  background-color: #00ffff;
+}
+.intro-btn button:active {
+  color: #242424;
+  border: 0;
+  background-color: #00ffff;
+  -webkit-box-shadow: 2px 2px 22px 1px #00ffff;
+  -moz-box-shadow: 2px 2px 22px 1px #00ffff;
+  box-shadow: 2px 2px 22px 1px #00ffff;
 }
 
 #image__intro {
-  position: absolute;
-  top: 8rem;
-  left: 2rem;
+  position: relative;
+  margin-top: 7.5rem;
+  margin-left: -14rem;
+  margin-right: -12rem;
   height: 30rem;
 }
 
 #text__intro {
-  position: absolute;
-  top: 10rem;
-  right: 2rem;
-  width: 55vw;
+  position: relative;
+  margin-top: 7.5rem;
+  width: 48rem;
   background-color: #242424;
   padding: 3rem;
 }
 #text__intro p, #text__intro h1 {
   padding-bottom: 2rem;
-}
-#text__intro button {
-  margin-left: 13vw;
-  width: 25vw;
-  height: 4rem;
-  text-align: center;
 }
 
 .logo {
