@@ -25,7 +25,31 @@ main {
     width: 100%;
     z-index: 1;
 }
-
+//default button
+button {
+    width: 10vw;
+    height: 3rem;
+    text-align: center;
+    border: 2px solid;
+    background-color: transparent;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    color: #00ffff;
+    border-radius: 18px;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+button:hover {
+    color: #242424;
+    background-color: #00ffff;
+}
+button:active {
+    color: #242424;
+    background-color: #00ffff;
+}
+button:focus { //remove default style chrome
+    outline: none;
+}
 //layout layers
 main { z-index: 1; }
 nav, .logo, .nav-container, .panel-container, .toggle-icon, .bubble-container, 

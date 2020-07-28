@@ -30,6 +30,34 @@ main {
   z-index: 1;
 }
 
+button {
+  width: 10vw;
+  height: 3rem;
+  text-align: center;
+  border: 2px solid;
+  background-color: transparent;
+  font-size: 1.2em;
+  padding: 10px 20px;
+  color: #00ffff;
+  border-radius: 18px;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+button:hover {
+  color: #242424;
+  background-color: #00ffff;
+}
+
+button:active {
+  color: #242424;
+  background-color: #00ffff;
+}
+
+button:focus {
+  outline: none;
+}
+
 main {
   z-index: 1;
 }
@@ -230,20 +258,7 @@ a[id]:active::after {
 .intro-btn button {
   width: 15vw;
   height: 4rem;
-  text-align: center;
-  border: 2px solid;
-  background-color: transparent;
   font-size: 1.5em;
-  padding: 10px 20px;
-  color: #00ffff;
-  border-radius: 18px;
-  margin-left: 2rem;
-  margin-right: 2rem;
-}
-.intro-btn button:hover {
-  color: #242424;
-  border: 2px transparent;
-  background-color: #00ffff;
 }
 
 #image__intro {
