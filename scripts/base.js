@@ -16,8 +16,5 @@ var refreshCounter = localStorage.getItem('Refresh Counter');
 localStorage.setItem("Refresh Counter", refreshCounter);
 console.log('Refresh Counter: ' + refreshCounter);
 
-//removing from Local Storage:
-//localStorage.removeItem('KEY');
-
-//clear everything:
-//localStorage.clear();
+//removing from Local Storage: localStorage.removeItem('KEY');
+//clear everything: localStorage.clear();

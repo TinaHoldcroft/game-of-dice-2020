@@ -25,7 +25,6 @@ main {
     width: 100%;
     z-index: 1;
 }
-::-webkit-scrollbar-thumb:hover { background: #3f3f3f; }
 
 //layout layers
 main { z-index: 1; }
@@ -41,3 +40,4 @@ nav, .logo, .nav-container, .panel-container, .toggle-icon, .bubble-container,
     background: #242424; 
     border-radius: 10px;
 }
+::-webkit-scrollbar-thumb:hover { background: #3f3f3f; }

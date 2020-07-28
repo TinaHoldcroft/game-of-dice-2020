@@ -1,6 +1,4 @@
-#index {
-    padding-top: 40rem;
-}
+#index { padding-top: 40rem; }
 .intro-container {
     width: 100vw;
     top: 0;
@@ -37,9 +35,9 @@
         color: #242424;
         border: 0;
         background-color: #00ffff;
-        -webkit-box-shadow: 2px 2px 22px 1px #00ffff;
-        -moz-box-shadow: 2px 2px 22px 1px  #00ffff;
-        box-shadow: 2px 2px 22px 1px  #00ffff;
+        -webkit-box-shadow: 1px 1px 10px 1px #00ffff;
+        -moz-box-shadow: 1px 1px 10px 1px #00ffff;
+        box-shadow: 1px 1px 10px 1px #00ffff;
     }
 }
 #image__intro {
@@ -55,7 +53,5 @@
     width: 48rem;
     background-color: #242424;
     padding: 3rem;
-    p, h1 {
-        padding-bottom: 2rem;
-    }
+    p, h1 { padding-bottom: 2rem; }
 }

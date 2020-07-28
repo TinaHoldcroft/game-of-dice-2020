@@ -30,10 +30,6 @@ main {
   z-index: 1;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: #3f3f3f;
-}
-
 main {
   z-index: 1;
 }
@@ -51,6 +47,10 @@ nav, .logo, .nav-container, .panel-container, .toggle-icon, .bubble-container,
 ::-webkit-scrollbar-thumb {
   background: #242424;
   border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f3f;
 }
 
 body {
@@ -142,6 +142,12 @@ a[id]:active::after {
   flex-wrap: wrap;
   padding-bottom: 5rem;
 }
+.character-container button:hover {
+  cursor: grab;
+}
+.character-container button:active {
+  cursor: grabbing;
+}
 
 .card-container {
   background-color: transparent;
@@ -194,14 +200,6 @@ a[id]:active::after {
   margin-top: -5vh;
 }
 
-button:hover {
-  cursor: grab;
-}
-
-button:active {
-  cursor: grabbing;
-}
-
 #image__cardOne {
   margin-bottom: 1rem;
   width: 100%;
@@ -251,9 +249,9 @@ button:active {
   color: #242424;
   border: 0;
   background-color: #00ffff;
-  -webkit-box-shadow: 2px 2px 22px 1px #00ffff;
-  -moz-box-shadow: 2px 2px 22px 1px #00ffff;
-  box-shadow: 2px 2px 22px 1px #00ffff;
+  -webkit-box-shadow: 1px 1px 10px 1px #00ffff;
+  -moz-box-shadow: 1px 1px 10px 1px #00ffff;
+  box-shadow: 1px 1px 10px 1px #00ffff;
 }
 
 #image__intro {

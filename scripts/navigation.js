@@ -7,8 +7,8 @@ $('.unicode').click(function() {
     else { //open       
         $('.panel-container').addClass('openPanel');   
         console.log ('Toggle opened: class added to panel-container');          
-    }
-});
+}});
+
 //dropdown menu
 $('#dropdown').click(function() {
     if($('nav').hasClass("showDropdown")) { //close
@@ -18,5 +18,4 @@ $('#dropdown').click(function() {
     else { //open           
         $('nav').addClass('showDropdown');   
         console.log ('Dropdown opened: class added to nav');          
-    }
-});
+}});

@@ -5,6 +5,8 @@
     text-align: center;
     flex-wrap: wrap;
     padding-bottom: 5rem;
+    button:hover { cursor: grab; }
+    button:active { cursor: grabbing; }
 }
 .card-container {
     background-color: transparent;
@@ -52,8 +54,6 @@
     margin-left: 5.5rem;
     margin-top: -5vh;
 }
-button:hover { cursor: grab; } //cursor effect
-button:active { cursor: grabbing; }
 #image__cardOne {
     margin-bottom: 1rem;
     width: 100%;
