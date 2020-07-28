@@ -230,8 +230,11 @@ button:active {
 }
 @media only screen and (max-width: 600px) {
   .logo {
-    margin-left: 8rem;
+    margin-left: 40vw;
     padding: 0.5rem;
+  }
+  .logo img {
+    display: none;
   }
 }
 .logo img {
@@ -256,6 +259,11 @@ button:active {
   margin-bottom: -38px;
   text-transform: uppercase;
 }
+@media only screen and (max-width: 600px) {
+  #logo__txt {
+    letter-spacing: 7px;
+  }
+}
 #logo__txt span {
   font-family: chuck, sans-serif;
   letter-spacing: 4px;
@@ -263,6 +271,11 @@ button:active {
   margin-left: -1px;
   font-size: 28px;
   color: #00ffff;
+}
+@media only screen and (max-width: 600px) {
+  #logo__txt span {
+    letter-spacing: 5px;
+  }
 }
 
 .nav-container {
@@ -280,7 +293,6 @@ button:active {
 }
 @media only screen and (max-width: 600px) {
   .nav-container {
-    position: fixed;
     box-shadow: none;
     height: 4.5rem;
   }
@@ -324,12 +336,39 @@ button:active {
 .panel-container {
   position: fixed;
 }
+.panel-container #logo__phone {
+  padding-top: 0.3rem;
+  background-color: #313131;
+  height: 4.5rem;
+  width: 4rem;
+}
+.panel-container img {
+  width: 30px;
+  height: 30px;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  transition: transform ease-out 0.1s;
+}
+.panel-container #navToggle {
+  background-color: #242424;
+  height: 4.5rem;
+  width: 4rem;
+}
+.panel-container #navToggle i {
+  padding: 1rem;
+}
+.panel-container img:hover {
+  transform: scale(0.93);
+}
+.panel-container img:active {
+  transform: scale(1.1);
+}
 .panel-container nav {
   position: absolute;
   display: block;
   left: -200px;
-  top: 4.5rem;
-  width: 16.2rem;
+  top: 8rem;
+  width: 16.5rem;
   /*12.8 = 0*/
   transition: all 0.45s cubic-bezier(0.77, 0, 0.175, 1);
   background-color: #242424;
@@ -341,7 +380,7 @@ button:active {
 }
 .panel-container nav li {
   position: relative;
-  padding-bottom: 2rem;
+  padding-bottom: 2.7rem;
 }
 .panel-container nav a {
   display: block;
@@ -355,6 +394,7 @@ button:active {
   left: 12.1rem;
 }
 .panel-container nav i + i {
+  /*only applies to an i following (+) i*/
   left: 4.5rem;
 }
 @media only screen and (min-width: 600px) {
@@ -366,10 +406,6 @@ button:active {
 .unicode {
   position: relative;
   display: block;
-  left: 0;
-  top: 0;
-  padding-top: 1.35rem;
-  padding-left: 1.1rem;
   cursor: pointer;
 }
 .unicode ::before {
@@ -409,8 +445,12 @@ button:active {
 #dropdown-menu {
   display: none;
 }
+#dropdown-menu li {
+  margin-top: 1rem;
+  margin-bottom: -1rem;
+}
 #dropdown-menu li + li {
-  margin-bottom: -2.8rem;
+  margin-bottom: -5rem;
 }
 
 .showDropdown #dropdown-menu {

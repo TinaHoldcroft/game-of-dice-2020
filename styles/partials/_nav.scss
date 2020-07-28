@@ -4,8 +4,11 @@
     margin-left: 1rem;
     padding: 1rem;
     @media only screen and (max-width: 600px) { 
-        margin-left: 8rem;
+        margin-left: 40vw;
         padding: 0.5rem; 
+        img {
+            display: none;
+        }
     }
     //logo icon
     img { 
@@ -25,6 +28,9 @@
     line-height: 22px;
     margin-bottom: -38px;
     text-transform: uppercase;
+    @media only screen and (max-width: 600px) {
+            letter-spacing: 7px;
+        }
     span {
         font-family: chuck, sans-serif;
         letter-spacing: 4px;
@@ -32,6 +38,9 @@
         margin-left: -1px;
         font-size: 28px;
         color: #00ffff;
+        @media only screen and (max-width: 600px) {
+            letter-spacing: 5px;
+        }
     }
 }
 //desktop navigation
@@ -48,7 +57,6 @@
     background-color: #242424; 
     box-shadow: inset 3px 3px 7px rgba(0,0,0,0.15), inset -3px -3px 7px rgba(255,255,255,0.05);
     @media only screen and (max-width: 600px) { 
-        position: fixed;
         box-shadow: none; 
         height: 4.5rem;
     }
@@ -81,12 +89,35 @@
 //phone navigation
 .panel-container {
     position: fixed;
+    #logo__phone {
+        padding-top: 0.3rem;
+        background-color: #313131;
+        height: 4.5rem;
+        width: 4rem;
+    }
+    img { //logo icon
+        width: 30px;
+        height: 30px;
+        margin-top: 1rem;
+        margin-left: 1rem;
+        transition: transform ease-out 0.1s;
+    }
+    #navToggle {
+        background-color: #242424;
+        height: 4.5rem;
+        width: 4rem;
+        i {
+            padding: 1rem;
+        }
+    }
+    img:hover { transform: scale(0.93); }
+    img:active { transform: scale(1.1); }
     nav {
         position: absolute;
         display: block;
         left: -200px;
-        top: 4.5rem;
-        width: 16.2rem; /*12.8 = 0*/
+        top: 8rem;
+        width: 16.5rem; /*12.8 = 0*/
         transition: all 0.45s cubic-bezier(0.77, 0, 0.175, 1);
         background-color: #242424;
         height: 100vh;
@@ -96,7 +127,7 @@
         }
         li {
             position: relative;
-            padding-bottom: 2rem;
+            padding-bottom: 2.7rem;
         }
         a {
             display: block;
@@ -109,7 +140,7 @@
             top: 0rem;
             left: 12.1rem;
         }
-        i + i {
+        i + i { /*only applies to an i following (+) i*/
             left: 4.5rem;
         }
     }
@@ -119,10 +150,6 @@
 .unicode {
     position: relative;
 	display: block;
-	left: 0;
-    top: 0;
-    padding-top: 1.35rem;
-    padding-left: 1.1rem;
     cursor: pointer;
     ::before {
         font-family: 'Font Awesome\ 5 Free';
@@ -159,8 +186,12 @@
 }
 #dropdown-menu { 
     display:none; 
-        li + li {
-        margin-bottom: -2.8rem;
+    li {
+        margin-top: 1rem;
+        margin-bottom: -1rem;
+    }
+    li + li {
+        margin-bottom: -5rem;
     }
 }
 .showDropdown #dropdown-menu {  
