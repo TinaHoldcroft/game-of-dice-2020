@@ -30,9 +30,11 @@ button {
     width: 10vw;
     height: 3rem;
     text-align: center;
-    border: 2px solid;
-    background-color: transparent;
+    border: 2px solid #00ffff;
+    background-color: #242424;
     font-size: 1.2em;
+    font-family: montserrat, sans-serif;
+    letter-spacing: 2px;
     padding: 10px 20px;
     color: #00ffff;
     border-radius: 18px;
@@ -48,9 +50,7 @@ button:active {
     background-color: #00ffff;
     scale: (0.98);
 }
-button:focus { //remove default style chrome
-    outline: none;
-}
+
 //layout layers
 main { z-index: 1; }
 nav, .logo, .nav-container, .panel-container, .toggle-icon, .bubble-container, 
