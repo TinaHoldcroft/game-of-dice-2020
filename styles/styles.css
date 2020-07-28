@@ -239,6 +239,8 @@ button:active {
   padding: 10px 20px;
   color: #00ffff;
   border-radius: 18px;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 .intro-btn button:hover {
   color: #242424;
