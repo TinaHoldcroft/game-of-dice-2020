@@ -242,16 +242,8 @@ a[id]:active::after {
 }
 .intro-btn button:hover {
   color: #242424;
-  border: 0;
+  border: 2px transparent;
   background-color: #00ffff;
-}
-.intro-btn button:active {
-  color: #242424;
-  border: 0;
-  background-color: #00ffff;
-  -webkit-box-shadow: 1px 1px 10px 1px #00ffff;
-  -moz-box-shadow: 1px 1px 10px 1px #00ffff;
-  box-shadow: 1px 1px 10px 1px #00ffff;
 }
 
 #image__intro {
