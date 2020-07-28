@@ -369,7 +369,6 @@ button:active {
   left: -200px;
   top: 8rem;
   width: 16.5rem;
-  /*12.8 = 0*/
   transition: all 0.45s cubic-bezier(0.77, 0, 0.175, 1);
   background-color: #242424;
   height: 100vh;
@@ -394,7 +393,6 @@ button:active {
   left: 12.1rem;
 }
 .panel-container nav i + i {
-  /*only applies to an i following (+) i*/
   left: 4.5rem;
 }
 @media only screen and (min-width: 600px) {
@@ -432,8 +430,9 @@ button:active {
 
 #dropdown {
   position: relative;
+  cursor: pointer;
 }
-#dropdown :after {
+#dropdown ::after {
   position: absolute;
   content: "";
   left: 80px;
