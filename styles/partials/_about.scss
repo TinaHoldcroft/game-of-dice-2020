@@ -1,0 +1,30 @@
+#about-body {
+    overflow: hidden;
+}
+#about {
+    width: 100vw;
+    height: 100vh;
+}
+//background
+@keyframes animated-grid { 100% { transform: perspective(50vh) rotateX(60deg) translateY(var(--grid-line)); } }
+.synthwave-grid {
+    position: absolute;
+    left: 0;
+    bottom: 40vh; //start
+    width: 100vw;
+    height: 100vh;
+    background: repeating-linear-gradient(90deg, var(--grid-colour),
+                transparent var(--grid-blur), 
+                transparent var(--grid-line),
+                var(--grid-colour) calc(var(--grid-line) + var(--grid-blur))),
+                repeating-linear-gradient(180deg, var(--grid-colour),
+                transparent var(--grid-blur), 
+                transparent var(--grid-line),
+                var(--grid-colour) calc(var(--grid-line) + var(--grid-blur)));
+    transform: perspective(50vh) rotateX(60deg);
+    animation: animated-grid 3s infinite linear; //movement, speed
+    //style grid
+    --grid-line: 3rem;
+    --grid-colour: #00ffff;
+    --grid-blur: 1px;
+}

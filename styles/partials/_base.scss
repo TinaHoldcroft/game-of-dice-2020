@@ -59,7 +59,9 @@ button:focus {
 main { z-index: 1; }
 nav, .logo, .nav-container, .panel-container, .toggle-icon, .bubble-container, 
 .card-container:hover { z-index: 9; }
-
+.synthwave-grid {
+    z-index: -1;
+}
 //scrollbar
 ::-webkit-scrollbar { //width
     width: 10px;
