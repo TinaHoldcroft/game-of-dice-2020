@@ -387,6 +387,9 @@ a[id]:active::after {
   margin-top: 1rem;
   margin-bottom: -1rem;
 }
+#dropdown-menu li a {
+  color: #ffffff;
+}
 #dropdown-menu li + li {
   margin-bottom: -4.5rem;
 }
@@ -470,6 +473,51 @@ footer {
   background-color: #00ffff;
 }
 
+#index {
+  padding-top: 40rem;
+}
+
+.intro-container {
+  width: 100vw;
+  top: 0;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.intro-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.intro-btn button {
+  width: 15vw;
+  height: 4rem;
+  font-size: 1.5em;
+}
+
+#image__intro {
+  position: relative;
+  margin-top: 7.5rem;
+  margin-left: -14rem;
+  margin-right: -12rem;
+  height: 30rem;
+}
+
+#text__intro {
+  position: relative;
+  margin-top: 7.5rem;
+  width: 48rem;
+  background-color: #242424;
+  padding: 3rem;
+}
+#text__intro p, #text__intro h1 {
+  padding-bottom: 2rem;
+}
+
 .character-container {
   display: flex;
   justify-content: center;
@@ -541,56 +589,6 @@ footer {
   width: 100%;
   border-radius: 30px 30px 0px 0px;
   filter: grayscale(100%);
-}
-
-#index {
-  padding-top: 40rem;
-}
-
-.intro-container {
-  width: 100vw;
-  top: 0;
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  flex-direction: row;
-}
-
-.intro-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.intro-btn button {
-  width: 15vw;
-  height: 4rem;
-  font-size: 1.5em;
-}
-
-#image__intro {
-  position: relative;
-  margin-top: 7.5rem;
-  margin-left: -14rem;
-  margin-right: -12rem;
-  height: 30rem;
-}
-
-#text__intro {
-  position: relative;
-  margin-top: 7.5rem;
-  width: 48rem;
-  background-color: #242424;
-  padding: 3rem;
-}
-#text__intro p, #text__intro h1 {
-  padding-bottom: 2rem;
-}
-
-#about {
-  width: 100vw;
-  height: 100vh;
 }
 
 #contact {

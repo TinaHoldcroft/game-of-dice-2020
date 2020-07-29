@@ -19,7 +19,7 @@
 	<title>Game of Dice</title> <!-- page title -->
 </head>
 
-<body id="about-body">
+<body>
     <header>
 		<div class="nav-container">
 			<!-- logo desktop-->
@@ -28,7 +28,7 @@
 			<nav>
 				<ul>
                     <li><a href="index.html#characterCards"><i class="fas fa-dice-five"></i><span>Play</span></a></li>
-					<!-- active page --><li class="active"><a href="about.html"><i class="fas fa-question-circle"></i><span>About</span></a></li>
+					<li><a href="about.html"><i class="fas fa-question-circle"></i><span>About</span></a></li>
 				</ul>
 			</nav>
         </div>
@@ -41,36 +41,35 @@
             <nav>
                 <ul>
                     <li><a href="index.html">Play<i class="fa fa-play"></i></a></li>
-                    <li  class="active" id="dropdown">
-                        <a>About</a>
+                    <li id="dropdown">
+                        <a href="about.html">About</a>
                         <i class="fas fa-question-circle"></i>
                         <i class="fa fa-caret-down"></i>
-                        <ul id="dropdown-menu"><!-- active page -->
+                        <ul id="dropdown-menu">
                             <li><a href="about.html">Information</a></li>
                             <li><a href="about.html">How to play</a></li>
                         </ul>
                     </li>
-                    <li><a href="contact.html">Contact<i class="fa fa-envelope"></i></a></li>
+                    <!-- active page -->
+                    <li class="active"><a href="contact.html">Contact<i class="fa fa-envelope"></i></a></li>
                 </ul>
             </nav>
         </div>
 	</header>
 
-	<main id="about">
-        <!-- Animated 80s grid -->
-        <div class="synthwave-grid"></div>
+	<main id="contact">
+
     </main>
-    
     <footer>
         <div class="copy-container">Copyright &copy; Game of Dice 2020</div>
 		<div class="bubble-container">
             <div class="bubble">
 				<div><a id="Play" href="index.html#characterCards"><i class="fas fa-play"></i></a></div>
 			</div>
-			<div class="bubble active"> <!-- active page-->
+			<div class="bubble">
 				<div><a id="About" href="about.html"><i class="fas fa-info"></i></a></div>
 			</div>
-			<div class="bubble">
+			<div class="bubble active"><!-- active page-->
                 <div><a id="Contact" href="contact.html"><i class="fas fa-envelope"></i></a></div>
 			</div>
 		</div>
