@@ -25,6 +25,8 @@
     margin-left: -14rem;
     margin-right: -12rem;
     height: 30rem;
+    border-radius: 25px;
+    box-shadow: -8px -8px 18px 0 rgba(0, 0, 0, 0.55), inset 3px 3px 7px rgba(0,0,0,0.15), inset -3px -3px 7px rgba(255,255,255,0.09);
 }
 #text__intro {
     position: relative;
@@ -32,5 +34,7 @@
     width: 48rem;
     background-color: #242424;
     padding: 3rem;
+    border-radius: 25px;
     p, h1 { padding-bottom: 2rem; }
+    box-shadow: -8px -8px 18px 0 rgba(0, 0, 0, 0.55), inset 3px 3px 7px rgba(0,0,0,0.15), inset -3px -3px 7px rgba(255,255,255,0.09);
 }
