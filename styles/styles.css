@@ -166,124 +166,6 @@ a[id]:active::after {
   color: #00ffff;
 }
 
-.character-container {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  text-align: center;
-  flex-wrap: wrap;
-  padding-bottom: 5rem;
-}
-.character-container button:hover {
-  cursor: grab;
-}
-.character-container button:active {
-  cursor: grabbing;
-}
-
-.card-container {
-  background-color: transparent;
-  width: 14rem;
-  height: 15rem;
-  perspective: 100rem;
-  margin: 1.5rem;
-}
-
-.cards {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: width 1s, height 1s, transform 2s;
-  transform-style: preserve-3d;
-}
-
-.card-container:hover .cards {
-  transform: rotateY(180deg);
-  width: calc(100% + 10rem);
-  height: calc(100% + 15rem);
-}
-
-.card-front, .card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-}
-
-.card-front {
-  color: #ffffff;
-  background-color: #242424;
-  background-image: url("images/placeholder.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 10rem;
-  border-radius: 30px;
-  box-shadow: -8px -8px 18px 0 rgba(0, 0, 0, 0.55), inset 3px 3px 7px rgba(0, 0, 0, 0.15), inset -3px -3px 7px rgba(255, 255, 255, 0.09);
-}
-
-.card-back {
-  border: solid 2px #00FFFF;
-  border-radius: 30px;
-  background-color: #242424;
-  color: #ffffff;
-  transform: rotateY(180deg);
-  margin-left: 5.5rem;
-  margin-top: -5vh;
-}
-
-#image__cardOne {
-  margin-bottom: 1rem;
-  width: 100%;
-  border-radius: 30px 30px 0px 0px;
-  filter: grayscale(100%);
-}
-
-#index {
-  padding-top: 40rem;
-}
-
-.intro-container {
-  width: 100vw;
-  top: 0;
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  flex-direction: row;
-}
-
-.intro-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.intro-btn button {
-  width: 15vw;
-  height: 4rem;
-  font-size: 1.5em;
-}
-
-#image__intro {
-  position: relative;
-  margin-top: 7.5rem;
-  margin-left: -14rem;
-  margin-right: -12rem;
-  height: 30rem;
-}
-
-#text__intro {
-  position: relative;
-  margin-top: 7.5rem;
-  width: 48rem;
-  background-color: #242424;
-  padding: 3rem;
-}
-#text__intro p, #text__intro h1 {
-  padding-bottom: 2rem;
-}
-
 .logo {
   display: block;
   margin-left: 1rem;
@@ -586,6 +468,124 @@ footer {
 
 .bubble:active, .bubble:focus {
   background-color: #00ffff;
+}
+
+.character-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  text-align: center;
+  flex-wrap: wrap;
+  padding-bottom: 5rem;
+}
+.character-container button:hover {
+  cursor: grab;
+}
+.character-container button:active {
+  cursor: grabbing;
+}
+
+.card-container {
+  background-color: transparent;
+  width: 14rem;
+  height: 15rem;
+  perspective: 100rem;
+  margin: 1.5rem;
+}
+
+.cards {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: width 1s, height 1s, transform 2s;
+  transform-style: preserve-3d;
+}
+
+.card-container:hover .cards {
+  transform: rotateY(180deg);
+  width: calc(100% + 10rem);
+  height: calc(100% + 15rem);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.card-front {
+  color: #ffffff;
+  background-color: #242424;
+  background-image: url("images/placeholder.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 10rem;
+  border-radius: 30px;
+  box-shadow: -8px -8px 18px 0 rgba(0, 0, 0, 0.55), inset 3px 3px 7px rgba(0, 0, 0, 0.15), inset -3px -3px 7px rgba(255, 255, 255, 0.09);
+}
+
+.card-back {
+  border: solid 2px #00FFFF;
+  border-radius: 30px;
+  background-color: #242424;
+  color: #ffffff;
+  transform: rotateY(180deg);
+  margin-left: 5.5rem;
+  margin-top: -5vh;
+}
+
+#image__cardOne {
+  margin-bottom: 1rem;
+  width: 100%;
+  border-radius: 30px 30px 0px 0px;
+  filter: grayscale(100%);
+}
+
+#index {
+  padding-top: 40rem;
+}
+
+.intro-container {
+  width: 100vw;
+  top: 0;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.intro-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.intro-btn button {
+  width: 15vw;
+  height: 4rem;
+  font-size: 1.5em;
+}
+
+#image__intro {
+  position: relative;
+  margin-top: 7.5rem;
+  margin-left: -14rem;
+  margin-right: -12rem;
+  height: 30rem;
+}
+
+#text__intro {
+  position: relative;
+  margin-top: 7.5rem;
+  width: 48rem;
+  background-color: #242424;
+  padding: 3rem;
+}
+#text__intro p, #text__intro h1 {
+  padding-bottom: 2rem;
 }
 
 /*# sourceMappingURL=styles.css.map */
