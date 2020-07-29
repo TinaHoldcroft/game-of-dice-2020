@@ -588,4 +588,9 @@ footer {
   padding-bottom: 2rem;
 }
 
+#about {
+  width: 100vw;
+  height: 100vh;
+}
+
 /*# sourceMappingURL=styles.css.map */
