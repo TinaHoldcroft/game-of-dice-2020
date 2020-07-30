@@ -665,6 +665,7 @@ footer {
   letter-spacing: 1px;
   text-transform: uppercase;
   background: -webkit-linear-gradient(top, #004141, white);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 2px;
