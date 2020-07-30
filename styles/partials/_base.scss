@@ -54,9 +54,9 @@ button:focus {
 }
 
 //layout layers
-main { z-index: 1; }
+main, #synthwave__triangle { z-index: 1; }
 nav, .logo, .nav-container, .panel-container, .toggle-icon, .bubble-container, 
-.card-container:hover { z-index: 9; }
+.card-container:hover, #synthwave__h1, #synthwave__h2 { z-index: 9; }
 .synthwave-grid {
     z-index: -1;
 }
