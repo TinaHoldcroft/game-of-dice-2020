@@ -88,6 +88,8 @@
         background-color: #313131;
         height: 4.5rem;
         width: 4rem;
+        :hover { transform: scale(0.93); }
+        :active { transform: scale(1.1); }
     }
     img { //logo icon
         width: 35px;
@@ -125,6 +127,8 @@
             text-decoration: none; 
             position: relative;
         }
+        i:hover, a:hover { opacity: 50%; }
+        i:active, a:active { opacity: 100%; color: #00ffff; }
         i {
             position: absolute;
             top: 0rem;

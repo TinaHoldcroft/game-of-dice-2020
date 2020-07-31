@@ -1,5 +1,11 @@
 #about-body {
     overflow: hidden;
+    .panel-container {
+        display: block;
+    }
+    .nav-container {
+        height: 1.5rem;
+    }
 }
 #about {
     width: 100vw;
@@ -9,8 +15,9 @@
 @keyframes animated-grid { 100% { transform: perspective(50vh) rotateX(60deg) translateY(var(--grid-line)); } }
 .synthwave-grid {
     position: absolute;
+    top: -30rem;
     left: 0;
-    bottom: 40vh; //start
+    bottom: 80vh; //start
     width: 100vw;
     height: 100vh;
     background: repeating-linear-gradient(90deg, var(--grid-colour),
@@ -31,10 +38,11 @@
 .synthwave-box {
     position: absolute;
     overflow-y: scroll;
-    left: 5vw;
-    height: 60vh;
+    left: 50vw;
+    margin-left: -40vw;
+    height: calc(100% - 22rem);
     bottom: 3rem;
-    width: 90vw;
+    width: 85vw;
     border: solid #00ffff 2px;
     background-color: #191919;
     h3 {
@@ -48,18 +56,14 @@
         margin-left: 1rem;
         margin-right: 2rem;
     }
-    footer {
-        margin-top: 8rem;
-        position: relative;
-    }
 }
 .synthwave-heading {
     h1 {
         position: absolute;
         z-index: 9;
-        top: 90px;
+        top: 2.2rem;
         left: 50vw;
-        margin-left: -17rem;
+        margin-left: -16rem;
         font-family: sans-serif;
         font-size: 6.5em;
         font-weight: 900;
@@ -71,12 +75,15 @@
         -webkit-text-fill-color: transparent;
         -webkit-text-stroke-width: 2px;
         -webkit-text-stroke-color: white;
+        @-moz-document url-prefix() { //only for firefox browsers
+            top: 3.4rem;
+        }
     }
     h2 {
         position: absolute;
         z-index: 9;
         display: block;
-        top: 120px;
+        top: 4.6rem;
         left: 50vw;
         margin-left: -8rem;
         font-family: 'Yellowtail', cursive;
@@ -90,23 +97,43 @@
     }
     hr {
         position: absolute;
-        top: 6.4rem;
+        top: 3.3rem;
         left: 50vw;
-        margin-left: -12.9rem;
+        margin-left: -12.4rem;
         border-top: 1px solid #00ffff;
         color: #00ffff;
-        width: 425px;
+        width: 25.5rem;
     }
 }
 #synthwave__triangle{
     position: absolute;
     left: 50vw;
-    margin-left: -9rem;
-    top: -46px;
-    width: 300px;
-    height: 300px;
-    background-color: #242424;
+    margin-left: -8.7rem;
+    top: -5.6rem;
+    width: 18rem;
+    height: 18rem;
+    background-color: #191919;
     clip-path: polygon(0% 100%, 100% 100%, 0% 0%);
     border: 2px solid #00ffff;
     transform: rotate(-45deg);
 }
+/*GitHub corner*/
+@keyframes octocat-wave {
+    0%, 100% { transform: rotate(0); }
+    20%, 60% { transform: rotate(-25deg); }
+    40%, 80% { transform: rotate(0deg); }
+}
+.github-corner {
+    svg {
+        fill: #313131; 
+        position: absolute; 
+        top: 0; 
+        right: 0;
+        border: 0;
+        height: 10rem;
+        width: 10rem; 
+        :hover { fill: #00ffff; }
+    }
+}
+.GitHub-wave { transform-origin: 130px 106px; }
+.github-corner:hover .GitHub-wave { animation: octocat-wave 760ms ease-in-out; }

@@ -2,11 +2,10 @@
     display: flex;
     justify-content: center;
     flex-direction: row;
-    text-align: center;
     flex-wrap: wrap;
-    padding-bottom: 5rem;
     button:hover { cursor: grab; }
     button:active { cursor: grabbing; }
+    @media only screen and (max-width: 600px) { margin-left: 5rem; } //margin for nav on phone
 }
 .card-container {
     background-color: transparent;
@@ -22,11 +21,15 @@
     text-align: center;
     transition: width 1s, height 1s, transform 2s;
     transform-style: preserve-3d;
+    @-moz-document url-prefix() { //only for firefox browsers
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+    }
 }
 .card-container:hover .cards {
     transform: rotateY(180deg);
     width: calc(100% + 10rem);
-    height: calc(100% + 15rem);
+    height: calc(100% + 19rem);
 }
 .card-front, .card-back {
     position: absolute;
@@ -34,17 +37,17 @@
     height: 100%;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
-
 }
 .card-front {
     color: #ffffff;
     background-color: #242424;
-    background-image: url("images/placeholder.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 10rem;
     border-radius: 30px;
     box-shadow: -8px -8px 18px 0 rgba(0, 0, 0, 0.55), inset 3px 3px 7px rgba(0,0,0,0.15), inset -3px -3px 7px rgba(255,255,255,0.09);
+    img {
+        margin-top: 1.5rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
 }
 .card-back {
     border: solid 2px #00FFFF;
@@ -55,10 +58,20 @@
     //postition after rotation
     margin-left: 5.5rem;
     margin-top: -5vh;
-}
-#image__cardOne {
-    margin-bottom: 1rem;
-    width: 100%;
-    border-radius: 30px 30px 0px 0px;
-    filter: grayscale(100%);
+    img {
+        width: 100%;
+        border-radius: 30px 30px 0px 0px;
+        filter: grayscale(100%);
+    }
+    h3, p {
+        margin-top: 1rem;
+        margin-left: 2.5rem;
+        margin-right: 2.5rem;
+    }
+    p + p {
+        margin-bottom: 0.8rem;
+    }
+    button {
+        margin: 1rem;
+    }
 }
