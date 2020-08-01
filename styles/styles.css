@@ -501,7 +501,7 @@ footer {
 }
 
 #index-header .nav-container {
-  box-shadow: none !important;
+  box-shadow: none;
 }
 
 .intro-container {
@@ -535,7 +535,6 @@ footer {
   margin-left: -29rem;
   z-index: 9;
   width: 58rem;
-  /*background-color: #242424a8;*/
   box-shadow: -8px -8px 18px 0 rgba(0, 0, 0, 0.55), inset 3px 3px 7px rgba(0, 0, 0, 0.15), inset -3px -3px 7px rgba(255, 255, 255, 0.09);
   padding: 5rem;
   border-radius: 25px;
