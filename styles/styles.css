@@ -507,7 +507,7 @@ footer {
 .intro-container {
   z-index: 9;
   background-image: url("images/indexBackground.jpg");
-  filter: grayscale(50%);
+  filter: grayscale(100%);
   height: 91vh;
   width: 100vw;
   top: 5.5rem;
@@ -530,6 +530,7 @@ footer {
 
 #text__intro {
   position: absolute;
+  background-color: #242424a8;
   top: 30vh;
   left: 50vw;
   margin-left: -29rem;
