@@ -1,46 +1,48 @@
 #index { 
-    padding-top: 40rem; 
+    padding-top: 105vh; 
     h2 {
         padding-top: 1rem;
         padding-bottom: 1rem;
     }
 }
+#index-header {
+    .nav-container {
+        box-shadow: none !important;
+    }
+}
 .intro-container {
+    z-index: 9;
+    background-image: url("images/indexBackground.jpg");
+    filter: grayscale(50%);
+    height: 91vh;
     width: 100vw;
-    top: 0;
+    top: 5.5rem;
     position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    flex-direction: row;
 }
 .intro-btn {
     display: flex;
     align-items: center;
     justify-content: center;
     button {
-        width: 15vw;
+        width: 20vw;
         height: 4rem;
         font-size: 1.5em;
+            background-color: #242424a8;
+            border: none;
+    box-shadow: -8px -8px 18px 0 rgba(0, 0, 0, 0.55), inset 3px 3px 7px rgba(0,0,0,0.15), inset -3px -3px 7px rgba(255,255,255,0.09);
+    
     }
 }
-#image__intro {
-    position: relative;
-    margin-top: 7.5rem;
-    margin-left: -14rem;
-    margin-right: -12rem;
-    height: 30rem;
-    border-radius: 25px;
-    box-shadow: -8px -8px 18px 0 rgba(0, 0, 0, 0.55);
-}
 #text__intro {
-    position: relative;
-    margin-top: 7.5rem;
-    width: 48rem;
-    background-color: #242424;
-    padding: 3rem;
+    position: absolute;
+    top: 30vh;
+    left: 50vw;
+    margin-left: -29rem;
+    z-index: 9;
+    width: 58rem;
+    /*background-color: #242424a8;*/
+    box-shadow: -8px -8px 18px 0 rgba(0, 0, 0, 0.55), inset 3px 3px 7px rgba(0,0,0,0.15), inset -3px -3px 7px rgba(255,255,255,0.09);
+    padding: 5rem;
     border-radius: 25px;
     p, h1 { padding-bottom: 2rem; }
-    box-shadow: -8px -8px 18px 0 rgba(0, 0, 0, 0.55), inset 3px 3px 7px rgba(0,0,0,0.15), inset -3px -3px 7px rgba(255,255,255,0.09);
 }
