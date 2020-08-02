@@ -1,11 +1,9 @@
+#index-header { .nav-container { box-shadow: none; } }
 #index { 
     padding-top: 110vh;
     padding-bottom: 10rem;
-    h2 {
-        padding-bottom: 3rem;
-    }
+    h2 { padding-bottom: 3rem; }
 }
-#index-header { .nav-container { box-shadow: none; } }
 .intro-container {
     z-index: 9;
     background-image: url("images/indexBackground.jpg");
@@ -14,25 +12,6 @@
     width: 100vw;
     top: 5.5rem;
     position: absolute;
-}
-.intro-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 1rem;
-    button {
-        width: 20vw;
-        height: 5rem;
-        font-size: 1.5em;
-        color: #00ffff;
-        border: #242424 solid 2px;
-        background-color: 242424;
-        text-transform: uppercase;
-        box-shadow: -8px -8px 18px 0 rgba(0, 0, 0, 0.55), inset 3px 3px 7px rgba(0,0,0,0.15), inset -3px -3px 7px rgba(255,255,255,0.09);
-    }
-    :hover {
-        color: #242424;
-    }
 }
 #text__intro {
     position: absolute;
@@ -54,4 +33,21 @@
         margin-left: 5vw;
         margin-right: 5vw;
     }
+}
+.intro-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+    button {
+        width: 20vw;
+        height: 5rem;
+        font-size: 1.5em;
+        color: #00ffff;
+        border: #242424 solid 2px;
+        background-color: 242424;
+        text-transform: uppercase;
+        box-shadow: -8px -8px 18px 0 rgba(0, 0, 0, 0.55), inset 3px 3px 7px rgba(0,0,0,0.15), inset -3px -3px 7px rgba(255,255,255,0.09);
+    }
+    :hover { color: #242424; }
 }
