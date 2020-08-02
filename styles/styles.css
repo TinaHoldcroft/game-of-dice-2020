@@ -605,15 +605,12 @@ footer {
   height: calc(100% + 19rem);
 }
 
-.card-front, .card-back {
+.card-front {
   position: absolute;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
-}
-
-.card-front {
   color: #ffffff;
   background-color: #242424;
   border-radius: 30px;
@@ -626,6 +623,11 @@ footer {
 }
 
 .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
   border: solid 2px #00FFFF;
   border-radius: 30px;
   background-color: #242424;
@@ -656,9 +658,6 @@ footer {
 }
 #about-body .panel-container {
   display: block;
-}
-#about-body .nav-container {
-  height: 1.5rem;
 }
 
 #about {

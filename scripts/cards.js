@@ -38,11 +38,11 @@ function createCards(house) {
         const cardContent = //card html
         `<div class="cards">
             <div class="card-front">
-                <img class="card-image" src="styles/images/icons__${filename}.svg" alt="${house.name}"/>
+                <img class="card-image" src="styles/images/icons__${filename}.svg" alt="${house.name}">
             </div>
 
             <div class="card-back">
-                <img id="images__${filename}" src="styles/images/images__${filename}.jpg" alt"${house.name}"/>
+                <img id="images__${filename}" src="styles/images/images__${filename}.jpg" alt"${house.name}">
                 <h3>${house.name}</h3>
                 <p><strong>Coat of Arms: </strong> ${house.coatOfArms}</p>
                 <p><strong>Region: </strong>${house.region}</p>
