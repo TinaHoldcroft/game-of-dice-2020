@@ -493,11 +493,11 @@ footer {
 }
 
 #index {
-  padding-top: 105vh;
+  padding-top: 110vh;
+  padding-bottom: 10rem;
 }
 #index h2 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-bottom: 3rem;
 }
 
 #index-header .nav-container {
@@ -518,14 +518,20 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 1rem;
 }
 .intro-btn button {
   width: 20vw;
-  height: 4rem;
+  height: 5rem;
   font-size: 1.5em;
-  background-color: #242424a8;
-  border: none;
+  color: #00ffff;
+  border: #242424 solid 2px;
+  background-color: 242424;
+  text-transform: uppercase;
   box-shadow: -8px -8px 18px 0 rgba(0, 0, 0, 0.55), inset 3px 3px 7px rgba(0, 0, 0, 0.15), inset -3px -3px 7px rgba(255, 255, 255, 0.09);
+}
+.intro-btn :hover {
+  color: #242424;
 }
 
 #text__intro {
@@ -537,11 +543,19 @@ footer {
   z-index: 9;
   width: 58rem;
   box-shadow: -8px -8px 18px 0 rgba(0, 0, 0, 0.55), inset 3px 3px 7px rgba(0, 0, 0, 0.15), inset -3px -3px 7px rgba(255, 255, 255, 0.09);
-  padding: 5rem;
+  padding: 3rem;
   border-radius: 25px;
 }
-#text__intro p, #text__intro h1 {
+#text__intro h1 {
   padding-bottom: 2rem;
+}
+#text__intro p {
+  text-align: center;
+  font-size: 1.3em;
+  line-height: 1.6em;
+  padding-bottom: 2rem;
+  margin-left: 5vw;
+  margin-right: 5vw;
 }
 
 .character-container {
