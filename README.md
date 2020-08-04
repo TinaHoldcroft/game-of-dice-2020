@@ -1,6 +1,9 @@
 # 2020-09_GameofDice
+
 Semester Project 2
+
 Delivery: September 2020
+
 Link: http://tinamary.com/noroff/semester-project-02
 
 The assignment is to create an online board game using the assigned API to create the players.
