@@ -1,8 +1,6 @@
 # 2020-09_GameofDice
 
-Semester Project 2
-
-Delivery: September 2020
+Semester Project 2 (delivery: September 2020)
 
 Link: http://tinamary.com/noroff/semester-project-02
 
