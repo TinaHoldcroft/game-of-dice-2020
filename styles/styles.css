@@ -504,52 +504,90 @@ footer {
   padding-bottom: 3rem;
 }
 
-.intro-container {
-  z-index: 9;
-  background-image: url("images/indexBackground.jpg");
-  filter: grayscale(100%);
-  height: 91vh;
-  width: 100vw;
-  top: 5.5rem;
+#intro__box {
   position: absolute;
-}
-
-#text__intro {
-  position: absolute;
-  background-color: #242424a8;
-  top: 30vh;
+  top: 50vh;
+  margin-top: -15rem;
   left: 50vw;
-  margin-left: -29rem;
+  margin-left: -35rem;
   z-index: 9;
-  width: 58rem;
+  width: 30rem;
+  height: 36rem;
+  background-color: #00ffff;
   box-shadow: -8px -8px 18px 0 rgba(0, 0, 0, 0.55), inset 3px 3px 7px rgba(0, 0, 0, 0.15), inset -3px -3px 7px rgba(255, 255, 255, 0.09);
-  padding: 3rem;
   border-radius: 25px;
 }
-#text__intro h1 {
-  padding-bottom: 2rem;
+#intro__box h1 {
+  position: relative;
+  margin-top: 11rem;
+  margin-left: -7.2rem;
+  font-family: chuck, sans-serif;
+  font-size: 8.4em;
+  line-height: 0.8em;
+  transform: rotate(-90deg);
+  height: 13rem;
+  width: 33rem;
+  z-index: 9;
+  color: rgba(0, 0, 0, 0.185);
 }
-#text__intro p {
+#intro__box h1 span {
+  font-size: 0.65em;
+}
+
+#intro__img {
+  position: absolute;
+  z-index: 11;
+  top: 50vh;
+  margin-top: -3rem;
+  left: 50vw;
+  margin-left: -38rem;
+  width: 32rem;
+  transform: rotate(-55deg);
+}
+
+#intro__txt {
+  position: absolute;
+  background-color: #242424;
+  top: 50vh;
+  margin-top: -12rem;
+  left: 50vw;
+  margin-left: -15rem;
+  z-index: 9;
+  width: 49rem;
+  height: 30rem;
+  box-shadow: -8px -8px 18px 0 rgba(0, 0, 0, 0.55), inset 3px 3px 7px rgba(0, 0, 0, 0.15), inset -3px -3px 7px rgba(255, 255, 255, 0.09);
+  border-radius: 25px;
+}
+#intro__txt h1 {
+  font-family: montserrat, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  line-height: 1em;
+  color: #ffffff;
+  font-size: 4.4em;
+  margin-top: 3rem;
   text-align: center;
-  font-size: 1.3em;
+  padding: 2rem;
+}
+#intro__txt p {
+  margin-left: 8rem;
+  font-size: 1.2em;
   line-height: 1.6em;
-  padding-bottom: 2rem;
-  margin-left: 5vw;
-  margin-right: 5vw;
+  width: 32rem;
 }
 
 .intro-btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 1rem;
+  margin-top: 2.5rem;
 }
 .intro-btn button {
-  width: 20vw;
+  width: 15rem;
   height: 5rem;
-  font-size: 1.5em;
+  font-size: 1.4em;
   color: #00ffff;
-  border: #242424 solid 2px;
+  border: #00ffff solid 2px;
   background-color: 242424;
   text-transform: uppercase;
   box-shadow: -8px -8px 18px 0 rgba(0, 0, 0, 0.55), inset 3px 3px 7px rgba(0, 0, 0, 0.15), inset -3px -3px 7px rgba(255, 255, 255, 0.09);
