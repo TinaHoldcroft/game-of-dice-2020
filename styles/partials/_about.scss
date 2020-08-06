@@ -30,28 +30,6 @@
     --grid-colour: #00ffff;
     --grid-blur: 1px;
 }
-.synthwave-box {
-    position: absolute;
-    overflow-y: scroll;
-    left: 50vw;
-    margin-left: -40vw;
-    height: calc(100% - 22rem);
-    bottom: 3rem;
-    width: 85vw;
-    border: solid #00ffff 2px;
-    background-color: #191919;
-    h3 {
-        text-align: left;
-        margin-top: 0.5rem;
-        margin-left: 1rem;
-        margin-right: 2rem;
-    }
-    p {
-        margin-top: 0.5rem;
-        margin-left: 1rem;
-        margin-right: 2rem;
-    }
-}
 .synthwave-heading {
     h1 {
         position: absolute;
@@ -132,3 +110,25 @@
 }
 .GitHub-wave { transform-origin: 130px 106px; }
 .github-corner:hover .GitHub-wave { animation: octocat-wave 760ms ease-in-out; }
+.synthwave-box {
+    position: absolute;
+    overflow-y: scroll;
+    left: 50vw;
+    margin-left: -40vw;
+    height: calc(100% - 22rem);
+    bottom: 3rem;
+    width: 85vw;
+    border: solid #00ffff 2px;
+    background-color: #191919;
+    div {
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+        margin-left: 3rem;
+        margin-right: 4rem;
+    }
+    h3, h4, p {
+        text-align: left;
+        margin-top: 1rem;
+
+    }
+}

@@ -117,6 +117,12 @@ h3 {
   font-family: montserrat, sans-serif;
 }
 
+h4 {
+  font-size: 1.2em;
+  text-align: left;
+  font-family: montserrat, sans-serif;
+}
+
 p {
   font-family: montserrat, sans-serif;
   font-size: 1em;
@@ -170,6 +176,14 @@ a[id]:active::after {
 }
 .active i, .active span, .active a {
   color: #00ffff;
+}
+
+.links-new-panel {
+  font-weight: bold;
+}
+
+.links-new-panel:hover {
+  color: #8d8d8d;
 }
 
 .logo {
@@ -723,29 +737,6 @@ footer {
   --grid-blur: 1px;
 }
 
-.synthwave-box {
-  position: absolute;
-  overflow-y: scroll;
-  left: 50vw;
-  margin-left: -40vw;
-  height: calc(100% - 22rem);
-  bottom: 3rem;
-  width: 85vw;
-  border: solid #00ffff 2px;
-  background-color: #191919;
-}
-.synthwave-box h3 {
-  text-align: left;
-  margin-top: 0.5rem;
-  margin-left: 1rem;
-  margin-right: 2rem;
-}
-.synthwave-box p {
-  margin-top: 0.5rem;
-  margin-left: 1rem;
-  margin-right: 2rem;
-}
-
 .synthwave-heading h1 {
   position: absolute;
   z-index: 9;
@@ -837,6 +828,28 @@ footer {
 
 .github-corner:hover .GitHub-wave {
   animation: octocat-wave 760ms ease-in-out;
+}
+
+.synthwave-box {
+  position: absolute;
+  overflow-y: scroll;
+  left: 50vw;
+  margin-left: -40vw;
+  height: calc(100% - 22rem);
+  bottom: 3rem;
+  width: 85vw;
+  border: solid #00ffff 2px;
+  background-color: #191919;
+}
+.synthwave-box div {
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  margin-left: 3rem;
+  margin-right: 4rem;
+}
+.synthwave-box h3, .synthwave-box h4, .synthwave-box p {
+  text-align: left;
+  margin-top: 1rem;
 }
 
 #contact {
