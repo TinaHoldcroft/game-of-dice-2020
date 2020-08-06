@@ -1,4 +1,5 @@
 # 2020-09_GameofDice
+![Image of site](styles/images/readme.png)
 
 [Semester Project 2 (delivery: September 2020)](http://tinamary.com/noroff/semester-project-02)
 
