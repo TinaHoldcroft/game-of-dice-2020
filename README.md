@@ -1,5 +1,5 @@
 # 2020-09_GameofDice
-![Image of site](styles/images/readme.png)
+![Image of site](https://github.com/TinaHoldcroft/2020-09_GameofDice/blob/master/styles/images/readme.PNG)
 
 [Semester Project 2 (delivery: September 2020)](http://tinamary.com/noroff/semester-project-02)
 
