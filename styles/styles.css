@@ -865,4 +865,14 @@ footer {
   height: 100vh;
 }
 
+#loser {
+  width: 100vw;
+  height: 100vh;
+}
+
+#winner {
+  width: 100vw;
+  height: 100vh;
+}
+
 /*# sourceMappingURL=styles.css.map */
