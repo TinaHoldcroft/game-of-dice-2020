@@ -851,6 +851,9 @@ footer {
   text-align: left;
   margin-top: 1rem;
 }
+.synthwave-box p {
+  font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+}
 
 #contact {
   width: 100vw;
