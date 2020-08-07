@@ -1,5 +1,4 @@
-//logo
-.logo {
+.logo { //logo
     display: block;
     margin-left: 1rem;
     padding: 1rem;
@@ -8,8 +7,7 @@
         padding: 0.5rem; 
         img { display: none; }
     }
-    //logo icon
-    img { 
+    img { //logo icon
         height: 35px;
         width: 35px;
         transition: transform ease-out 0.1s;
