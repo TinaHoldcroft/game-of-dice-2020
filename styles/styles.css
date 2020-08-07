@@ -606,14 +606,13 @@ footer {
     left: 50vw;
     margin-left: -25%;
     width: 68vw;
-    height: 70vh;
+    height: 35rem;
     z-index: 9;
   }
 }
 @media only screen and (max-width: 600px) {
   #intro__txt {
     margin-top: 8rem;
-    height: 80vh;
     z-index: 5;
   }
 }
@@ -716,6 +715,7 @@ footer {
   text-align: center;
   transition: width 1s, height 1s, transform 2s;
   transform-style: preserve-3d;
+  z-index: 1;
 }
 @-moz-document url-prefix() {
   .cards {
@@ -724,11 +724,14 @@ footer {
   }
 }
 
+.card-container:hover {
+  z-index: 9;
+}
+
 .card-container:hover .cards {
   transform: rotateY(180deg);
   width: calc(100% + 10rem);
   height: calc(100% + 19rem);
-  z-index: 9;
 }
 @media only screen and (max-width: 600px) {
   .card-container:hover .cards {

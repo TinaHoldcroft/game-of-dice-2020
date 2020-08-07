@@ -21,19 +21,18 @@
     text-align: center;
     transition: width 1s, height 1s, transform 2s;
     transform-style: preserve-3d;
+    z-index: 1;
     @-moz-document url-prefix() { //only for firefox browsers
         backface-visibility: hidden;
         -webkit-backface-visibility: hidden;
     }
 }
+.card-container:hover { z-index: 9; }
 .card-container:hover .cards {
     transform: rotateY(180deg);
     width: calc(100% + 10rem);
     height: calc(100% + 19rem);
-    z-index: 9;
-    @media only screen and (max-width: 600px) {     
-        width: calc(100% + 5rem);
-    }
+    @media only screen and (max-width: 600px) { width: calc(100% + 5rem); }
 }
 .card-front {
     position: absolute;
@@ -65,9 +64,7 @@
     //postition after rotation
     margin-left: 5.5rem;
     margin-top: -5vh;
-    @media only screen and (max-width: 600px) { 
-        margin-left: 3rem;
-    }
+    @media only screen and (max-width: 600px) { margin-left: 3rem; }
     img {
         width: 100%;
         border-radius: 30px 30px 0px 0px;
