@@ -531,6 +531,16 @@ footer {
   box-shadow: -8px -8px 18px 0 rgba(0, 0, 0, 0.55), inset 3px 3px 7px rgba(0, 0, 0, 0.15), inset -3px -3px 7px rgba(255, 255, 255, 0.09);
   border-radius: 25px;
 }
+@media only screen and (max-width: 600px) {
+  #intro__box {
+    top: 5rem;
+    margin-top: 1rem;
+    left: 0vw;
+    margin-left: 5.2rem;
+    width: 74vw;
+    height: 30rem;
+  }
+}
 #intro__box h1 {
   position: relative;
   margin-top: 11rem;
@@ -558,6 +568,11 @@ footer {
   width: 32rem;
   transform: rotate(-55deg);
 }
+@media only screen and (max-width: 600px) {
+  #intro__img {
+    display: none;
+  }
+}
 
 #intro__txt {
   position: absolute;
@@ -572,6 +587,16 @@ footer {
   box-shadow: -8px -8px 18px 0 rgba(0, 0, 0, 0.55), inset 3px 3px 7px rgba(0, 0, 0, 0.15), inset -3px -3px 7px rgba(255, 255, 255, 0.09);
   border-radius: 25px;
 }
+@media only screen and (max-width: 600px) {
+  #intro__txt {
+    top: 5rem;
+    margin-top: 10rem;
+    left: 0vw;
+    margin-left: 6rem;
+    width: 68vw;
+    height: 33rem;
+  }
+}
 #intro__txt h1 {
   font-family: montserrat, sans-serif;
   text-transform: uppercase;
@@ -583,11 +608,27 @@ footer {
   text-align: center;
   padding: 2rem;
 }
+@media only screen and (max-width: 600px) {
+  #intro__txt h1 {
+    margin-top: 0.5rem;
+    margin-left: -1rem;
+    font-size: 2.8em;
+    width: 75vw;
+  }
+}
 #intro__txt p {
   margin-left: 8rem;
   font-size: 1.2em;
   line-height: 1.6em;
   width: 32rem;
+}
+@media only screen and (max-width: 600px) {
+  #intro__txt p {
+    margin-left: 2.5rem;
+    font-size: 1em;
+    line-height: 1.5em;
+    width: 50vw;
+  }
 }
 
 .intro-btn {
@@ -596,6 +637,11 @@ footer {
   justify-content: center;
   margin-top: 2.5rem;
 }
+@media only screen and (max-width: 600px) {
+  .intro-btn {
+    flex-direction: column;
+  }
+}
 .intro-btn button {
   width: 14.5rem;
   height: 4rem;
@@ -603,16 +649,19 @@ footer {
   font-weight: 500;
   color: #242424;
   border: #00ffff solid 2px;
-  border-radius: 50px;
   background-color: #00ffff;
   text-transform: uppercase;
+}
+@media only screen and (max-width: 600px) {
+  .intro-btn button {
+    margin-bottom: 2rem;
+  }
 }
 .intro-btn :hover {
   transform: scale(0.99);
 }
 .intro-btn :active {
-  color: #00ffff;
-  background-color: #242424;
+  opacity: 0.7;
 }
 
 .character-container {
