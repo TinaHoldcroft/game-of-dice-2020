@@ -49,9 +49,7 @@
         -webkit-text-fill-color: transparent;
         -webkit-text-stroke-width: 2px;
         -webkit-text-stroke-color: white;
-        @-moz-document url-prefix() { //only for firefox browsers
-            top: 3.4rem;
-        }
+        @-moz-document url-prefix() { top: 3.4rem; } //only for firefox browsers
     }
     h2 {
         position: absolute;
@@ -67,7 +65,6 @@
         text-transform: none;
         transform: rotate(-13deg);
         text-shadow: 0 0 1px #00ffff, 0 -3px 3px rgba(255, 255, 255, 0.205), 0 3px 3px rgba(0, 0, 0, 0.5), 0 0 15px #00ffff, 0 0 25px #00ffffcc;
-        //text-decoration: underline;
     }
     hr {
         position: absolute;
@@ -93,7 +90,7 @@
 }
 //GitHub corner
 @keyframes octocat-wave {
-    0%, 100% { transform: rotate(0); }
+    0%, 100% { transform: rotate(0); } 
     20%, 60% { transform: rotate(-25deg); }
     40%, 80% { transform: rotate(0deg); }
 }
@@ -121,9 +118,7 @@
     width: 85vw;
     border: solid #00ffff 2px;
     background-color: #191919;
-    @media only screen and (max-width: 1100px) { 
-        height: calc(100% - 12rem);
-    }
+    @media only screen and (max-width: 1100px) { height: calc(100% - 12rem); }
     @media only screen and (max-width: 800px) { 
         height: calc(100% - 12rem);
         width: 79vw;
