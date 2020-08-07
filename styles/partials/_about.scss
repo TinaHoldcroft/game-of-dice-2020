@@ -9,6 +9,7 @@
 //background
 @keyframes animated-grid { 100% { transform: perspective(50vh) rotateX(60deg) translateY(var(--grid-line)); } }
 .synthwave-grid {
+    z-index: -1;
     position: absolute;
     top: -30rem;
     left: 0;
@@ -87,6 +88,7 @@
     clip-path: polygon(0% 100%, 100% 100%, 0% 0%);
     border: 2px solid #00ffff;
     transform: rotate(-45deg);
+    z-index: 1;
 }
 //GitHub corner
 @keyframes octocat-wave {

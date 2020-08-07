@@ -28,6 +28,7 @@ footer {
     display: flex;
     justify-content: space-evenly;
     width: 40rem;
+    z-index: 9;
     @media only screen and (max-width: 600px) { //phone
         bottom: 1.3rem;
         width: 100vw;

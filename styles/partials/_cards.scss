@@ -30,6 +30,7 @@
     transform: rotateY(180deg);
     width: calc(100% + 10rem);
     height: calc(100% + 19rem);
+    z-index: 9;
     @media only screen and (max-width: 600px) {     
         width: calc(100% + 5rem);
     }

@@ -61,19 +61,6 @@ button:focus {
   outline: none;
 }
 
-main, #synthwave__triangle {
-  z-index: 1;
-}
-
-nav, .logo, .nav-container, .panel-container, .toggle-icon, .bubble-container,
-.card-container:hover {
-  z-index: 9;
-}
-
-.synthwave-grid {
-  z-index: -1;
-}
-
 ::-webkit-scrollbar {
   width: 10px;
   background: #191919;
@@ -190,6 +177,7 @@ a[id]:active::after {
   display: block;
   margin-left: 1rem;
   padding: 1rem;
+  z-index: 9;
 }
 @media only screen and (max-width: 600px) {
   .logo {
@@ -253,6 +241,7 @@ a[id]:active::after {
   overflow: hidden;
   background-color: #242424;
   box-shadow: inset 3px 3px 7px rgba(0, 0, 0, 0.15), inset -3px -3px 7px rgba(255, 255, 255, 0.05);
+  z-index: 9;
 }
 @media only screen and (max-width: 600px) {
   .nav-container {
@@ -263,6 +252,7 @@ a[id]:active::after {
 .nav-container nav {
   margin: 1rem;
   padding: 1rem;
+  z-index: 9;
 }
 .nav-container nav ul {
   display: flex;
@@ -298,6 +288,7 @@ a[id]:active::after {
 
 .panel-container {
   position: fixed;
+  z-index: 9;
 }
 .panel-container #logo__phone {
   padding-top: 0.3rem;
@@ -466,6 +457,7 @@ footer {
   display: flex;
   justify-content: space-evenly;
   width: 40rem;
+  z-index: 9;
 }
 @media only screen and (max-width: 600px) {
   .bubble-container {
@@ -736,6 +728,7 @@ footer {
   transform: rotateY(180deg);
   width: calc(100% + 10rem);
   height: calc(100% + 19rem);
+  z-index: 9;
 }
 @media only screen and (max-width: 600px) {
   .card-container:hover .cards {
@@ -814,6 +807,7 @@ footer {
   }
 }
 .synthwave-grid {
+  z-index: -1;
   position: absolute;
   top: -30rem;
   left: 0;
@@ -892,6 +886,7 @@ footer {
   clip-path: polygon(0% 100%, 100% 100%, 0% 0%);
   border: 2px solid #00ffff;
   transform: rotate(-45deg);
+  z-index: 1;
 }
 
 @keyframes octocat-wave {

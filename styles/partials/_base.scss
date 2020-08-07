@@ -49,17 +49,7 @@ button:active {
     outline: none;
     transform: scale(0.98)
 }
-button:focus {
-    outline: none;
-}
-
-//layout layers
-main, #synthwave__triangle { z-index: 1; }
-nav, .logo, .nav-container, .panel-container, .toggle-icon, .bubble-container, 
-.card-container:hover { z-index: 9; }
-.synthwave-grid {
-    z-index: -1;
-}
+button:focus { outline: none; }
 //scrollbar
 ::-webkit-scrollbar { //width
     width: 10px;
