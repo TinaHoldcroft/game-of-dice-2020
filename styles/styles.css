@@ -165,14 +165,6 @@ a[id]:active::after {
   color: #00ffff;
 }
 
-.links-new-panel {
-  font-weight: bold;
-}
-
-.links-new-panel:hover {
-  color: #8d8d8d;
-}
-
 .logo {
   display: block;
   margin-left: 1rem;
@@ -964,13 +956,16 @@ footer {
   text-align: left;
   margin-top: 1rem;
 }
-.synthwave-box p {
+.synthwave-box a {
+  font-weight: bold;
+  text-decoration: underline;
   font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
 }
-
-#contact {
-  width: 100vw;
-  height: 100vh;
+.synthwave-box a:hover {
+  color: #8d8d8d;
+}
+.synthwave-box p {
+  font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
 }
 
 #game {

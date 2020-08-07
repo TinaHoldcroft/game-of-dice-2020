@@ -142,5 +142,11 @@
         margin-top: 1rem;
 
     }
+    a {
+        font-weight: bold;
+        text-decoration: underline;
+        font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+    }
+    a:hover { color: #8d8d8d; }
     p { font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif; }
 }
