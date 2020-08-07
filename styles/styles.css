@@ -828,6 +828,11 @@ footer {
   --grid-blur: 1px;
 }
 
+@media only screen and (max-width: 1100px) {
+  .synthwave-heading {
+    display: none;
+  }
+}
 .synthwave-heading h1 {
   position: absolute;
   z-index: 9;
@@ -932,11 +937,30 @@ footer {
   border: solid #00ffff 2px;
   background-color: #191919;
 }
+@media only screen and (max-width: 1100px) {
+  .synthwave-box {
+    height: calc(100% - 12rem);
+  }
+}
+@media only screen and (max-width: 800px) {
+  .synthwave-box {
+    height: calc(100% - 12rem);
+    width: 79vw;
+    margin-left: -33vw;
+    bottom: 1rem;
+  }
+}
 .synthwave-box div {
   margin-top: 2rem;
   margin-bottom: 3rem;
   margin-left: 3rem;
   margin-right: 4rem;
+}
+@media only screen and (max-width: 800px) {
+  .synthwave-box div {
+    margin-left: 2rem;
+    margin-right: 1rem;
+  }
 }
 .synthwave-box h3, .synthwave-box h4, .synthwave-box p {
   text-align: left;
