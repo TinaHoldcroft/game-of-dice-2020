@@ -511,11 +511,11 @@ footer {
 }
 
 #index {
-  padding-top: 110vh;
+  padding-top: 102vh;
   padding-bottom: 10rem;
 }
 #index h2 {
-  padding-bottom: 3rem;
+  padding-bottom: 2rem;
 }
 
 #intro__box {
@@ -597,17 +597,22 @@ footer {
   margin-top: 2.5rem;
 }
 .intro-btn button {
-  width: 15rem;
-  height: 5rem;
+  width: 14.5rem;
+  height: 4rem;
   font-size: 1.4em;
-  color: #00ffff;
+  font-weight: 500;
+  color: #242424;
   border: #00ffff solid 2px;
-  background-color: 242424;
+  border-radius: 50px;
+  background-color: #00ffff;
   text-transform: uppercase;
-  box-shadow: -8px -8px 18px 0 rgba(0, 0, 0, 0.55), inset 3px 3px 7px rgba(0, 0, 0, 0.15), inset -3px -3px 7px rgba(255, 255, 255, 0.09);
 }
 .intro-btn :hover {
-  color: #242424;
+  transform: scale(0.99);
+}
+.intro-btn :active {
+  color: #00ffff;
+  background-color: #242424;
 }
 
 .character-container {

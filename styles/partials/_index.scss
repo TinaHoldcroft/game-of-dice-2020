@@ -1,10 +1,9 @@
 #index-header { .nav-container { box-shadow: none; } }
 #index { 
-    padding-top: 110vh;
+    padding-top: 102vh;
     padding-bottom: 10rem;
-    h2 { padding-bottom: 3rem; }
+    h2 { padding-bottom: 2rem; }
 }
-
 #intro__box {
     position: absolute;
     top: 50vh;
@@ -29,9 +28,7 @@
         width: 33rem;
         z-index: 9;
         color: rgba(0, 0, 0, 0.185);
-        span {
-            font-size: 0.65em;
-        }
+        span { font-size: 0.65em; }
     }
 }
 #intro__img {
@@ -79,14 +76,19 @@
     justify-content: center;
     margin-top: 2.5rem;
     button {
-        width: 15rem;
-        height: 5rem;
+        width: 14.5rem;
+        height: 4rem;
         font-size: 1.4em;
-        color: #00ffff;
+        font-weight: 500;
+        color: #242424;
         border: #00ffff solid 2px;
-        background-color: 242424;
+        border-radius: 50px;
+        background-color: #00ffff;
         text-transform: uppercase;
-        box-shadow: -8px -8px 18px 0 rgba(0, 0, 0, 0.55), inset 3px 3px 7px rgba(0,0,0,0.15), inset -3px -3px 7px rgba(255,255,255,0.09);
     }
-    :hover { color: #242424; }
+    :hover { transform: scale(0.99); }
+    :active { 
+        color: #00ffff;
+        background-color: #242424;
+    }
 }
