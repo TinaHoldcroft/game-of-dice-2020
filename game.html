@@ -54,49 +54,49 @@
                 </ul>
             </nav>
         </div>
+        <!-- player overveiw pannel -->
+        <div class="player-container">
+            <button class="dice-btn">Roll Dice</button>
+            <div id="playerLog" class="player-wrapper player-one"></div>
+            
+            <div id="opponentLog" class="player-wrapper player-two"></div>
+        </div>
 	</header>
 
 	<main id="game">
         <!-- board -->
         <div class="board">
-            <div class="start-tile"></div>
-            <div class="default-tile"></div>
-            <div class="default-tile"></div>
-            <div class="default-tile"></div>
-            <div class="trap-tile" data-message="Tile 4: Wait 3 turns" data-penalty="3" data-type="wait"></div>
-            <div class="default-tile"></div>
-            <div class="default-tile"></div>
-            <div id="throne_1" class="throne-tile" data-message="Throne 1"></div>
-            <div class="default-tile"></div>
-            <div class="default-tile"></div>
-            <div class="default-tile"></div>
-            <div class="trap-tile" data-message="Tile 11: Move back 5 spaces" data-penalty="5" data-type="back"></div>
-            <div class="default-tile"></div>
-            <div class="default-tile"></div>
-            <div class="default-tile"></div>
-            <div id="throne_2" class="throne-tile" data-message="Throne 2"></div>
-            <div class="default-tile"></div>
-            <div class="default-tile"></div>
-            <div class="trap-tile" data-message="Tile 18: back to start" data-penalty="18" data-type="back"></div>
-            <div class="default-tile"></div>
-            <div class="default-tile"></div>
-            <div class="trap-tile" data-message="Tile 21: wait  2 turns" data-penalty="2" data-type="wait"></div>
-            <div class="default-tile"></div>
-            <div id="throne_3" class="throne-tile" data-message="Throne 3"></div>
-            <div class="default-tile"></div>
-            <div class="default-tile"></div>
-            <div class="default-tile"></div>
-            <div class="trap-tile" data-message="Tile 27: move back 3 spaces" data-penalty="3" data-type="back"></div>
-            <div class="default-tile"></div>
-            <div class="default-tile"></div>
-            <div id="placeholder-2" class="finale-tile" data-message="Final tile (31)"></div>
-        </div>
-        
-        <!-- player overveiw pannel -->
-        <div class="player-container">
-            <div id="playerLog" class="player-wrapper player-one"></div>
-            <button class="dice-btn">Roll Dice</button>
-            <div id="opponentLog" class="player-wrapper player-two"></div>
+            <div class="tile-start"></div>
+            <div class="tile-default"></div>
+            <div class="tile-default"></div>
+            <div class="tile-default"></div>
+            <div class="tile-trap" data-message="Tile 4: Wait 3 turns" data-penalty="3" data-type="wait"></div>
+            <div class="tile-default"></div>
+            <div class="tile-default"></div>
+            <div id="throne_1" class="tile-throne" data-message="Throne 1"></div>
+            <div class="tile-default"></div>
+            <div class="tile-default"></div>
+            <div class="tile-default"></div>
+            <div class="tile-trap" data-message="Tile 11: Move back 5 spaces" data-penalty="5" data-type="back"></div>
+            <div class="tile-default"></div>
+            <div class="tile-default"></div>
+            <div class="tile-default"></div>
+            <div id="throne_2" class="tile-throne" data-message="Throne 2"></div>
+            <div class="tile-default"></div>
+            <div class="tile-default"></div>
+            <div class="tile-trap" data-message="Tile 18: Back to start" data-penalty="18" data-type="back"></div>
+            <div class="tile-default"></div>
+            <div class="tile-default"></div>
+            <div class="tile-trap" data-message="Tile 21: Wait  2 turns" data-penalty="2" data-type="wait"></div>
+            <div class="tile-default"></div>
+            <div id="throne_3" class="tile-throne" data-message="Throne 3"></div>
+            <div class="tile-default"></div>
+            <div class="tile-default"></div>
+            <div class="tile-default"></div>
+            <div class="tile-trap" data-message="Tile 27: Move back 3 spaces" data-penalty="3" data-type="back"></div>
+            <div class="tile-default"></div>
+            <div class="tile-default"></div>
+            <div id="throne_iron" class="tile-end" data-message="Final tile (31)"></div>
         </div>
     </main>
 
@@ -117,9 +117,7 @@
 
 	<!-- JavaScript -->
     <script src="scripts/base.js"></script>
-    <script src="scripts/navigation.js"></script>
     <script src="scripts/game.js"></script>
-    <script src="scripts/winner.js"></script>
-    <script src="scripts/looser.js"></script>
+    <script src="scripts/modals.js"></script>
 </body>	
 </html>

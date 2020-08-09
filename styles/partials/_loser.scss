@@ -1,4 +1,21 @@
 #loser {
     width: 100vw;
     height: 100vh;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    h1 {
+        font-family: lores-12, sans-serif;
+        font-size: 5.5em;
+    }
+    h2 {
+        padding-top: 2rem;
+    }
+}
+.loser-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }

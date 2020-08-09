@@ -128,11 +128,9 @@
         width: 14.5rem;
         height: 4rem;
         font-size: 1.4em;
-        font-weight: 500;
         color: #242424;
         border: #00ffff solid 2px;
         background-color: #00ffff;
-        text-transform: uppercase;
         @media only screen and (max-width: 1100px) { margin-bottom: 2rem; }
     }
     :hover { transform: scale(0.99); }

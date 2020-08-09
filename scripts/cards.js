@@ -1,4 +1,3 @@
-// https://github.com/joakimskoog/AnApiOfIceAndFire/blob/master/data/characters.json
 const houses = [
     "House Tully of Riverrun", //filenames card one: icons__HouseTullyofRiverrun || images__HouseTullyofRiverrun
     "House Stark of Winterfell", //filenames card two: icons__HouseStarkofWinterfell || images__HouseStarkofWinterfell
@@ -9,10 +8,9 @@ const houses = [
     "House Tyrell of Highgarden", //filenames card seven: icons__HouseTyrellofHighgarden || images__HouseTyrellofHighgarden
     "House Goodbrother of Hammerhorn", //filenames card eight: icons__HouseGoodbrotherofHammerhorn || images__HouseGoodbrotherofHammerhorn
     "House Nymeros Martell of Sunspear", //filenames card nine: icons__HouseNymerosMartellofSunspear || images__HouseNymerosMartellofSunspear
-    "House Greyjoy of Pyke" //filenames card ten: icons__HouseGreyjoyofPyke || images__HouseGreyjoyofPyke
-];
+    "House Greyjoy of Pyke" ]; //filenames card ten: icons__HouseGreyjoyofPyke || images__HouseGreyjoyofPyke
 
-//fetch API house data
+//fetch API house data (https://github.com/joakimskoog/AnApiOfIceAndFire/blob/master/data/characters.json)
 async function fetchData() {
     for (const house of houses) {
         await fetch(`https://anapioficeandfire.com/api/houses?name=${house}`)
@@ -20,16 +18,16 @@ async function fetchData() {
         .then(data => {
             console.log('fetch successful');
             if (house === "") {
-                createCards(data[1]);} 
+                createCards(data[1]); } 
             else {
-                createCards(data[0]);}})
+                createCards(data[0]); } })
         .catch(error => { 
             console.log('fetch failed '+ error);
-            alert('Error fetching API, see console for more details');})}}
+            alert('Error fetching API, see console for more details'); }) } }
 fetchData();
 
-//create player cards
 const cardContainer = document.querySelector('.character-container'); //where to display cards
+
 function createCards(house) {
     if (!house) return;
         const filename = house.name.replace(/\s/g, ''); //remove spaces in name
@@ -59,21 +57,17 @@ let houseSelection = '';
 let playerOne = '';
 
 function confimationMessage(selected) {
-    if (duplicate) { return `This card has allready been selected for player one`; } 
+    if (duplicate) { return `You can not pick the same player twice`; } 
     else if (!playerOne) { return `You have selected ${selected} to be player one`; } 
     else { return `You have selected ${selected} to be player two`; }}
 
 function openModal(selected) {
     duplicate = playerOne && selected === playerOne; //mark as duplicate if same card is selected twice
     let modalMessage = confimationMessage(selected);
-    let confirmBtn = { label: 'Confirm', clickHandler: () => confirm(selected) }; //confirm choice button
-    let cancelBtn = { label: 'Cancel', clickHandler: cancel }; //cancel choice button
-        if (duplicate) { //buttons when duplicate selected
-            confirmBtn = { label: 'Repick player one', clickHandler: cancel };
-            cancelBtn = {
-                label: 'Repick player two',
-                clickHandler: () => confirm(selected)};}
-    const selectionMessage = new Modal(modalMessage, confirmBtn, cancelBtn);
+    let confirmBtn = { label: 'OK', clickHandler: () => confirm(selected) }; //confirm choice button
+    if (duplicate) { //buttons when duplicate selected
+        confirmBtn = { label: 'Repick', clickHandler: cancel };}
+    const selectionMessage = new Modal(modalMessage, confirmBtn);
     selectionMessage.answer();
 } 
 function confirm(selected) { //confirm choice of player
