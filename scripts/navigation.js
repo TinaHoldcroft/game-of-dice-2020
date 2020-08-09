@@ -19,3 +19,7 @@ $('#dropdown').click(function() {
         $('nav').addClass('showDropdown');   
         console.log ('Dropdown opened: class added to nav');          
 }});
+
+//play again
+const playAgainButton = document.querySelector('#play-again-button');
+playAgainButton.addEventListener('click', () => history.back()); //remember players and go back to game
