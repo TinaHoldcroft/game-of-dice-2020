@@ -12,7 +12,8 @@
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    margin-top: 4.5rem;
+    margin-top: 5.5rem;
+    margin-bottom: 20vh;
 }
 .player-container {
     position: absolute;
@@ -27,7 +28,7 @@
     position: absolute;
     left: 17vw;
     height: 5.5rem;
-    width: 10vw;
+    width: 9rem;
     font-size: 1em;
     font-weight: 500;
     text-transform: uppercase;
