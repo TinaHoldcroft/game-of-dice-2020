@@ -1286,7 +1286,7 @@ div[class^=tile] {
 @media only screen and (max-width: 1000px) {
   .winner-btn {
     flex-direction: column;
-    margin-top: -30vh;
+    margin-top: -10rem;
   }
 }
 .winner-btn button {
