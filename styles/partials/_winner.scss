@@ -7,9 +7,18 @@
     align-items: center;
     h1 {
         font-size: 5.5em;
+        //text-shadow: 0 0 1px #00ffff, 0 -3px 3px rgba(255, 255, 255, 0.205), 0 3px 3px rgba(0, 0, 0, 0.5), 0 0 15px #00ffff, 0 0 25px #00ffffcc;
+        //font-family: 'Yellowtail', cursive;
+        //transform: rotate(-10deg);
     }
     h2 {
-        padding-top: 2rem;
+ 
+        color: #00ffff;
+        font-size: 5.5em;
+        font-family: 'Yellowtail', cursive;
+        text-transform: inherit;
+        transform: rotate(-10deg);
+    text-shadow: 0 0 1px #00ffff, 0 -3px 3px rgba(255, 255, 255, 0.205), 0 3px 3px rgba(0, 0, 0, 0.5), 0 0 15px #00ffff, 0 0 25px #00ffffcc;   
     }
 }
 .winner-btn {
@@ -17,4 +26,31 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+}
+#synthwave {
+    overflow: hidden;
+}
+@keyframes animated-grid { 100% { transform: perspective(50vh) rotateX(60deg) translateY(var(--grid-line)); } }
+.synthwave-grid {
+    z-index: -1;
+    position: absolute;
+    top: -30rem;
+    left: 0;
+    bottom: 80vh; //start
+    width: 100vw;
+    height: 100vh;
+    background: repeating-linear-gradient(90deg, var(--grid-colour),
+                transparent var(--grid-blur), 
+                transparent var(--grid-line),
+                var(--grid-colour) calc(var(--grid-line) + var(--grid-blur))),
+                repeating-linear-gradient(180deg, var(--grid-colour),
+                transparent var(--grid-blur), 
+                transparent var(--grid-line),
+                var(--grid-colour) calc(var(--grid-line) + var(--grid-blur)));
+    transform: perspective(50vh) rotateX(60deg);
+    animation: animated-grid 3s infinite linear; //movement, speed
+    //style grid
+    --grid-line: 2rem;
+    --grid-colour: #00ffff;
+    --grid-blur: 1px;
 }
