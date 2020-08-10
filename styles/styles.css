@@ -1146,8 +1146,18 @@ div[class^=tile] {
   font-family: lores-12, sans-serif;
   font-size: 8.5em;
 }
+@media only screen and (max-width: 600px) {
+  #loser h1 {
+    font-size: 6.5em;
+  }
+}
 #loser h2 {
   padding-top: 2rem;
+}
+@media only screen and (max-width: 600px) {
+  #loser h2 {
+    font-size: 1.5em;
+  }
 }
 
 .loser-btn {
@@ -1155,6 +1165,14 @@ div[class^=tile] {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+@media only screen and (max-width: 600px) {
+  .loser-btn {
+    flex-direction: column;
+  }
+  .loser-btn button {
+    margin: 1rem;
+  }
 }
 
 .flash {
