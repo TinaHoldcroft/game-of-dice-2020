@@ -1,17 +1,12 @@
 #game-body {
-    .logo {
-        @media only screen and (max-width: 600px) { 
-            margin-left: 35vw;
-
-        }
+    .logo {  
+        @media only screen and (max-width: 600px) { margin-left: 35vw; } 
     }
     footer {
         height: 8rem;
-        @media only screen and (max-width: 600px) { display: flex; }
+        @media only screen and (max-width: 600px) { display: flex; } 
     }
 }
-
-
 #game {
     width: 100vw;
     height: 100vh; 
@@ -40,9 +35,7 @@
     margin-left: -25vw;
     width: 50vw;
     height: 5.5rem;
-    @media only screen and (max-width: 600px) { 
-        top: 5.5rem;
-    }
+    @media only screen and (max-width: 600px) { top: 5.5rem; }
 }
 .dice-btn {
     position: absolute;
@@ -130,8 +123,8 @@ div[class^="tile"] {
 .tile-trap { background-color: #00ffff94; }
 .tile-throne {
     background-color: #19191960;
-    .tile-number { color: transparent; }
     background-size: 55%;
+    .tile-number { color: transparent; }
 }
 .tile-end {
     background-color: #19191960;
