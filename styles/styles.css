@@ -842,7 +842,10 @@ footer {
 @media only screen and (max-width: 1300px) {
   #about {
     flex-direction: column;
-    padding-top: 40rem;
+    padding-top: 15rem;
+    padding-bottom: 0;
+    width: 100%;
+    height: 100%;
   }
 }
 
