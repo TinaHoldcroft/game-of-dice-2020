@@ -19,7 +19,7 @@
 	<title>Game | Game of Dice </title> <!-- page title -->
 </head>
 
-<body>
+<body id="game-body">
     <header>
 		<div class="nav-container">
 			<!-- logo desktop-->
@@ -31,28 +31,6 @@
 					<li><a href="about.html"><i class="fas fa-question-circle"></i><span>About</span></a></li>
 				</ul>
 			</nav>
-        </div>
-        <!-- phone navigation side bar panel -->
-        <div class="panel-container">
-            <!-- logo phone-->
-            <div id="logo__phone"><a href="index.html"><img src="styles/images/dice-logo.svg" alt="Logo"></a></div>
-            <!-- toggle button -->
-            <div id="navToggle" class="unicode"><i id="unicode__toggle" class="fa"></i></div>
-            <nav>
-                <ul>
-                    <!-- active page --><li class="active"><a href="index.html">Play<i class="fa fa-play"></i></a></li>
-                    <li id="dropdown">
-                        <a>About</a>
-                        <i class="fas fa-question-circle"></i>
-                        <i class="fa fa-caret-down"></i>
-                        <ul id="dropdown-menu">
-                            <li><a href="about.html#info">Information</a></li>
-                            <li><a href="about.html#how">How to play</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="contact.html">Contact<i class="fa fa-envelope"></i></a></li>
-                </ul>
-            </nav>
         </div>
         <!-- player overveiw pannel -->
         <div class="player-container">
@@ -99,7 +77,7 @@
         </div>
     </main>
 
-    <footer>
+    <footer id="game-footer">
         <div class="copy-container">Copyright &copy; Game of Dice 2020</div>
 		<div class="bubble-container">
             <div class="bubble active"> <!-- active page-->
