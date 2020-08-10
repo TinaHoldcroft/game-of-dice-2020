@@ -813,6 +813,11 @@ footer {
   background-color: #242424;
   box-shadow: -8px -8px 18px 0 rgba(0, 0, 0, 0.55), inset 3px 3px 7px rgba(0, 0, 0, 0.15), inset -3px -3px 7px rgba(255, 255, 255, 0.09);
 }
+@media only screen and (max-width: 600px) {
+  .modal {
+    width: 21rem;
+  }
+}
 .modal p {
   text-align: center;
   font-size: 1.2em;
@@ -998,7 +1003,7 @@ footer {
 }
 @media only screen and (max-width: 1000px) {
   .dice-btn {
-    width: 31vw;
+    width: 9rem;
     height: 2.5rem;
     left: 17vw;
     font-size: 0.8em;
