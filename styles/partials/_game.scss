@@ -26,7 +26,6 @@
 .dice-btn {
     position: absolute;
     left: 17vw;
-    //margin-left: -5vw;
     height: 5.5rem;
     width: 10vw;
     font-size: 1em;
@@ -46,7 +45,6 @@
     cursor: not-allowed;
     box-shadow: none;
 }
-.dice-btn:hover { transform: scale(0.98); }
 .player-one {
     img { 
         position: absolute;
