@@ -3,8 +3,10 @@
         @media only screen and (max-width: 600px) { margin-left: 35vw; } 
     }
     footer {
-        height: 8rem;
-        @media only screen and (max-width: 600px) { display: flex; } 
+        @media only screen and (max-width: 600px) { 
+            display: flex; 
+            height: 8rem
+        } 
     }
 }
 #game {
@@ -26,6 +28,7 @@
     align-items: center;
     margin-top: 4.5rem;
     margin-bottom: 5vh;
+    @media only screen and (max-width: 1000px) { margin-top: 7rem;}
 }
 .player-container {
     position: absolute;
@@ -35,7 +38,7 @@
     margin-left: -25vw;
     width: 50vw;
     height: 5.5rem;
-    @media only screen and (max-width: 600px) { top: 5.5rem; }
+    @media only screen and (max-width: 1000px) { top: 7rem; }
 }
 .dice-btn {
     position: absolute;
@@ -53,8 +56,8 @@
                 0 0 13px #03e9f4,
                 0 0 25px #03e9f4,
                 0 0 100px #03e9f4;
-    @media only screen and (max-width: 600px) { 
-        width: 38vw;
+    @media only screen and (max-width: 1000px) { 
+        width: 31vw;
         height: 2.5rem;
         left: 17vw;
         font-size: 0.8em;
@@ -71,7 +74,7 @@
         top: 1rem;
         left: 2vw;
         height: 3rem;
-        @media only screen and (max-width: 600px) { display: none; }
+        @media only screen and (max-width: 1000px) { display: none; }
     }
     .dice-paragraph {
         margin-left: 10vw;
@@ -79,7 +82,7 @@
         height: 3rem;
         width: auto;
         background-repeat: no-repeat;
-        @media only screen and (max-width: 600px) { 
+        @media only screen and (max-width: 1000px) { 
             height: 2.5rem;
             margin-left: 11vw;
             margin-top: 0rem;
@@ -92,7 +95,7 @@
         top: 1rem;
         right: 3vw;
         height: 3rem;
-        @media only screen and (max-width: 600px) { display: none; }
+        @media only screen and (max-width: 1000px) { display: none; }
     }
     .dice-paragraph {
         margin-left: 35vw;
@@ -100,7 +103,7 @@
         height: 3rem;
         width: auto;
         background-repeat: no-repeat;
-        @media only screen and (max-width: 600px) { 
+        @media only screen and (max-width: 1000px) { 
             height: 2.5rem;
             margin-left: -1vw;
             margin-top: -2.5rem;

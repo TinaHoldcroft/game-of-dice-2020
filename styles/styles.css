@@ -929,12 +929,10 @@ footer {
     margin-left: 35vw;
   }
 }
-#game-body footer {
-  height: 8rem;
-}
 @media only screen and (max-width: 600px) {
   #game-body footer {
     display: flex;
+    height: 8rem;
   }
 }
 
@@ -963,6 +961,11 @@ footer {
   margin-top: 4.5rem;
   margin-bottom: 5vh;
 }
+@media only screen and (max-width: 1000px) {
+  .board {
+    margin-top: 7rem;
+  }
+}
 
 .player-container {
   position: absolute;
@@ -973,9 +976,9 @@ footer {
   width: 50vw;
   height: 5.5rem;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1000px) {
   .player-container {
-    top: 5.5rem;
+    top: 7rem;
   }
 }
 
@@ -993,9 +996,9 @@ footer {
   background-color: #00ffff;
   box-shadow: 0 0 3px #03e9f4, 0 0 13px #03e9f4, 0 0 25px #03e9f4, 0 0 100px #03e9f4;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1000px) {
   .dice-btn {
-    width: 38vw;
+    width: 31vw;
     height: 2.5rem;
     left: 17vw;
     font-size: 0.8em;
@@ -1014,7 +1017,7 @@ footer {
   left: 2vw;
   height: 3rem;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1000px) {
   .player-one img {
     display: none;
   }
@@ -1026,7 +1029,7 @@ footer {
   width: auto;
   background-repeat: no-repeat;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1000px) {
   .player-one .dice-paragraph {
     height: 2.5rem;
     margin-left: 11vw;
@@ -1040,7 +1043,7 @@ footer {
   right: 3vw;
   height: 3rem;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1000px) {
   .player-two img {
     display: none;
   }
@@ -1052,7 +1055,7 @@ footer {
   width: auto;
   background-repeat: no-repeat;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1000px) {
   .player-two .dice-paragraph {
     height: 2.5rem;
     margin-left: -1vw;
