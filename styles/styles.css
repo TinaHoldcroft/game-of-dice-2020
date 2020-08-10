@@ -846,6 +846,7 @@ footer {
 }
 #about_txt h2 {
   margin-bottom: -4rem;
+  text-align: left;
 }
 #about_txt h3 {
   margin-bottom: 2rem;
