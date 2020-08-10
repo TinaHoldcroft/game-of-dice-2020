@@ -7,18 +7,14 @@
     align-items: center;
     h1 {
         font-size: 5.5em;
-        //text-shadow: 0 0 1px #00ffff, 0 -3px 3px rgba(255, 255, 255, 0.205), 0 3px 3px rgba(0, 0, 0, 0.5), 0 0 15px #00ffff, 0 0 25px #00ffffcc;
-        //font-family: 'Yellowtail', cursive;
-        //transform: rotate(-10deg);
     }
     h2 {
- 
-        color: #00ffff;
+        color: white;
         font-size: 5.5em;
         font-family: 'Yellowtail', cursive;
         text-transform: inherit;
         transform: rotate(-10deg);
-    text-shadow: 0 0 1px #00ffff, 0 -3px 3px rgba(255, 255, 255, 0.205), 0 3px 3px rgba(0, 0, 0, 0.5), 0 0 15px #00ffff, 0 0 25px #00ffffcc;   
+        text-shadow: 0 0 1px #00ffff, 0 -3px 3px rgba(255, 255, 255, 0.205), 0 3px 3px rgba(0, 0, 0, 0.5), 0 0 15px #00ffff, 0 0 25px #00ffffcc;   
     }
 }
 .winner-btn {

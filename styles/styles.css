@@ -1126,7 +1126,7 @@ div[class^=tile] {
 }
 #loser h1 {
   font-family: lores-12, sans-serif;
-  font-size: 5.5em;
+  font-size: 8.5em;
 }
 #loser h2 {
   padding-top: 2rem;
@@ -1139,6 +1139,15 @@ div[class^=tile] {
   align-items: center;
 }
 
+.flash {
+  animation: flash 1s linear infinite;
+}
+
+@keyframes flash {
+  50% {
+    opacity: 0;
+  }
+}
 #winner {
   width: 100vw;
   height: 100vh;
@@ -1151,7 +1160,7 @@ div[class^=tile] {
   font-size: 5.5em;
 }
 #winner h2 {
-  color: #00ffff;
+  color: white;
   font-size: 5.5em;
   font-family: "Yellowtail", cursive;
   text-transform: inherit;
