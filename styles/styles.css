@@ -506,6 +506,8 @@ footer {
 @media only screen and (max-width: 600px) {
   #index h2 {
     padding-left: 20%;
+    padding-top: 0vh;
+    padding-bottom: 0rem;
   }
 }
 
@@ -531,11 +533,7 @@ footer {
 }
 @media only screen and (max-width: 600px) {
   #intro__box {
-    margin-top: -18rem;
-    width: 20rem;
-    height: 30rem;
-    margin-left: -32%;
-    z-index: 5;
+    display: none;
   }
 }
 #intro__box h1 {
@@ -553,11 +551,6 @@ footer {
 }
 #intro__box h1 span {
   font-size: 0.65em;
-}
-@media only screen and (max-width: 600px) {
-  #intro__box h1 {
-    display: none;
-  }
 }
 
 #intro__img {
@@ -606,7 +599,12 @@ footer {
 }
 @media only screen and (max-width: 600px) {
   #intro__txt {
-    margin-top: 8rem;
+    margin-top: 0rem;
+    top: 0;
+    margin-top: 10rem;
+    left: 50vw;
+    margin-left: -29vw;
+    width: 70vw;
     z-index: 5;
   }
 }
