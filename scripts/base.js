@@ -27,3 +27,17 @@ $('#dropdown').click(function() { //dropdown menu
     else { //open           
         $('nav').addClass('showDropdown');   
         console.log ('Dropdown opened: class added to nav'); } });
+        
+//fullscreen mode
+document.addEventListener("keypress", function(esc) { 
+    if (esc.keyCode === 13) { toggleFullScreen(); }
+    }, false);
+
+function toggleFullScreen() {
+    if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen(); 
+        console.log('fullcreen activated'); } 
+    else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen();
+            console.log('fullcreen de-activated'); } } }
