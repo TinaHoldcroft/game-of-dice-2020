@@ -604,7 +604,7 @@ footer {
     margin-top: -15rem;
     left: 50vw;
     margin-left: -29vw;
-    width: 70vw;
+    width: 75vw;
     z-index: 5;
   }
 }
@@ -697,6 +697,14 @@ footer {
   perspective: 100rem;
   margin: 1.5rem;
 }
+@media only screen and (max-width: 600px) {
+  .card-container {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    margin-left: -1rem;
+    margin-right: 0rem;
+  }
+}
 
 .cards {
   position: relative;
@@ -725,7 +733,8 @@ footer {
 }
 @media only screen and (max-width: 600px) {
   .card-container:hover .cards {
-    width: calc(100% + 5rem);
+    width: calc(100% + 2rem);
+    height: calc(100% + 19rem);
   }
 }
 
@@ -762,7 +771,7 @@ footer {
 }
 @media only screen and (max-width: 600px) {
   .card-back {
-    margin-left: 3rem;
+    margin-left: 1rem;
   }
 }
 .card-back img {
