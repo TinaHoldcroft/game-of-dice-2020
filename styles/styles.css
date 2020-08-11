@@ -1279,7 +1279,7 @@ div[class^=tile] {
   #winner h2 {
     margin-top: 10vh;
     text-transform: uppercase;
-    font-size: 7em;
+    font-size: 5em;
   }
 }
 
@@ -1295,6 +1295,7 @@ div[class^=tile] {
   .winner-btn {
     flex-direction: column;
     margin-top: -10rem;
+    font-size: 1.2em;
   }
 }
 .winner-btn button {
@@ -1304,6 +1305,8 @@ div[class^=tile] {
 @media only screen and (max-width: 1000px) {
   .winner-btn button {
     margin: 1rem;
+    width: 10rem;
+    height: 3.5rem;
   }
 }
 
