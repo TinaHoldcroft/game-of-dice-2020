@@ -8,6 +8,13 @@
             height: 8rem
         } 
     }
+    .active {
+        div { box-shadow: inherit; }
+        div:hover {
+            box-shadow: inset 3px 3px 7px rgba(0,0,0,0.15), inset -3px -3px 7px rgba(255,255,255,0.09);
+            transform: scale(0.96);
+        }
+    }
 }
 #game {
     width: 100vw;
