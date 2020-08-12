@@ -841,13 +841,19 @@ footer {
 }
 @media only screen and (max-width: 1300px) {
   #about_txt {
-    margin-left: 6rem;
-    margin-right: 2rem;
+    margin-left: 3.4rem;
+    margin-right: 0rem;
   }
 }
 #about_txt h2 {
   margin-bottom: -4rem;
   text-align: left;
+}
+@media only screen and (max-width: 1300px) {
+  #about_txt h2 {
+    font-size: 1.5em;
+    margin-bottom: -1.5em;
+  }
 }
 #about_txt h3 {
   margin-bottom: 2rem;
