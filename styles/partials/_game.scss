@@ -1,6 +1,8 @@
 #game-body {
-    .logo {  
-        @media only screen and (max-width: 600px) { margin-left: 35vw; } 
+    #logo__txt {  
+        @media only screen and (max-width: 600px) { 
+            display: none;
+        } 
     }
     footer {
         @media only screen and (max-width: 600px) { 
@@ -35,7 +37,9 @@
     align-items: center;
     margin-top: 4.5rem;
     margin-bottom: 5vh;
-    @media only screen and (max-width: 1000px) { margin-top: 7rem;}
+    @media only screen and (max-width: 1000px) {
+        margin-top: 2rem;
+    }
 }
 .player-container {
     position: absolute;
@@ -45,7 +49,14 @@
     margin-left: -25vw;
     width: 50vw;
     height: 5.5rem;
-    @media only screen and (max-width: 1000px) { top: 7rem; }
+    @media only screen and (max-width: 1000px) { 
+        position: fixed;
+        background-color: #242424;
+        top: -0.7rem; 
+        width: 100vw;
+        margin-left: -50vw;
+        height: 5rem;
+    }
 }
 .dice-btn {
     position: absolute;
@@ -66,7 +77,8 @@
     @media only screen and (max-width: 1000px) { 
         width: 9rem;
         height: 2.5rem;
-        left: 17vw;
+        top: 1.5rem;
+        left: 42vw;
         font-size: 0.8em;
     }
 }
@@ -91,8 +103,8 @@
         background-repeat: no-repeat;
         @media only screen and (max-width: 1000px) { 
             height: 2.5rem;
-            margin-left: 11vw;
-            margin-top: 0rem;
+            margin-left: 35vw;
+            margin-top: 1.5rem;
         }
     }
 }
@@ -112,7 +124,7 @@
         background-repeat: no-repeat;
         @media only screen and (max-width: 1000px) { 
             height: 2.5rem;
-            margin-left: -1vw;
+            margin-left: 20vw;
             margin-top: -2.5rem;
         }
     }

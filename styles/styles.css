@@ -931,8 +931,8 @@ footer {
 }
 
 @media only screen and (max-width: 600px) {
-  #game-body .logo {
-    margin-left: 35vw;
+  #game-body #logo__txt {
+    display: none;
   }
 }
 @media only screen and (max-width: 600px) {
@@ -976,7 +976,7 @@ footer {
 }
 @media only screen and (max-width: 1000px) {
   .board {
-    margin-top: 7rem;
+    margin-top: 2rem;
   }
 }
 
@@ -991,7 +991,12 @@ footer {
 }
 @media only screen and (max-width: 1000px) {
   .player-container {
-    top: 7rem;
+    position: fixed;
+    background-color: #242424;
+    top: -0.7rem;
+    width: 100vw;
+    margin-left: -50vw;
+    height: 5rem;
   }
 }
 
@@ -1013,7 +1018,8 @@ footer {
   .dice-btn {
     width: 9rem;
     height: 2.5rem;
-    left: 17vw;
+    top: 1.5rem;
+    left: 42vw;
     font-size: 0.8em;
   }
 }
@@ -1045,8 +1051,8 @@ footer {
 @media only screen and (max-width: 1000px) {
   .player-one .dice-paragraph {
     height: 2.5rem;
-    margin-left: 11vw;
-    margin-top: 0rem;
+    margin-left: 35vw;
+    margin-top: 1.5rem;
   }
 }
 
@@ -1071,7 +1077,7 @@ footer {
 @media only screen and (max-width: 1000px) {
   .player-two .dice-paragraph {
     height: 2.5rem;
-    margin-left: -1vw;
+    margin-left: 20vw;
     margin-top: -2.5rem;
   }
 }
@@ -1318,7 +1324,7 @@ div[class^=tile] {
 }
 @media only screen and (max-width: 1000px) {
   .winner-btn {
-    margin-top: -1vh;
+    margin-top: -8rem;
     font-size: 1.2em;
   }
 }
