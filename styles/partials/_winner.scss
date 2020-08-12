@@ -23,13 +23,13 @@
 .winner-btn {
     margin-top: -10vh;
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
     justify-content: center;
     align-items: center;
+    justify-items: center;
     font-size: 1.5em;
     @media only screen and (max-width: 1000px) { 
-        flex-direction: column;
-        margin-top: 0.5rem;
+        margin-top: -1vh;
         font-size: 1.2em;
     }
     button {
