@@ -84,6 +84,10 @@ button:focus {
   background: #3f3f3f;
 }
 
+#readme {
+  display: none;
+}
+
 body {
   color: white;
   text-align: justify;
