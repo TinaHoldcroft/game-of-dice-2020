@@ -45,11 +45,8 @@
 #synthwave { 
     overflow: hidden;
     .logo {
-        @media only screen and (max-width: 600px) { 
-            margin-left: 35.5vw;
-
-        } 
-}
+        @media only screen and (max-width: 600px) { margin-left: 35.5vw; } 
+    }
 }
 @keyframes animated-grid { 100% { transform: perspective(50vh) rotateX(60deg) translateY(var(--grid-line)); } }
 .synthwave-grid {
