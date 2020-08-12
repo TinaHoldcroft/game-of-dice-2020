@@ -52,6 +52,10 @@ button:active {
     transform: scale(0.98)
 }
 button:focus { outline: none; }
+.active {
+    div { box-shadow: inset 3px 3px 7px rgba(0,0,0,0.15), inset -3px -3px 7px rgba(255,255,255,0.09); }
+    div:hover { transform: scale(1) !important; }
+}
 //scrollbar
 ::-webkit-scrollbar { //width
     width: 10px;

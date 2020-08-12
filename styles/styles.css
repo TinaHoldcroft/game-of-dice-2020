@@ -63,6 +63,13 @@ button:focus {
   outline: none;
 }
 
+.active div {
+  box-shadow: inset 3px 3px 7px rgba(0, 0, 0, 0.15), inset -3px -3px 7px rgba(255, 255, 255, 0.09);
+}
+.active div:hover {
+  transform: scale(1) !important;
+}
+
 ::-webkit-scrollbar {
   width: 10px;
   background: #191919;
@@ -157,12 +164,6 @@ a[id]:active::after {
   color: transparent;
 }
 
-.active div {
-  box-shadow: inset 3px 3px 7px rgba(0, 0, 0, 0.15), inset -3px -3px 7px rgba(255, 255, 255, 0.09);
-}
-.active div:hover {
-  transform: scale(1) !important;
-}
 .active i, .active span, .active a {
   color: #00ffff;
 }
@@ -175,7 +176,7 @@ a[id]:active::after {
 }
 @media only screen and (max-width: 600px) {
   .logo {
-    margin-left: 40vw;
+    margin-left: 42vw;
     padding: 0.5rem;
   }
   .logo img {
