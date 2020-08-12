@@ -1241,6 +1241,15 @@ div[class^=tile] {
     opacity: 0;
   }
 }
+#synthwave {
+  overflow: hidden;
+}
+@media only screen and (max-width: 600px) {
+  #synthwave .logo {
+    margin-left: 35.5vw;
+  }
+}
+
 #winner {
   display: flex;
   flex-flow: column wrap;
@@ -1294,15 +1303,6 @@ div[class^=tile] {
     margin: 1rem;
     width: 10rem;
     height: 3.5rem;
-  }
-}
-
-#synthwave {
-  overflow: hidden;
-}
-@media only screen and (max-width: 600px) {
-  #synthwave .logo {
-    margin-left: 35.5vw;
   }
 }
 
