@@ -492,31 +492,30 @@ footer {
   background-color: #00ffff;
 }
 
-#index-header .nav-container {
-  box-shadow: none;
-}
-
 #index {
-  padding-top: 102vh;
   padding-bottom: 10rem;
 }
 #index h2 {
   padding-bottom: 2rem;
+  padding-left: 4.5rem;
 }
-@media only screen and (max-width: 600px) {
-  #index h2 {
-    padding-left: 20%;
-    padding-top: 0vh;
-    padding-bottom: 0rem;
+
+.intro-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row nowrap;
+  margin: 5rem;
+}
+@media only screen and (max-width: 1100px) {
+  .intro-container {
+    flex-flow: row wrap;
+    margin-left: 3.5rem;
+    margin-right: -0.5rem;
   }
 }
 
 #intro__box {
-  position: absolute;
-  top: 50vh;
-  margin-top: -15rem;
-  left: 50vw;
-  margin-left: -35rem;
   z-index: 9;
   width: 30rem;
   height: 36rem;
@@ -525,13 +524,6 @@ footer {
   border-radius: 25px;
 }
 @media only screen and (max-width: 1100px) {
-  #intro__box {
-    width: 25rem;
-    margin-left: -42%;
-    z-index: 9;
-  }
-}
-@media only screen and (max-width: 600px) {
   #intro__box {
     display: none;
   }
@@ -554,12 +546,9 @@ footer {
 }
 
 #intro__img {
-  position: absolute;
+  margin-left: -32rem;
+  margin-top: 1rem;
   z-index: 11;
-  top: 50vh;
-  margin-top: -3rem;
-  left: 50vw;
-  margin-left: -37rem;
   width: 32rem;
   transform: rotate(-55deg);
 }
@@ -570,12 +559,14 @@ footer {
 }
 
 #intro__txt {
-  position: absolute;
+  margin-left: -10rem;
+  padding-top: 5rem;
+  padding-bottom: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row wrap;
   background-color: #242424;
-  top: 50vh;
-  margin-top: -12rem;
-  left: 50vw;
-  margin-left: -15rem;
   z-index: 9;
   width: 49rem;
   height: 30rem;
@@ -584,60 +575,38 @@ footer {
 }
 @media only screen and (max-width: 1100px) {
   #intro__txt {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    top: 1rem;
-    margin-top: 10rem;
-    left: 50vw;
-    margin-left: -25%;
-    width: 68vw;
-    height: 35rem;
-    z-index: 9;
-  }
-}
-@media only screen and (max-width: 600px) {
-  #intro__txt {
-    margin-top: 0rem;
-    top: 50vh;
-    margin-top: -15rem;
-    left: 50vw;
-    margin-left: -29vw;
-    width: 75vw;
-    z-index: 5;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: 70vw;
+    height: 100%;
+    margin-left: 0rem;
   }
 }
 #intro__txt h1 {
+  padding-bottom: 1.5rem;
   font-family: montserrat, sans-serif;
   text-transform: uppercase;
   letter-spacing: -1px;
   line-height: 1em;
   color: #ffffff;
   font-size: 4.4em;
-  margin-top: 3rem;
   text-align: center;
-  padding: 2rem;
 }
 @media only screen and (max-width: 1100px) {
   #intro__txt h1 {
-    margin-top: 0rem;
-    font-size: 3em;
-    width: 100%;
+    padding-top: 1rem;
+    font-size: 2em;
+    max-width: 67%;
   }
 }
 #intro__txt p {
-  margin-left: 8rem;
   font-size: 1.2em;
   line-height: 1.6em;
-  width: 32rem;
+  max-width: 67%;
 }
 @media only screen and (max-width: 1100px) {
   #intro__txt p {
-    margin-left: 0rem;
-    font-size: 1em;
-    line-height: 1.5em;
-    width: 75%;
+    max-width: 80%;
   }
 }
 
@@ -645,12 +614,8 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-flow: row wrap;
   margin-top: 2.5rem;
-}
-@media only screen and (max-width: 1100px) {
-  .intro-btn {
-    flex-direction: column;
-  }
 }
 .intro-btn button {
   width: 14.5rem;
@@ -662,7 +627,9 @@ footer {
 }
 @media only screen and (max-width: 1100px) {
   .intro-btn button {
-    margin-bottom: 2rem;
+    margin: 1rem;
+    width: 12.5rem;
+    font-size: 1em;
   }
 }
 .intro-btn :hover {
