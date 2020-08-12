@@ -1191,6 +1191,21 @@ div[class^=tile] {
   background-image: url("images/throne_iron.svg");
 }
 
+@media only screen and (max-width: 600px) {
+  #loser-body .logo {
+    margin-left: 35.5vw;
+  }
+}
+@media only screen and (max-width: 600px) {
+  #loser-body footer {
+    display: block;
+    height: 8.5rem;
+  }
+  #loser-body footer .copy-container {
+    display: none;
+  }
+}
+
 #loser {
   width: 100vw;
   height: 100vh;

@@ -1,3 +1,15 @@
+#loser-body {
+    .logo {
+        @media only screen and (max-width: 600px) { margin-left: 35.5vw; } 
+    }
+    footer {
+        @media only screen and (max-width: 600px) { 
+            display: block; 
+            height: 8.5rem;
+            .copy-container { display: none; }
+        }
+    }
+}
 #loser {
     width: 100vw;
     height: 100vh;
