@@ -1281,7 +1281,7 @@ div[class^=tile] {
 @media only screen and (max-width: 1000px) {
   .winner-btn {
     flex-direction: column;
-    margin-top: -10rem;
+    margin-top: 0.5rem;
     font-size: 1.2em;
   }
 }
@@ -1299,6 +1299,11 @@ div[class^=tile] {
 
 #synthwave {
   overflow: hidden;
+}
+@media only screen and (max-width: 600px) {
+  #synthwave .logo {
+    margin-left: 35.5vw;
+  }
 }
 
 @keyframes animated-grid {
