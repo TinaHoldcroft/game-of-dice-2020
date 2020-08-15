@@ -57,7 +57,7 @@ let playerOne = '';
 function confimationMessage(selected) {
     if (duplicate) { return `You can not pick the same player twice`; } 
     else if (!playerOne) { return `You have selected ${selected} to be your player, pick again to choose your opponent and start the game`; } 
-    else { return `You have selected ${selected} to be your opponent, click ok to start the game`; }}
+    else { return `You have selected ${selected} to be your opponent, click OK to start the game`; }}
 
 function openModal(selected) {
     duplicate = playerOne && selected === playerOne; //mark as duplicate if same card is selected twice
