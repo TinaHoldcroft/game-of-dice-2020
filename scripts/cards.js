@@ -17,12 +17,10 @@ async function fetchData() {
         .then(response => response.json())
         .then(data => {
             console.log('fetch successful');
-            if (house === "") {
-                createCards(data[1]); } 
-            else {
-                createCards(data[0]); } })
+            if (house === "") { createCards(data[1]); } 
+            else { createCards(data[0]); } })
         .catch(error => { 
-            console.log('fetch failed '+ error);
+            console.log(error);
             alert('Error fetching API, see console for more details'); }) } }
 fetchData();
 
@@ -53,7 +51,7 @@ function createCards(house) {
 
 //confirm choice of player
 let duplicate = false;
-let houseSelection = '';
+let playerTwo = '';
 let playerOne = '';
 
 function confimationMessage(selected) {
@@ -66,18 +64,18 @@ function openModal(selected) {
     let modalMessage = confimationMessage(selected);
     let confirmBtn = { label: 'OK', clickHandler: () => confirm(selected) }; //confirm choice button
     if (duplicate) { //buttons when duplicate selected
-        confirmBtn = { label: 'Repick', clickHandler: cancel };}
+        confirmBtn = { label: 'Repick', clickHandler: cancel };};
     const selectionMessage = new Modal(modalMessage, confirmBtn);
     selectionMessage.answer();
 } 
 function confirm(selected) { //confirm choice of player
     if (!playerOne || duplicate) {
         playerOne = selected;
-        houseSelection = `?player=${playerOne}`;} 
+        playerTwo = `?player=${playerOne}`; } 
     else {
-        houseSelection += `&autoPlayer=${selected}`;
-        window.location.assign(`game.html${houseSelection}`);}}
+        playerTwo += `&autoPlayer=${selected}`;
+        window.location.assign(`game.html${playerTwo}`); } }
 
 function cancel() { //cancel choice of player
     if (duplicate) { playerOne = ''; } 
-    else { return; }}
+    else { return; } };

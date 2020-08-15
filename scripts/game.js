@@ -1,6 +1,5 @@
 if (!window.location.search) { //no player selected 
-    if (window.confirm('You have not selected a player, please go back')) {
-        window.open('index.html'); }; }
+    if (window.confirm('You have not selected a player, please go back')) { window.open('index.html'); }; }
 
 function diceLog(createLog, number) { // create player log
     const paragraph = document.createElement('p');
@@ -8,13 +7,13 @@ function diceLog(createLog, number) { // create player log
     if (!createLog) {
         playerLog.insertAdjacentElement('afterbegin', paragraph);
         paragraph.id = `player-dice-${number}`;
-        paragraph.title = `You rolled a ${number}`;  
-        console.log('Player one log created'); } 
+        paragraph.title = `You rolled a ${number}`;
+        console.log(`Player rolled: ${number}`); } 
     else {
         opponentLog.insertAdjacentElement('afterbegin', paragraph);
         paragraph.id = `opponent-dice-${number}`;
         paragraph.title = `Your opponent rolled a ${number}`; 
-        console.log('Player two log created'); } }
+        console.log(`Opponent rolled: ${number}`); } }
 
 class Avatar {
     constructor(name, id, isComputerControlled = false) {
@@ -53,8 +52,7 @@ class Avatar {
         const lastTileToMoveTo = this.tileNumber + diceRoll;
         const lastTile = tiles.length - 1;
         let moveIndex = 1;
-        if (lastTileToMoveTo > lastTile) {
-            diceRoll = diceRoll - (lastTileToMoveTo - lastTile);}
+        if (lastTileToMoveTo > lastTile) { diceRoll = diceRoll - (lastTileToMoveTo - lastTile);}
         while (moveIndex <= diceRoll) {
             const tileToMoveTo = tiles[moveIndex + this.tileNumber];
             await this.wait(this.moveTimeOut).then(() => this.moveToken(tileToMoveTo.offsetTop, tileToMoveTo.offsetLeft));
@@ -106,10 +104,8 @@ function createBoardGame() {
 function createAvatar(house) { 
     const htmlString = `
         <img title="${house.name}" src="styles/images/icons__${house.id}.svg">`;
-    if (!house.isComputerControlled) {
-        overview[0].insertAdjacentHTML('afterbegin', htmlString); } 
-    else {
-        overview[1].insertAdjacentHTML('afterbegin', htmlString); } }
+    if (!house.isComputerControlled) { overview[0].insertAdjacentHTML('afterbegin', htmlString); } 
+    else { overview[1].insertAdjacentHTML('afterbegin', htmlString); } }
 
 function fetchCards(player) {
     const pattern = new RegExp(`${player}\\=[a-zA-z\\s']+`, 'g');
@@ -128,14 +124,13 @@ async function onDiceRollClick() {
         await runTurn(player);
         diceBtn.disabled = false;
         waitPenalty--;
-        if (!player.hasToWaitTurn) {
-            return;}
+        if (!player.hasToWaitTurn) { return; }
         autoPlayer.hasToWaitTurn = false;
         diceBtn.disabled = true; } 
-    else {
-        await runTurn(player);}
+    else { await runTurn(player); }
     if (player.rolledSix && !player.hasToWaitTurn) {
-        alert('You rolled a 6! You get another turn')
+        alert('You rolled a 6! You get another turn');
+        console.log('6 rolled: bonus roll alert');
         diceBtn.disabled = false;
         return; }
     if (player.hasToWaitTurn && waitPenalty > 0) {
@@ -146,11 +141,9 @@ async function onDiceRollClick() {
                 player.hasToWaitTurn = false;
                 break; } }
         player.hasToWaitTurn = false; }
-    else {
-        await runTurn(autoPlayer); }
+    else { await runTurn(autoPlayer); }
     if (autoPlayer.rolledSix && !autoPlayer.hasToWaitTurn) {
-        while (autoPlayer.rolledSix) {
-            await runTurn(autoPlayer); } }
+        while (autoPlayer.rolledSix) { await runTurn(autoPlayer); } }
     diceBtn.disabled = false; }
 
 async function runTurn(house) {
@@ -159,18 +152,15 @@ async function runTurn(house) {
     diceLog(house.isComputerControlled, number);
     await house.moveForwards(number, tiles);
     await sleep(600);
-    if (house.tileNumber === lastTileNumber) {
-        return sleep(500).then(() => endGame(!house.isComputerControlled)); }
+    if (house.tileNumber === lastTileNumber) { return sleep(500).then(() => endGame(!house.isComputerControlled)); }
     const didLandOntrapTile = tiles[house.tileNumber].className === 'tile-trap';
-    if (didLandOntrapTile) {
-        await applyPenalty(house); } }
+    if (didLandOntrapTile) { await applyPenalty(house); } }
 
 async function applyPenalty(house) {
     const trapTile = tiles[house.tileNumber];
     let tileMessage = trapTile.dataset.message;
     let confirmBtn = { label: 'OK' };
-    if (house.isComputerControlled) {
-        confirmBtn.label = 'OK'; }
+    if (house.isComputerControlled) { confirmBtn.label = 'OK'; }
     const messageModal = new Modal(tileMessage, confirmBtn);
     const penaltyType = trapTile.dataset.type;
     const penalty = parseInt(trapTile.dataset.penalty);
@@ -178,13 +168,10 @@ async function applyPenalty(house) {
     if (penaltyType === 'wait') {
         waitPenalty = penalty + 1;
         house.hasToWaitTurn = true; } 
-    else {
-        await house.moveBackwards(penalty, tiles); } }
-
-async function endGame(final) {
-    if (final) {
-        window.location.assign('winner.html'); } 
-    else {
-        window.location.assign('loser.html'); } }
+    else { await house.moveBackwards(penalty, tiles); } }
 
 function sleep(miliseconds) { return new Promise(resolve => setTimeout(resolve, miliseconds)); }
+
+async function endGame(final) { // move to winner/loser screen
+    if (final) { window.location.assign('winner.html'); } 
+    else { window.location.assign('loser.html'); } }

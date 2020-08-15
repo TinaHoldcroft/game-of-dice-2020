@@ -2,8 +2,7 @@ console.log ('\u00A9 Game of Dice 2020') //display copyright in console log
 var displayDate = new Date(); window.localStorage.setItem('Date', displayDate); //display date in local storage
 
 var refreshCounter = localStorage.getItem('Refresh Counter');
-    if (refreshCounter === null) {
-        refreshCounter = 0; } 
+    if (refreshCounter === null) { refreshCounter = 0; } 
     else { refreshCounter ++; }
 
 localStorage.setItem("Refresh Counter", refreshCounter);
@@ -30,8 +29,7 @@ $('#dropdown').click(function() { //dropdown menu
         
 //fullscreen mode
 document.addEventListener("keypress", function(esc) { 
-    if (esc.keyCode === 13) { toggleFullScreen(); }
-    }, false);
+    if (esc.keyCode === 13) { toggleFullScreen(); } }, false);
 
 function toggleFullScreen() {
     if (!document.fullscreenElement) {

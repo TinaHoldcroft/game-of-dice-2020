@@ -13,19 +13,16 @@ class Modal {
             if (!this.modal) {
                 reject('Error creating modal'); }
                 this.modal.addEventListener('click', event => {
-                    if (event.target.className !== 'modal__background modal__background-active') {
-                        return; }
+                    if (event.target.className !== 'modal__background modal__background-active') { return; }
                     resolve();
-                    if (this.clickHandler) {
-                        this.removeModal(); } 
+                    if (this.clickHandler) { this.removeModal(); } 
                     else if (this.confirmBtn.clickHandler) {
                         this.confirmBtn.clickHandler(event);
                         this.removeModal();} 
                     else { this.removeModal(); } });
             confirmBtn.addEventListener('click', event => {
                 resolve();
-                if (this.confirmBtn.clickHandler) {
-                    this.confirmBtn.clickHandler(event); }
+                if (this.confirmBtn.clickHandler) { this.confirmBtn.clickHandler(event); }
                 this.removeModal(); }); }); }
 
     createModal() {
@@ -39,8 +36,7 @@ class Modal {
             this.parent.removeChild(this.modal);
             delete this; }); }
     
-    sleep(miliseconds) {
-        return new Promise(resolve => setTimeout(resolve, miliseconds)); }
+    sleep(miliseconds) { return new Promise(resolve => setTimeout(resolve, miliseconds)); }
 
     fadeIn() {
         this.modal.classList.add('modal__background-active');
@@ -55,7 +51,8 @@ class Modal {
         this.modal.className = 'modal__background';
         this.modal.addEventListener('click', this.onModalOverlayClick);
         this.modal.innerHTML = `
-            <article class="modal">
+            <div class="modal">
                 <p>${this.message}</p>
                 <button>${this.confirmLabel}</button>
-            </article>`; } }
+            </div>`;
+        console.log(`Modal message: ${this.message}`) } }
