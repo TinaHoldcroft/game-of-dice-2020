@@ -81,20 +81,15 @@
         @media only screen and (max-width: 600px) { display: none; }
     }
     @media only screen and (max-width: 600px) { 
-        h3 {
-            font-size: 1.2em;
-        }
-        p {
-            font-size: 0.9em; }
+        h3 { font-size: 1.2em; }
+        p { font-size: 0.9em; }
         p + p { display: none; }
     }
     h3, p {
         margin-top: 1rem;
         margin-left: 2.5rem;
         margin-right: 2.5rem;
-        @media only screen and (max-width: 600px) { 
-            margin: 1.5rem;
-        }
+        @media only screen and (max-width: 600px) { margin: 1.5rem; }
     }
     p + p { margin-bottom: 0.8rem; }
     button { margin: 1rem; }
