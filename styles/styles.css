@@ -827,7 +827,7 @@ footer {
   }
 }
 
-.modal__background {
+.modal-container {
   opacity: 0;
   position: fixed;
   z-index: 100;
@@ -838,8 +838,7 @@ footer {
   transition: 0.2s ease-in-out;
 }
 
-.modal__background-active {
-  visibility: visible;
+.modal--active {
   opacity: 1;
 }
 
@@ -992,20 +991,20 @@ footer {
 }
 
 @media only screen and (max-width: 600px) {
-  #game-body #logo__txt {
+  #game__body #logo__txt {
     display: none;
   }
 }
 @media only screen and (max-width: 600px) {
-  #game-body footer {
+  #game__body footer {
     display: flex;
     height: 8rem;
   }
 }
-#game-body .active div {
+#game__body .active div {
   box-shadow: inherit;
 }
-#game-body .active div:hover {
+#game__body .active div:hover {
   box-shadow: inset 3px 3px 7px rgba(0, 0, 0, 0.15), inset -3px -3px 7px rgba(255, 255, 255, 0.09);
   transform: scale(0.96);
 }
@@ -1195,7 +1194,7 @@ div[class^=tile] {
   color: transparent;
 }
 
-#tile-0 {
+.tile-start .tile-number {
   color: transparent;
   background-color: transparent;
 }

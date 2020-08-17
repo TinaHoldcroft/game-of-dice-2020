@@ -1,4 +1,3 @@
-console.log ('\u00A9 Game of Dice 2020') //display copyright in console log
 var displayDate = new Date(); window.localStorage.setItem('Date', displayDate); //display date in local storage
 
 var refreshCounter = localStorage.getItem('Refresh Counter');
@@ -6,9 +5,9 @@ var refreshCounter = localStorage.getItem('Refresh Counter');
     else { refreshCounter ++; }
 
 localStorage.setItem("Refresh Counter", refreshCounter);
-console.log('Refresh Counter: ' + refreshCounter);
-//removing from Local Storage: localStorage.removeItem('KEY');
 //clear everything: localStorage.clear();
+
+console.log ('\u00A9 Game of Dice 2020') //display copyright in console log
 
 //navigation menu (nav-bar)
 $('.unicode').click(function() { //sidepanel toggle

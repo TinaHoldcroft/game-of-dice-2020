@@ -74,7 +74,7 @@ class Avatar {
     async wait(miliseconds) { return new Promise(resolve => setTimeout(resolve, miliseconds)); } }
 
 const board = document.querySelector('.board');
-const tiles = Array.from(document.querySelectorAll('div[class^="tile"]'));
+const tiles = Array.from(document.querySelectorAll('div[class^="tile"]')); //^=class starting with
 const firstTile = tiles[0];
 const lastTileNumber = tiles.length - 1;
 const lastTile = tiles[lastTileNumber];
@@ -95,7 +95,7 @@ function createBoardGame() {
     createAvatar(autoPlayer);
     diceBtn.addEventListener('click', onDiceRollClick);
     tiles.forEach((tile, index) => (tile.innerHTML = `
-        <p id="tile-${index}" title="${index}" class="tile-number">${index}</p>` ));
+        <p title="${index}" class="tile-number">${index}</p>`));
     const firstTileTop = firstTile.offsetTop;
     const firstTileLeft = firstTile.offsetLeft;
     player.placeTokenOnBoard(board, firstTileTop, firstTileLeft);
