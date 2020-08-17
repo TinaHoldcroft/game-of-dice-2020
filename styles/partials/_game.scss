@@ -154,7 +154,7 @@ div[class^="tile"] {
     background-color: #19191960;
     .tile-number { color: transparent; }
 }
-#tile-0 {
+.tile-start .tile-number {
     color: transparent;
     background-color: transparent;
 }

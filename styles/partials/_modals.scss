@@ -1,4 +1,4 @@
-.modal__background {
+.modal-container {
     opacity: 0;
     position: fixed;
     z-index: 100;
@@ -8,10 +8,7 @@
     bottom: 0;
     transition: 0.2s ease-in-out;
 }
-.modal__background-active {
-    visibility: visible;
-    opacity: 1;
-}
+.modal--active { opacity: 1; }
 .modal {
     position: absolute;
     display: flex;

@@ -29,8 +29,8 @@ const cardContainer = document.querySelector('.character-container'); //where to
 function createCards(house) {
     if (!house) return;
         const filename = house.name.replace(/\s/g, ''); //remove spaces in name
-        const card = document.createElement('div'); // create div
-        card.className = 'card-container'; // give div class 
+        const card = document.createElement('div'); //create div
+        card.className = 'card-container'; //give div a class 
         const cardContent = //card html
         `<div class="cards">
             <div class="card-front">
