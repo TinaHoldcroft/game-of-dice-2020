@@ -1,8 +1,6 @@
 #game-body {
     #logo__txt {  
-        @media only screen and (max-width: 600px) { 
-            display: none;
-        } 
+        @media only screen and (max-width: 600px) { display: none; } 
     }
     footer {
         @media only screen and (max-width: 600px) { 
@@ -41,10 +39,7 @@
     align-items: center;
     margin-top: 4.5rem;
     margin-bottom: 5vh;
-    @media only screen and (max-width: 1000px) {
-        margin-top: 2rem;
-    }
- 
+    @media only screen and (max-width: 1000px) { margin-top: 2rem; }
 }
 .player-container {
     position: absolute;
@@ -135,9 +130,7 @@
     }
 }
 .dice-paragraph { display: none; } //hide history
-.dice-paragraph:first-of-type { 
-    display: block; 
-}
+.dice-paragraph:first-of-type { display: block; }
 div[class^="tile"] {
     width: 9rem;
     height: 7rem;
@@ -174,9 +167,7 @@ div[class^="tile"] {
     font-size: 2em;
     cursor: default;
     font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
-    @media only screen and (max-width: 600px) {
-        margin-top: 2rem;
-    }
+    @media only screen and (max-width: 600px) { margin-top: 2rem; }
 }
 .token {
     width: 3rem;
