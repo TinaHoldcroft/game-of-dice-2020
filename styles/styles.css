@@ -502,6 +502,7 @@ footer {
 @media only screen and (max-width: 600px) {
   #index h2 {
     padding-left: 4.5rem;
+    font-size: 2em;
   }
 }
 
@@ -594,6 +595,15 @@ footer {
     margin-left: 0rem;
   }
 }
+@media only screen and (max-width: 600px) {
+  #intro__txt {
+    background-color: transparent;
+    box-shadow: none;
+    color: #8d8d8d;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
 #intro__txt h1 {
   padding-bottom: 1.5rem;
   font-family: montserrat, sans-serif;
@@ -607,8 +617,14 @@ footer {
 @media only screen and (max-width: 1100px) {
   #intro__txt h1 {
     padding-top: 1rem;
-    font-size: 2em;
+    font-size: 3em;
     max-width: 67%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  #intro__txt h1 {
+    color: #8d8d8d;
+    letter-spacing: 0.1em;
   }
 }
 #intro__txt p {
