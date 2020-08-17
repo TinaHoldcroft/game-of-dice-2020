@@ -733,7 +733,7 @@ footer {
 @media only screen and (max-width: 600px) {
   .card-container:hover .cards {
     width: calc(100% + 2rem);
-    height: calc(100% + 4rem);
+    height: calc(100% + 2rem);
   }
 }
 
@@ -770,6 +770,7 @@ footer {
 }
 @media only screen and (max-width: 600px) {
   .card-back {
+    margin-top: -2.5vh;
     margin-left: 1rem;
   }
 }
@@ -783,32 +784,43 @@ footer {
     display: none;
   }
 }
-@media only screen and (max-width: 600px) {
-  .card-back h3 {
-    font-size: 1.2em;
-  }
-  .card-back p {
-    font-size: 0.9em;
-  }
-  .card-back p + p {
-    display: none;
-  }
-}
-.card-back h3, .card-back p {
+.card-back h3 {
   margin-top: 1rem;
   margin-left: 2.5rem;
   margin-right: 2.5rem;
 }
 @media only screen and (max-width: 600px) {
-  .card-back h3, .card-back p {
+  .card-back h3 {
     margin: 1.5rem;
+    font-size: 1.2em;
+  }
+}
+.card-back p {
+  margin-top: 1rem;
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+}
+@media only screen and (max-width: 600px) {
+  .card-back p {
+    margin: 1.5rem;
+    font-size: 0.9em;
   }
 }
 .card-back p + p {
   margin-bottom: 0.8rem;
 }
+@media only screen and (max-width: 600px) {
+  .card-back p + p {
+    display: none;
+  }
+}
 .card-back button {
   margin: 1rem;
+}
+@media only screen and (max-width: 600px) {
+  .card-back button {
+    margin: 0;
+  }
 }
 
 .modal__background {
