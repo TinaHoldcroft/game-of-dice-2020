@@ -710,9 +710,14 @@ footer {
   width: 100%;
   height: 100%;
   text-align: center;
-  transition: width 0.5s, height 0.9s, transform 1.4s;
   transform-style: preserve-3d;
   z-index: 1;
+  transition: width 0.5s, height 0.9s, transform 1.4s;
+}
+@media only screen and (max-width: 600px) {
+  .cards {
+    transition: width 0.5s, height 0.9s, transform 1s;
+  }
 }
 @-moz-document url-prefix() {
   .cards {
