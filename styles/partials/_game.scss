@@ -28,6 +28,10 @@
     justify-content: center;
     align-items: center;
     @media only screen and (max-width: 1400px) { height: 100%; }
+    @media only screen and (max-width: 600px) { 
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 .board {
     position: relative;
@@ -40,6 +44,7 @@
     @media only screen and (max-width: 1000px) {
         margin-top: 2rem;
     }
+ 
 }
 .player-container {
     position: absolute;
@@ -140,6 +145,10 @@ div[class^="tile"] {
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+    @media only screen and (max-width: 600px) {
+        width: 6rem;
+        height: 6rem;
+    }
 }
 .tile-default { background: #19191960; }
 .tile-trap { background-color: #00ffff94; }
@@ -165,6 +174,9 @@ div[class^="tile"] {
     font-size: 2em;
     cursor: default;
     font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+    @media only screen and (max-width: 600px) {
+        margin-top: 2rem;
+    }
 }
 .token {
     width: 3rem;
@@ -172,6 +184,11 @@ div[class^="tile"] {
     height: auto;
     position: absolute;
     transition: 0.4s ease-in-out;
+    @media only screen and (max-width: 600px) {
+        width: 2rem;
+        margin-left: 0.5rem;
+        margin-right: 0rem;
+    }
 }
 //game icons
 #player-dice-1 { background-image: url("images/player-dice-1.svg"); }
