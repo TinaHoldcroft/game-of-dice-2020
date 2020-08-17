@@ -904,32 +904,32 @@ footer {
   }
 }
 
-#about_txt {
+#about__txt {
   margin-right: 6rem;
   margin-left: 6rem;
 }
 @media only screen and (max-width: 1300px) {
-  #about_txt {
+  #about__txt {
     margin-right: 0rem;
     margin-left: 0rem;
   }
 }
 @media only screen and (max-width: 600px) {
-  #about_txt {
+  #about__txt {
     margin-left: 3.4rem;
   }
 }
-#about_txt h2 {
+#about__txt h2 {
   margin-bottom: -4rem;
   text-align: left;
 }
 @media only screen and (max-width: 1300px) {
-  #about_txt h2 {
+  #about__txt h2 {
     font-size: 1.5em;
     margin-bottom: -1.5em;
   }
 }
-#about_txt h3 {
+#about__txt h3 {
   margin-bottom: 2rem;
   color: #8d8d8d;
   letter-spacing: 0.1em;
@@ -937,14 +937,14 @@ footer {
   font-size: 1.3em;
   margin-bottom: 0.5em;
 }
-#about_txt p {
+#about__txt p {
   margin-bottom: 2rem;
   line-height: 1.5em;
   text-align: left;
   color: #8d8d8d;
 }
 
-#about_SoMe {
+#about__SoMe {
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-evenly;
@@ -952,42 +952,42 @@ footer {
   max-height: 60vh;
 }
 @media only screen and (max-width: 1300px) {
-  #about_SoMe {
+  #about__SoMe {
     flex-flow: row wrap;
     margin-left: 3rem;
   }
 }
-#about_SoMe a {
+#about__SoMe a {
   padding-top: 2.8rem;
   padding-bottom: 2.8rem;
   padding-left: 3.5rem;
   padding-right: 3.5rem;
 }
-#about_SoMe #Codepen:hover {
+#about__SoMe #Codepen:hover {
   background-color: #000000;
 }
-#about_SoMe #Codepen:hover i {
+#about__SoMe #Codepen:hover i {
   color: #ffffff;
 }
-#about_SoMe #Instagram:hover {
+#about__SoMe #Instagram:hover {
   background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
 }
-#about_SoMe #Instagram:hover i {
+#about__SoMe #Instagram:hover i {
   color: #ffffff;
 }
-#about_SoMe #GitHub:hover {
+#about__SoMe #GitHub:hover {
   background-color: #000000;
 }
-#about_SoMe #GitHub:hover i {
+#about__SoMe #GitHub:hover i {
   color: #ffffff;
 }
-#about_SoMe #LinkedIn:hover {
+#about__SoMe #LinkedIn:hover {
   background-color: #0072b1;
 }
-#about_SoMe #LinkedIn:hover i {
+#about__SoMe #LinkedIn:hover i {
   color: #ffffff;
 }
-#about_SoMe i {
+#about__SoMe i {
   font-size: 6em;
 }
 
@@ -1279,33 +1279,33 @@ div[class^=tile] {
   background-image: url("images/opponent-dice-6.svg");
 }
 
-#throne_1 {
-  background-image: url("images/throne_1.svg");
+#throne-1 {
+  background-image: url("images/throne-1.svg");
 }
 
-#throne_2 {
-  background-image: url("images/throne_2.svg");
+#throne-2 {
+  background-image: url("images/throne-2.svg");
 }
 
-#throne_3 {
-  background-image: url("images/throne_3.svg");
+#throne-3 {
+  background-image: url("images/throne-3.svg");
 }
 
-#throne_iron {
-  background-image: url("images/throne_iron.svg");
+#throne-iron {
+  background-image: url("images/throne-iron.svg");
 }
 
 @media only screen and (max-width: 600px) {
-  #loser-body .logo {
+  #loser__body .logo {
     margin-left: 35.5vw;
   }
 }
 @media only screen and (max-width: 600px) {
-  #loser-body footer {
+  #loser__body footer {
     display: block;
     height: 8.5rem;
   }
-  #loser-body footer .copy-container {
+  #loser__body footer .copy-container {
     display: none;
   }
 }
