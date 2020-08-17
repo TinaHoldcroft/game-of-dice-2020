@@ -891,7 +891,7 @@ footer {
 #about a:hover {
   color: #8d8d8d;
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1300px) {
   #about {
     flex-direction: column;
     padding-top: 7rem;
