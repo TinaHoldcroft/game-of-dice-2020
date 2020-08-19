@@ -4,6 +4,7 @@ class Modal {
         this.parent = document.body;
         this.modal = undefined;
         this.confirmBtn = confirmBtn;
+        this.confirmLabel = confirmBtn.label || 'OK';
         this.createModal();}
 
     answer() {
@@ -47,6 +48,6 @@ class Modal {
         this.modal.innerHTML = `
             <div class="modal">
                 <p>${this.message}</p>
-                <button>OK</button>
+                <button>${this.confirmLabel}</button>
             </div>`;
         console.log(`Modal message: ${this.message}`) } }
