@@ -1,7 +1,7 @@
 if (!window.location.search) { //no player selected 
     if (window.confirm('You have not selected a player, please go back')) { window.open('index.html'); }; }
 
-function diceLog(createLog, number) { // create player log
+function diceLog(createLog, number) { //create player log
     const paragraph = document.createElement('p');
     paragraph.className = 'dice-paragraph';
     if (!createLog) {
@@ -74,7 +74,7 @@ class Avatar {
     async wait(miliseconds) { return new Promise(resolve => setTimeout(resolve, miliseconds)); } }
 
 const board = document.querySelector('.board');
-const tiles = Array.from(document.querySelectorAll('div[class^="tile"]')); //^=class starting with
+const tiles = Array.from(document.querySelectorAll('div[class^="tile"]')); //^ = class starting with
 const firstTile = tiles[0];
 const lastTileNumber = tiles.length - 1;
 const lastTile = tiles[lastTileNumber];
@@ -172,6 +172,6 @@ async function applyPenalty(house) {
 
 function sleep(miliseconds) { return new Promise(resolve => setTimeout(resolve, miliseconds)); }
 
-async function endGame(final) { // move to winner/loser screen
+async function endGame(final) { //move to winner/loser screen
     if (final) { window.location.assign('winner.html'); } 
     else { window.location.assign('loser.html'); } }

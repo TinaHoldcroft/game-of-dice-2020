@@ -1,14 +1,14 @@
 const houses = [
-    "House Tully of Riverrun", //filenames card one: icons__HouseTullyofRiverrun || images__HouseTullyofRiverrun
-    "House Stark of Winterfell", //filenames card two: icons__HouseStarkofWinterfell || images__HouseStarkofWinterfell
-    "House Arryn of the Eyrie", //filenames card three: icons__HouseArrynoftheEyrie || images__HouseArrynoftheEyrie
-    "House Lannister of Casterly Rock", //filenames card four: icons__HouseLannisterofCasterlyRock || images__HouseLannisterofCasterlyRock
-    "House Baratheon of Storm's End", //filenames card five: icons__HouseBaratheonofStorm'sEnd || images__HouseBaratheonofStorm'sEnd
-    "House Bolton of the Dreadfort", //filenames card six: icons__HouseBoltonoftheDreadfort || images__HouseBoltonoftheDreadfort
-    "House Tyrell of Highgarden", //filenames card seven: icons__HouseTyrellofHighgarden || images__HouseTyrellofHighgarden
-    "House Goodbrother of Hammerhorn", //filenames card eight: icons__HouseGoodbrotherofHammerhorn || images__HouseGoodbrotherofHammerhorn
-    "House Nymeros Martell of Sunspear", //filenames card nine: icons__HouseNymerosMartellofSunspear || images__HouseNymerosMartellofSunspear
-    "House Greyjoy of Pyke" ]; //filenames card ten: icons__HouseGreyjoyofPyke || images__HouseGreyjoyofPyke
+    "House Tully of Riverrun", //filenames card one(1): icons__HouseTullyofRiverrun || images__HouseTullyofRiverrun
+    "House Stark of Winterfell", //filenames card two(2): icons__HouseStarkofWinterfell || images__HouseStarkofWinterfell
+    "House Arryn of the Eyrie", //filenames card three(3): icons__HouseArrynoftheEyrie || images__HouseArrynoftheEyrie
+    "House Lannister of Casterly Rock", //filenames card four(4): icons__HouseLannisterofCasterlyRock || images__HouseLannisterofCasterlyRock
+    "House Baratheon of Storm's End", //filenames card five(5): icons__HouseBaratheonofStorm'sEnd || images__HouseBaratheonofStorm'sEnd
+    "House Bolton of the Dreadfort", //filenames card six(6): icons__HouseBoltonoftheDreadfort || images__HouseBoltonoftheDreadfort
+    "House Tyrell of Highgarden", //filenames card seven(7): icons__HouseTyrellofHighgarden || images__HouseTyrellofHighgarden
+    "House Goodbrother of Hammerhorn", //filenames card eight(8): icons__HouseGoodbrotherofHammerhorn || images__HouseGoodbrotherofHammerhorn
+    "House Nymeros Martell of Sunspear", //filenames card nine(9): icons__HouseNymerosMartellofSunspear || images__HouseNymerosMartellofSunspear
+    "House Greyjoy of Pyke" ]; //filenames card ten(10): icons__HouseGreyjoyofPyke || images__HouseGreyjoyofPyke
 
 //fetch API house data (https://github.com/joakimskoog/AnApiOfIceAndFire/blob/master/data/characters.json)
 async function fetchData() {
@@ -21,7 +21,7 @@ async function fetchData() {
             else { createCards(data[0]); } })
         .catch(error => { 
             console.log(error);
-            alert('Error fetching API, see console for more details'); }) } }
+            alert('Error fetching API, see console for more details'); }) } } //error pop-up
 fetchData();
 
 const cardContainer = document.querySelector('.character-container'); //where to display cards
