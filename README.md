@@ -1,7 +1,7 @@
 # 2020-09_GameofDice
 ![Image of site](https://github.com/TinaHoldcroft/2020-09_GameofDice/blob/master/styles/images/readme.PNG)
 
-[Semester Project 2 (delivery: September 2020)](http://tinamary.com/noroff/semester-project-02)
+[Semester Project 2 (delivery: September 2020)](http://tinamary.com/portfolio/game-of-dice/index.html)
 
 The assignment is to create an online board game using the assigned API to create the players.
 The site will display the skills acquired during the third semester of Front-end Development at Noroff. 
