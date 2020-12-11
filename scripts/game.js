@@ -1,5 +1,6 @@
 if (!window.location.search) { //no player selected 
-    if (window.confirm('You have not selected a player, please go back')) { window.open('index.html'); }; }
+    if (window.confirm('You have not selected a player, please go back')) { window.open('index.html'); }; 
+}
 
 function diceLog(createLog, number) { //create player log
     const paragraph = document.createElement('p');
@@ -8,12 +9,15 @@ function diceLog(createLog, number) { //create player log
         playerLog.insertAdjacentElement('afterbegin', paragraph);
         paragraph.id = `player-dice-${number}`;
         paragraph.title = `You rolled a ${number}`;
-        console.log(`Player rolled: ${number}`); } 
+        console.log(`Player rolled: ${number}`); 
+    } 
     else {
         opponentLog.insertAdjacentElement('afterbegin', paragraph);
         paragraph.id = `opponent-dice-${number}`;
         paragraph.title = `Your opponent rolled a ${number}`; 
-        console.log(`Opponent rolled: ${number}`); } }
+        console.log(`Opponent rolled: ${number}`); 
+    } 
+}
 
 class Avatar {
     constructor(name, id, isComputerControlled = false) {
@@ -25,28 +29,34 @@ class Avatar {
         this.isComputerControlled = isComputerControlled;
         this.hasToWaitTurn = false;
         this.rolledSix = false;
-        this.createToken(); }
+        this.createToken(); 
+    }
 
     createToken() {
         const tokenImagePath = `styles/images/icons__${this.id}.svg`;
         const tokenElement = document.createElement('img');
         tokenElement.src = tokenImagePath;
         tokenElement.className = 'token';
-        this.token = tokenElement; }
+        this.token = tokenElement; 
+    }
 
     placeTokenOnBoard(board, top, left) {
         board.appendChild(this.token);
-        this.moveToken(top, left); }
+        this.moveToken(top, left); 
+    }
 
     async moveToken(top, left) {
         if (!this.isComputerControlled) {
             this.token.style.top = `${top}px`;
-            this.token.style.left = `${left}px`; } 
+            this.token.style.left = `${left}px`; 
+        } 
         else {
             const offsetTop = 70 / 2;
             const offsetLeft = 110 / 2;
             this.token.style.top = `${top + offsetTop}px`;
-            this.token.style.left = `${left + offsetLeft}px`; } }
+            this.token.style.left = `${left + offsetLeft}px`; 
+        } 
+    }
 
     async moveForwards(diceRoll, tiles) {
         const lastTileToMoveTo = this.tileNumber + diceRoll;
@@ -58,9 +68,12 @@ class Avatar {
             await this.wait(this.moveTimeOut).then(() => this.moveToken(tileToMoveTo.offsetTop, tileToMoveTo.offsetLeft));
                 if (tileToMoveTo.className === 'tile-throne' && !this.isComputerControlled) {
                     const messageModal = new Modal(tileToMoveTo.dataset.message, { label: 'OK' }); //throne 
-                    await messageModal.answer(); }
-            moveIndex++; }
-        this.tileNumber = this.tileNumber + diceRoll; }
+                    await messageModal.answer(); 
+                }
+            moveIndex++; 
+        }
+        this.tileNumber = this.tileNumber + diceRoll; 
+    }
 
     async moveBackwards(penalty, tiles) {
         let lastTileToMoveTo = this.tileNumber - penalty;
@@ -69,9 +82,11 @@ class Avatar {
             moveIndex--;
             const tileToMoveTo = tiles[moveIndex];
             await this.wait(this.moveTimeOut).then(() => this.moveToken(tileToMoveTo.offsetTop, tileToMoveTo.offsetLeft)); } 
-        this.tileNumber = moveIndex; }
+        this.tileNumber = moveIndex; 
+    }
 
-    async wait(miliseconds) { return new Promise(resolve => setTimeout(resolve, miliseconds)); } }
+    async wait(miliseconds) { return new Promise(resolve => setTimeout(resolve, miliseconds)); } 
+}
 
 const board = document.querySelector('.board');
 const tiles = Array.from(document.querySelectorAll('div[class^="tile"]')); //^ = class starting with
@@ -99,24 +114,28 @@ function createBoardGame() {
     const firstTileTop = firstTile.offsetTop;
     const firstTileLeft = firstTile.offsetLeft;
     player.placeTokenOnBoard(board, firstTileTop, firstTileLeft);
-    autoPlayer.placeTokenOnBoard(board, firstTileTop, firstTileLeft); }
+    autoPlayer.placeTokenOnBoard(board, firstTileTop, firstTileLeft); 
+}
 
 function createAvatar(house) { 
     const htmlString = `
         <img title="${house.name}" src="styles/images/icons__${house.id}.svg">`;
     if (!house.isComputerControlled) { overview[0].insertAdjacentHTML('afterbegin', htmlString); } 
-    else { overview[1].insertAdjacentHTML('afterbegin', htmlString); } }
+    else { overview[1].insertAdjacentHTML('afterbegin', htmlString); } 
+}
 
 function fetchCards(player) {
     const pattern = new RegExp(`${player}\\=[a-zA-z\\s']+`, 'g');
     const decodedUri = decodeURIComponent(window.location.search);
     const houseName = decodedUri.match(pattern)[0].split('=')[1];
     const houseFilename = houseName.replace(/\s/g, '');
-    return { name: houseName, id: houseFilename }; }
+    return { name: houseName, id: houseFilename }; 
+}
 
 function rollDice() {
     const randomNumber = Math.floor(Math.random() * 6 + 1);
-    return randomNumber; }
+    return randomNumber;
+}
 
 async function onDiceRollClick() {
     diceBtn.disabled = true;
@@ -126,25 +145,32 @@ async function onDiceRollClick() {
         waitPenalty--;
         if (!player.hasToWaitTurn) { return; }
         autoPlayer.hasToWaitTurn = false;
-        diceBtn.disabled = true; } 
+        diceBtn.disabled = true; 
+    } 
     else { await runTurn(player); }
     if (player.rolledSix && !player.hasToWaitTurn) {
         alert('You rolled a 6! You get another turn');
         console.log('6 rolled: bonus roll alert');
         diceBtn.disabled = false;
-        return; }
+        return; 
+    }
     if (player.hasToWaitTurn && waitPenalty > 0) {
         while (waitPenalty > 0) {
             await runTurn(autoPlayer);
             waitPenalty--;
             if (autoPlayer.hasToWaitTurn) {
                 player.hasToWaitTurn = false;
-                break; } }
-        player.hasToWaitTurn = false; }
+                break; } 
+            }
+        player.hasToWaitTurn = false; 
+    }
     else { await runTurn(autoPlayer); }
     if (autoPlayer.rolledSix && !autoPlayer.hasToWaitTurn) {
-        while (autoPlayer.rolledSix) { await runTurn(autoPlayer); } }
-    diceBtn.disabled = false; }
+        while (autoPlayer.rolledSix) { await runTurn(autoPlayer); 
+        } 
+    }
+    diceBtn.disabled = false; 
+}
 
 async function runTurn(house) {
     const number = rollDice();
@@ -154,7 +180,8 @@ async function runTurn(house) {
     await sleep(600);
     if (house.tileNumber === lastTileNumber) { return sleep(500).then(() => endGame(!house.isComputerControlled)); }
     const didLandOntrapTile = tiles[house.tileNumber].className === 'tile-trap';
-    if (didLandOntrapTile) { await applyPenalty(house); } }
+    if (didLandOntrapTile) { await applyPenalty(house); } 
+}
 
 async function applyPenalty(house) {
     const trapTile = tiles[house.tileNumber];
@@ -167,11 +194,14 @@ async function applyPenalty(house) {
     await messageModal.answer();
     if (penaltyType === 'wait') {
         waitPenalty = penalty + 1;
-        house.hasToWaitTurn = true; } 
-    else { await house.moveBackwards(penalty, tiles); } }
+        house.hasToWaitTurn = true; 
+    } 
+    else { await house.moveBackwards(penalty, tiles); } 
+}
 
 function sleep(miliseconds) { return new Promise(resolve => setTimeout(resolve, miliseconds)); }
 
 async function endGame(final) { //move to winner/loser screen
     if (final) { window.location.assign('winner.html'); } 
-    else { window.location.assign('loser.html'); } }
+    else { window.location.assign('loser.html'); } 
+}

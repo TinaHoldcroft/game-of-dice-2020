@@ -5,7 +5,8 @@ class Modal {
         this.modal = undefined;
         this.confirmBtn = confirmBtn;
         this.confirmLabel = confirmBtn.label || 'OK';
-        this.createModal();}
+        this.createModal();
+    }
 
     answer() {
         const confirmBtn = this.modal.querySelector('.modal');
@@ -23,18 +24,24 @@ class Modal {
             confirmBtn.addEventListener('click', event => {
                 resolve();
                 if (this.confirmBtn.clickHandler) { this.confirmBtn.clickHandler(event); }
-                this.removeModal(); }); }); }
+                this.removeModal(); 
+            }); 
+        }); 
+    }
 
     createModal() {
         this.createModalMarkup();
         this.parent.insertAdjacentElement('afterbegin', this.modal);
-        this.sleep(100).then(() => this.fadeIn()); } 
+        this.sleep(100).then(() => this.fadeIn()); 
+    } 
     
     removeModal() {
         this.fadeOut();
         this.sleep(200).then(() => {
             this.parent.removeChild(this.modal);
-            delete this; }); }
+            delete this; 
+        });
+    }
     
     sleep(miliseconds) { return new Promise(resolve => setTimeout(resolve, miliseconds)); }
 
@@ -50,4 +57,6 @@ class Modal {
                 <p>${this.message}</p>
                 <button>${this.confirmLabel}</button>
             </div>`;
-        console.log(`Modal message: ${this.message}`) } }
+        console.log(`Modal message: ${this.message}`) 
+    } 
+}

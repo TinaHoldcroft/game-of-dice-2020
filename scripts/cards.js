@@ -21,33 +21,37 @@ async function fetchData() {
             else { createCards(data[0]); } })
         .catch(error => { 
             console.log(error);
-            alert('Error fetching API, see console for more details'); }) } } //error pop-up
+            alert('Error fetching API, see console for more details'); 
+        }) 
+    } 
+}
 fetchData();
 
 const cardContainer = document.querySelector('.character-container'); //where to display cards
 
 function createCards(house) {
     if (!house) return;
-        const filename = house.name.replace(/\s/g, ''); //remove spaces in name
-        const card = document.createElement('div'); //create div
-        card.className = 'card-container'; //give div a class 
-        const cardContent = //card html
-        `<div class="cards">
-            <div class="card-front">
-                <img class="card-image" src="styles/images/icons__${filename}.svg" alt="${house.name}">
-            </div>
+    const filename = house.name.replace(/\s/g, ''); //remove spaces in name
+    const card = document.createElement('div'); //create div
+    card.className = 'card-container'; //give div a class 
+    const cardContent = //card html
+    `<div class="cards">
+        <div class="card-front">
+            <img class="card-image" src="styles/images/icons__${filename}.svg" alt="${house.name}">
+        </div>
 
-            <div class="card-back">
-                <img id="images__${filename}" src="styles/images/images__${filename}.jpg" alt"${house.name}">
-                <h3>${house.name}</h3>
-                <p><strong>Coat of Arms: </strong> ${house.coatOfArms}</p>
-                <p><strong>Region: </strong>${house.region}</p>
-                <button class="pick-btn">Pick</button>
-            </div>
-        </div>`;
-        card.innerHTML = cardContent;
-        cardContainer.appendChild(card);
-        card.querySelector('.pick-btn').addEventListener('click', () => openModal(house.name));}
+        <div class="card-back">
+            <img id="images__${filename}" src="styles/images/images__${filename}.jpg" alt"${house.name}">
+            <h3>${house.name}</h3>
+            <p><strong>Coat of Arms: </strong> ${house.coatOfArms}</p>
+            <p><strong>Region: </strong>${house.region}</p>
+            <button class="pick-btn">Pick</button>
+        </div>
+    </div>`;
+    card.innerHTML = cardContent;
+    cardContainer.appendChild(card);
+    card.querySelector('.pick-btn').addEventListener('click', () => openModal(house.name));
+}
 
 //confirm choice of player
 let duplicate = false;
@@ -57,25 +61,32 @@ let playerOne = '';
 function confimationMessage(selected) {
     if (duplicate) { return `You can not pick the same player twice`; } 
     else if (!playerOne) { return `You have selected ${selected} to be your player, pick again to choose your opponent and start the game`; } 
-    else { return `You have selected ${selected} to be your opponent, click OK to start the game`; }}
+    else { return `You have selected ${selected} to be your opponent, click OK to start the game`; }
+}
 
 function openModal(selected) {
     duplicate = playerOne && selected === playerOne; //mark as duplicate if same card is selected twice
     let modalMessage = confimationMessage(selected);
     let confirmBtn = { label: 'OK', clickHandler: () => confirm(selected) }; //confirm choice button
     if (duplicate) { //buttons when duplicate selected
-        confirmBtn = { label: 'Repick', clickHandler: cancel };};
+        confirmBtn = { label: 'Repick', clickHandler: cancel };
+    };
     const selectionMessage = new Modal(modalMessage, confirmBtn);
     selectionMessage.answer();
-} 
+}
+
 function confirm(selected) { //confirm choice of player
     if (!playerOne || duplicate) {
         playerOne = selected;
-        playerTwo = `?player=${playerOne}`; } 
+        playerTwo = `?player=${playerOne}`; 
+    } 
     else {
         playerTwo += `&autoPlayer=${selected}`;
-        window.location.assign(`game.html${playerTwo}`); } }
+        window.location.assign(`game.html${playerTwo}`); 
+    } 
+}
 
 function cancel() { //cancel choice of player
     if (duplicate) { playerOne = ''; } 
-    else { return; } };
+    else { return; } 
+};
