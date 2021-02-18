@@ -48,12 +48,14 @@ footer {
         margin: 2px;
         user-select: none; //pevent text selection
         cursor: pointer;
+        &:hover {
+            box-shadow: inset 3px 3px 7px rgba(0,0,0,0.15), inset -3px -3px 7px rgba(255,255,255,0.09);
+            transform: scale(0.96);
+        }
     }
-    div:hover {
-        box-shadow: inset 3px 3px 7px rgba(0,0,0,0.15), inset -3px -3px 7px rgba(255,255,255,0.09);
-        transform: scale(0.96);
+    i:active, i:focus { 
+        outline: none;
+        color: #00ffff; 
     }
-    i:active { color: #00ffff; }
-    i:focus { color: #00ffff; }
 }
 .bubble:active, .bubble:focus { background-color: #00ffff; }
