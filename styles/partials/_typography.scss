@@ -8,12 +8,12 @@
 //font-family: 'VT323', monospace;
 
 body {
-    color: white;
+    color: $white;
     text-align: justify;
 }
 h1 {
     font-family: chuck, sans-serif;
-    color: #00ffff;
+    color: $aqua;
     letter-spacing: 0.1em;
     text-align: center;
     font-size: 4em;
@@ -21,7 +21,7 @@ h1 {
 h2 {
     font-family: montserrat, sans-serif;
     text-transform: uppercase;
-    color: #8d8d8d;
+    color: $gray;
     letter-spacing: 0.1em;
     font-size: 2.5em;
     text-align: center;
@@ -47,7 +47,7 @@ a { //links
     font-family: montserrat, sans-serif;
 }
 i { //font awesome
-    color: #8d8d8d; 
+    color: $gray; 
     font-size: 1.2em;
 } 
 .copy-container { font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif; }
@@ -64,7 +64,7 @@ a[id]:hover::after { //tooltips
     padding: 0.2rem 0.4rem;
     border-radius: 3px;
     box-shadow: 0 1em 2em -0.5em rgba(0, 0, 0, 0.35);
-    background: #ffffff;
+    background: $white;
     opacity: 70%;
     color: #000000;
     font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
@@ -73,4 +73,4 @@ a[id]:active::after {
     background: transparent;
     color: transparent;
 }
-.active { i, span, a { color: #00ffff; } }
+.active { i, span, a { color: $aqua; } }

@@ -5,10 +5,8 @@
     }
 }
 #winner {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
+    @include flex-column;
+    @include flex-center;
     h1 {
         margin-top: 8rem;
         font-size: 7vw;
@@ -16,7 +14,7 @@
     }
     h2 {
         margin-top: 3rem;
-        color: white;
+        color: $white;
         font-size: 6vw;
         text-transform: inherit;
         @media only screen and (max-width: 1000px) { 
@@ -27,15 +25,12 @@
     }
 }
 .winner-btn {
-    margin-top: -10vh;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-    justify-items: center;
+    @include flex-wrap;
+    @include flex-center;
+    margin-top: 10vh;
     font-size: 1.5em;
     @media only screen and (max-width: 1000px) { 
-        margin-top: -8rem;
+        margin-top: 6rem;
         font-size: 1.2em;
     }
     button {

@@ -8,12 +8,12 @@
 }
 
 body {
+  justify-content: center;
+  align-items: center;
   background-color: #191919;
   width: 100%;
   height: 100%;
   display: grid;
-  justify-content: center;
-  align-items: center;
   overflow-y: scroll;
   overflow-x: hidden;
 }
@@ -82,7 +82,7 @@ button:focus {
 }
 
 body {
-  color: white;
+  color: #ffffff;
   text-align: justify;
 }
 
@@ -222,13 +222,13 @@ a[id]:active::after {
 
 .nav-container {
   display: flex;
+  flex-flow: row nowrap;
   position: absolute;
+  justify-content: space-between;
   top: 0vh;
   left: 0vw;
   width: 100vw;
   height: 5.5rem;
-  justify-content: space-between;
-  flex-direction: row;
   overflow: hidden;
   background-color: #242424;
   box-shadow: inset 3px 3px 7px rgba(0, 0, 0, 0.15), inset -3px -3px 7px rgba(255, 255, 255, 0.05);
@@ -247,14 +247,15 @@ a[id]:active::after {
 }
 .nav-container nav ul {
   display: flex;
+  flex-flow: row nowrap;
   list-style-type: none;
-  flex-direction: row;
   justify-content: flex-end;
 }
 .nav-container nav li {
   color: #8d8d8d;
   text-transform: uppercase;
   padding-right: 2rem;
+  outline: none;
 }
 @media only screen and (max-width: 600px) {
   .nav-container nav {
@@ -327,10 +328,10 @@ a[id]:active::after {
   padding-bottom: 2.7rem;
 }
 .panel-container nav a {
+  position: relative;
   display: block;
   white-space: nowrap;
   text-decoration: none;
-  position: relative;
 }
 .panel-container nav i:hover, .panel-container nav a:hover {
   opacity: 50%;
@@ -365,10 +366,10 @@ a[id]:active::after {
 }
 
 #unicode__toggle::before {
+  position: relative;
   content: "";
   font-size: 1.5em;
   display: block;
-  position: relative;
 }
 
 .openPanel nav {
@@ -414,14 +415,14 @@ a[id]:active::after {
 }
 
 footer {
-  display: flex;
   position: sticky;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
   bottom: 0;
   width: 100%;
   height: 16rem;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
   overflow: hidden;
   background-color: #242424;
   box-shadow: inset 3px 3px 10px rgba(255, 255, 255, 0.1), inset -3px -3px 10px rgba(255, 255, 255, 0.1);
@@ -443,9 +444,9 @@ footer {
 }
 
 .bubble-container {
+  display: flex;
   position: absolute;
   bottom: 7rem;
-  display: flex;
   justify-content: space-evenly;
   width: 40rem;
   z-index: 9;
@@ -462,11 +463,11 @@ footer {
   border-radius: 50%;
 }
 .bubble div {
+  display: flex;
   background-color: #242424;
   width: 5rem;
   height: 5rem;
   border-radius: 50%;
-  display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1.5em;
@@ -501,9 +502,9 @@ footer {
 }
 
 .intro-container {
-  display: flex;
   justify-content: center;
   align-items: center;
+  display: flex;
   flex-flow: row nowrap;
   margin: 5rem;
 }
@@ -566,16 +567,17 @@ footer {
 }
 
 #intro__txt {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
   margin-left: -10rem;
   padding-top: 5rem;
   padding-bottom: 4rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-flow: row wrap;
   background-color: #242424;
   z-index: 9;
-  width: 49rem;
+  width: 70vw;
+  max-width: 49rem;
   height: 30rem;
   box-shadow: -8px -8px 18px 0 rgba(0, 0, 0, 0.55), inset 3px 3px 7px rgba(0, 0, 0, 0.15), inset -3px -3px 7px rgba(255, 255, 255, 0.09);
   border-radius: 25px;
@@ -584,7 +586,6 @@ footer {
   #intro__txt {
     padding-top: 1rem;
     padding-bottom: 1rem;
-    width: 70vw;
     height: 100%;
     margin-left: 0rem;
   }
@@ -628,9 +629,9 @@ footer {
 }
 
 .intro-btn {
-  display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  display: flex;
   flex-flow: row wrap;
   margin-top: 2.5rem;
 }
@@ -659,9 +660,8 @@ footer {
 
 .character-container {
   display: flex;
+  flex-flow: row wrap;
   justify-content: center;
-  flex-direction: row;
-  flex-wrap: wrap;
 }
 .character-container button:hover {
   cursor: grab;
@@ -751,7 +751,7 @@ footer {
   height: 100%;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
-  border: solid 2px #00FFFF;
+  border: solid 2px #00ffff;
   border-radius: 30px;
   background-color: #242424;
   color: #ffffff;
@@ -815,13 +815,11 @@ footer {
 }
 
 .modal-container {
-  opacity: 0;
   position: fixed;
+  opacity: 0;
   z-index: 100;
   left: 0;
-  right: 0;
   top: 0;
-  bottom: 0;
   transition: 0.2s ease-in-out;
 }
 
@@ -831,10 +829,10 @@ footer {
 
 .modal {
   position: absolute;
-  display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  display: flex;
+  flex-flow: column nowrap;
   left: 50vw;
   top: 50vh;
   height: 20rem;
@@ -865,18 +863,12 @@ footer {
 }
 
 #about {
-  width: 100vw;
-  height: 110vh;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-@media only screen and (max-width: 800px) {
-  #about {
-    height: 100%;
-    margin-top: 3rem;
-  }
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100vw;
+  height: 100vh;
 }
 #about a {
   font-style: italic;
@@ -887,9 +879,11 @@ footer {
 
 #about__txt {
   display: flex;
-  flex-direction: column;
+  flex-flow: column nowrap;
   gap: 1rem;
   width: 60vw;
+  height: 100%;
+  margin-top: 5rem;
 }
 @media only screen and (max-width: 800px) {
   #about__txt {
@@ -936,14 +930,14 @@ footer {
 }
 
 #game {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100vw;
   height: 100vh;
   background: radial-gradient(#333333, #191919);
   background-position: center center;
   background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 @media only screen and (max-width: 1400px) {
   #game {
@@ -958,11 +952,11 @@ footer {
 }
 
 .board {
-  position: relative;
-  display: flex;
-  flex-flow: row wrap;
   justify-content: center;
   align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  position: relative;
   margin-top: 4.5rem;
   margin-bottom: 5vh;
 }
@@ -1236,12 +1230,12 @@ div[class^=tile] {
 }
 
 #loser {
-  width: 100vw;
-  height: 100vh;
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+  width: 100vw;
+  height: 100vh;
 }
 #loser h1 {
   font-family: lores-12, sans-serif;
@@ -1263,17 +1257,12 @@ div[class^=tile] {
 
 .loser-btn {
   display: flex;
-  flex-direction: row;
+  flex-flow: row wrap;
   justify-content: center;
   align-items: center;
 }
-@media only screen and (max-width: 600px) {
-  .loser-btn {
-    flex-direction: column;
-  }
-  .loser-btn button {
-    margin: 1rem;
-  }
+.loser-btn button {
+  margin-top: 3rem;
 }
 
 .flash {
@@ -1296,7 +1285,7 @@ div[class^=tile] {
 
 #winner {
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
 }
@@ -1311,7 +1300,7 @@ div[class^=tile] {
 }
 #winner h2 {
   margin-top: 3rem;
-  color: white;
+  color: #ffffff;
   font-size: 6vw;
   text-transform: inherit;
 }
@@ -1324,17 +1313,16 @@ div[class^=tile] {
 }
 
 .winner-btn {
-  margin-top: -10vh;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
-  justify-items: center;
+  margin-top: 10vh;
   font-size: 1.5em;
 }
 @media only screen and (max-width: 1000px) {
   .winner-btn {
-    margin-top: -8rem;
+    margin-top: 6rem;
     font-size: 1.2em;
   }
 }
@@ -1382,7 +1370,7 @@ div[class^=tile] {
 }
 #contact {
   display: flex;
-  flex-direction: row;
+  flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
   width: 100vw;
@@ -1391,7 +1379,7 @@ div[class^=tile] {
 
 .contact {
   display: flex;
-  flex-direction: column;
+  flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
   background-color: #242424;
@@ -1405,37 +1393,55 @@ div[class^=tile] {
 }
 @media only screen and (max-width: 800px) {
   .contact {
-    width: 85vw;
-    margin-left: 15vw;
+    top: 6rem;
+    width: 77vw;
+    left: 20vw;
   }
 }
 .contact form {
   display: flex;
-  flex-direction: column;
+  flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
   gap: 1.2rem;
   width: 80%;
   font-family: montserrat, sans-serif;
 }
+@media only screen and (max-width: 800px) {
+  .contact form {
+    width: 100%;
+  }
+}
 .contact form h2 {
-  font-size: 2.1em;
+  font-size: 2.8em;
   margin-bottom: -1rem;
+  color: #00ffff;
+}
+@media only screen and (max-width: 800px) {
+  .contact form h2 {
+    font-size: 1.8em;
+  }
 }
 .contact form p {
   margin-bottom: 1rem;
+  max-width: 80%;
 }
 .contact form input, .contact form textarea {
   color: #ffffff;
   background-color: #191919;
-  border: none;
-  width: 100%;
+  width: 80%;
   height: 3rem;
   padding: 1rem;
   font-size: 0.8em;
   letter-spacing: 0.1em;
-  border-radius: 10px;
-  border: solid 2px #00ffff;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  outline: none;
+}
+.contact form input:focus, .contact form textarea:focus {
+  border-bottom: solid 2px #00ffff;
 }
 .contact form input::placeholder, .contact form textarea::placeholder {
   text-transform: uppercase;
@@ -1450,6 +1456,7 @@ div[class^=tile] {
 .contact form textarea {
   font-family: montserrat, sans-serif;
   height: 5rem;
+  margin-bottom: 1rem;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -5,18 +5,33 @@ $light-black: #242424;
 $gray: #8d8d8d;
 $box-shadow: -8px -8px 18px 0 rgba(0, 0, 0, 0.55), inset 3px 3px 7px rgba(0,0,0,0.15), inset -3px -3px 7px rgba(255,255,255,0.09);
 
+@mixin flex-center {
+    justify-content: center;
+    align-items: center;
+}
+@mixin flex-row {
+    display: flex;
+    flex-flow: row nowrap;
+}
+@mixin flex-column {
+    display: flex;
+    flex-flow: column nowrap;
+}
+@mixin flex-wrap {
+    display: flex;
+    flex-flow: row wrap;
+}
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 body {
-    background-color: #191919;
+    @include flex-center;
+    background-color: $dark-black;
     width: 100%;
     height: 100%;
     display: grid;
-    justify-content: center;
-    align-items: center;
     overflow-y: scroll;
     overflow-x: hidden;
 }
@@ -33,13 +48,13 @@ button { //default button
     width: 10rem;
     height: 3rem;
     text-align: center;
-    border: 2px solid #00ffff;
-    background-color: #242424;
+    border: 2px solid $aqua;
+    background-color: $light-black;
     font-size: 1.2em;
     font-family: montserrat, sans-serif;
     letter-spacing: 2px;
     padding: 10px 20px;
-    color: #00ffff;
+    color: $aqua;
     border-radius: 18px;
     margin-left: 2rem;
     margin-right: 2rem;
@@ -47,8 +62,8 @@ button { //default button
     font-weight: 500;
 }
 button:hover {
-    color: #242424;
-    background-color: #00ffff;
+    color: $light-black;
+    background-color: $aqua;
 }
 button:active {
     outline: none;
@@ -62,10 +77,10 @@ button:focus { outline: none; }
 //scrollbar
 ::-webkit-scrollbar { //width
     width: 10px;
-    background: #191919; 
+    background: $dark-black; 
 }
 ::-webkit-scrollbar-thumb { //handle
-    background: #242424; 
+    background: $light-black; 
     border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb:hover { background: #3f3f3f; }

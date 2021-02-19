@@ -11,12 +11,10 @@
     }
 }
 #loser {
+    @include flex-column;
+    @include flex-center;
     width: 100vw;
     height: 100vh;
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
     h1 {
         font-family: lores-12, sans-serif;
         font-size: 8.5em;
@@ -28,14 +26,9 @@
     }
 }
 .loser-btn {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    @media only screen and (max-width: 600px) { 
-        flex-direction: column;
-        button { margin: 1rem; }
-    }
+    @include flex-wrap;
+    @include flex-center;
+    button { margin-top: 3rem; }
 }
 .flash { animation: flash 1s linear infinite; }
 @keyframes flash { 50% { opacity: 0; } }

@@ -9,10 +9,8 @@
     }
 }
 .intro-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: row nowrap;
+    @include flex-center;
+    @include flex-row;
     margin: 5rem;
     @media only screen and (max-width: 1100px) { flex-flow: row wrap; }
     @media only screen and (max-width: 600px) {
@@ -26,8 +24,8 @@
     z-index: 9;
     width: 30rem;
     height: 36rem;
-    background-color: #00ffff;
-    box-shadow: -8px -8px 18px 0 rgba(0, 0, 0, 0.55), inset 3px 3px 7px rgba(0,0,0,0.15), inset -3px -3px 7px rgba(255,255,255,0.09);
+    background-color: $aqua;
+    box-shadow: $box-shadow;
     border-radius: 25px;
     user-select: none; //pevent text selection
     @media only screen and (max-width: 1100px) { display: none; }
@@ -55,30 +53,28 @@
     @media only screen and (max-width: 1100px) { display: none; }
 }
 #intro__txt {
+    @include flex-center;
+    @include flex-wrap;
     margin-left: -10rem;
     padding-top: 5rem;
     padding-bottom: 4rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-flow: row wrap;
-    background-color: #242424;
+    background-color: $light-black;
     z-index: 9;
-    width: 49rem;
+    width: 70vw;
+    max-width: 49rem;
     height: 30rem;
-    box-shadow: -8px -8px 18px 0 rgba(0, 0, 0, 0.55), inset 3px 3px 7px rgba(0,0,0,0.15), inset -3px -3px 7px rgba(255,255,255,0.09);
+    box-shadow: $box-shadow;
     border-radius: 25px;
     @media only screen and (max-width: 1100px) { 
         padding-top: 1rem;
         padding-bottom: 1rem;
-        width: 70vw;
         height: 100%;
         margin-left: 0rem;
     }
     @media only screen and (max-width: 600px) { 
         background-color: transparent;
         box-shadow: none;
-        color: #8d8d8d;
+        color: $gray;
         padding-top: 0;
         padding-bottom: 0;
     }
@@ -88,7 +84,7 @@
         text-transform: uppercase;
         letter-spacing: -1px;
         line-height: 1em;
-        color: #ffffff;
+        color: $white;
         font-size: 4.4em;
         text-align: center;
         @media only screen and (max-width: 800px) { display: none; }
@@ -106,18 +102,16 @@
     }
 }
 .intro-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-flow: row wrap;
+    @include flex-center;
+    @include flex-wrap;
     margin-top: 2.5rem;
     button {
         width: 14.5rem;
         height: 4rem;
         font-size: 1.4em;
-        color: #242424;
-        border: #00ffff solid 2px;
-        background-color: #00ffff;
+        color: $light-black;
+        border: $aqua solid 2px;
+        background-color: $aqua;
         @media only screen and (max-width: 1100px) { 
             margin-bottom: 2rem;
             width: 12.5rem;

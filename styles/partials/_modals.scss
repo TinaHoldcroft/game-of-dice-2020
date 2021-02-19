@@ -1,20 +1,16 @@
 .modal-container {
-    opacity: 0;
     position: fixed;
+    opacity: 0;
     z-index: 100;
     left: 0;
-    right: 0;
     top: 0;
-    bottom: 0;
     transition: 0.2s ease-in-out;
 }
 .modal--active { opacity: 1; }
 .modal {
     position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    @include flex-center;
+    @include flex-column;
     left: 50vw;
     top: 50vh;
     height: 20rem;
@@ -22,8 +18,8 @@
     line-height: 1.8em;
     transform: translate(-50%, -50%);
     border-radius: 30px;
-    background-color: #242424;
-    box-shadow: -8px -8px 18px 0 rgba(0, 0, 0, 0.55), inset 3px 3px 7px rgba(0,0,0,0.15), inset -3px -3px 7px rgba(255,255,255,0.09);
+    background-color: $light-black;
+    box-shadow: $box-shadow;
     @media only screen and (max-width: 600px) { width: 21rem; }
     p { 
         text-align: center;
@@ -34,7 +30,6 @@
         @media only screen and (max-width: 600px) { 
             margin-left: 2rem; 
             margin-right: 2rem;
-
         }
     }
 }

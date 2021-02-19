@@ -21,7 +21,7 @@
     font-family: montserrat, sans-serif;
     font-size: 10px;
     letter-spacing: 8px;
-    color: #8d8d8d;
+    color: $gray;
     line-height: 22px;
     margin-bottom: -38px;
     text-transform: uppercase;
@@ -32,22 +32,21 @@
         font-weight: 900;
         margin-left: -1px;
         font-size: 28px;
-        color: #00ffff;
+        color: $aqua;
         @media only screen and (max-width: 600px) { letter-spacing: 5px; }
     }
 }
 //desktop navigation
 .nav-container {
-    display: flex;
+    @include flex-row;
     position: absolute;
+    justify-content: space-between;
     top: 0vh;
     left: 0vw;
     width: 100vw;
     height: 5.5rem;
-    justify-content: space-between;
-    flex-direction: row;
     overflow: hidden;
-    background-color: #242424; 
+    background-color: $light-black; 
     box-shadow: inset 3px 3px 7px rgba(0,0,0,0.15), inset -3px -3px 7px rgba(255,255,255,0.05);
     z-index: 9;
     @media only screen and (max-width: 600px) { 
@@ -59,15 +58,15 @@
         padding: 1rem;
         z-index: 9;
         ul {
-            display: flex;
+            @include flex-row;
             list-style-type: none;
-            flex-direction: row;
             justify-content: flex-end;
         }
         li {
-            color: #8d8d8d;
+            color: $gray;
             text-transform: uppercase;
             padding-right: 2rem;
+            outline: none;
         }
         @media only screen and (max-width: 600px) { display: none; } //hide element on phone
         span {
@@ -78,7 +77,7 @@
         }
         i { vertical-align: middle; }
         i:hover, a:hover { opacity: 80%; }
-        i:active, a:active { color: #00ffff; }
+        i:active, a:active { color: $aqua; }
     }
 }
 //phone navigation
@@ -101,7 +100,7 @@
         transition: transform ease-out 0.1s;
     }
     #navToggle {
-        background-color: #242424;
+        background-color: $light-black;
         height: 4.5rem;
         width: 4rem;
         i { padding: 1rem; }
@@ -113,7 +112,7 @@
         top: 8rem;
         width: 16.5rem; //12.8 = 0
         transition: all 0.45s cubic-bezier(0.77, 0, 0.175, 1);
-        background-color: #242424;
+        background-color: $light-black;
         height: 100vh;
         ul {
             padding: 1.7rem;
@@ -124,13 +123,13 @@
             padding-bottom: 2.7rem;
         }
         a {
+            position: relative;
             display: block;
             white-space: nowrap;
             text-decoration: none; 
-            position: relative;
         }
         i:hover, a:hover { opacity: 50%; }
-        i:active, a:active { opacity: 100%; color: #00ffff; }
+        i:active, a:active { opacity: 100%; color: $aqua; }
         i {
             position: absolute;
             top: 0rem;
@@ -144,27 +143,26 @@
     }
     @media only screen and (min-width: 600px) { display: none; }
 }
-//font awesome unicode icons
-.unicode {
+.unicode {//font awesome unicode icons
     position: relative;
 	display: block;
     cursor: pointer;
     ::before { font-family: 'Font Awesome\ 5 Free'; }
 }
 #unicode__toggle::before {
+    position: relative;
     content: '\f35a'; //arrow pointing right
     font-size: 1.5em;
     display: block;
-    position: relative;
 }
 .openPanel { //after panel is open
     nav { transform: translate3d(12.2rem, 0, 0); }
     #unicode__toggle::before {
 	content: '\f410'; //close x
-	display: block;
-    position: relative;
-    font-size: 1.5em;
-    color: #00ffff;
+        display: block;
+        position: relative;
+        font-size: 1.5em;
+        color: $aqua;
     }
 }
 #dropdown{
@@ -184,7 +182,7 @@
     li {
         margin-top: 1rem;
         margin-bottom: -1rem;
-        a { color: #ffffff; }
+        a { color: $white; }
     }
     li + li { margin-bottom: -4.5rem; }
 }
