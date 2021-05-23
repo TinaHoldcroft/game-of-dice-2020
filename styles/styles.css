@@ -46,18 +46,15 @@ button {
   font-weight: 500;
 }
 
-button:hover {
+button:hover, button:focus {
   color: #242424;
   background-color: #00ffff;
+  outline: none;
 }
 
 button:active {
   outline: none;
   transform: scale(0.98);
-}
-
-button:focus {
-  outline: none;
 }
 
 .active div {
@@ -880,7 +877,6 @@ footer {
 #about__txt {
   display: flex;
   flex-flow: column nowrap;
-  gap: 1rem;
   width: 60vw;
   height: 100%;
   margin-top: 5rem;
@@ -908,6 +904,7 @@ footer {
 #about__txt p {
   line-height: 1.5em;
   color: #8d8d8d;
+  margin-bottom: 1rem;
 }
 
 @media only screen and (max-width: 600px) {
@@ -1403,7 +1400,6 @@ div[class^=tile] {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  gap: 1.2rem;
   width: 80%;
   font-family: montserrat, sans-serif;
 }
@@ -1416,6 +1412,7 @@ div[class^=tile] {
   font-size: 2.8em;
   margin-bottom: -1rem;
   color: #00ffff;
+  margin-bottom: 0.1rem;
 }
 @media only screen and (max-width: 800px) {
   .contact form h2 {
@@ -1425,6 +1422,7 @@ div[class^=tile] {
 .contact form p {
   margin-bottom: 1rem;
   max-width: 80%;
+  margin-bottom: 2rem;
 }
 .contact form input, .contact form textarea {
   color: #ffffff;
@@ -1439,6 +1437,7 @@ div[class^=tile] {
   border-right: none;
   border-bottom: none;
   outline: none;
+  margin-bottom: 1rem;
 }
 .contact form input:focus, .contact form textarea:focus {
   border-bottom: solid 2px #00ffff;
@@ -1446,12 +1445,19 @@ div[class^=tile] {
 .contact form input::placeholder, .contact form textarea::placeholder {
   text-transform: uppercase;
 }
-.contact form label {
-  color: #8d8d8d;
-  text-transform: uppercase;
-  font-weight: 900;
-  letter-spacing: 0.1em;
-  margin-left: 0.8rem;
+.contact form .btn-group {
+  display: flex;
+  flex-flow: row nowrap;
+  margin: 1rem;
+  transform: scale(0.9);
+}
+.contact form .btn-group button + button {
+  background-color: #00ffff;
+  color: #191919;
+}
+.contact form .btn-group button + button:hover, .contact form .btn-group button + button:focus {
+  color: #00ffff;
+  background-color: #191919;
 }
 .contact form textarea {
   font-family: montserrat, sans-serif;

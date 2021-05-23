@@ -64,7 +64,10 @@
                 <input placeholder="name" type="name" name="name" pattern="[A-Za-z ]{2,}" required/>
                 <input placeholder="example@domain.com" type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required/>
                 <textarea placeholder="write your message here" type="text" name="message" pattern=".{3,}" required></textarea>
-                <button type="submit">Send</button>
+                <div class="btn-group">
+                    <button type="reset">Reset</button>
+                    <button type="submit">Send</button>
+                </div>
             </form>
         </div>
     </main>

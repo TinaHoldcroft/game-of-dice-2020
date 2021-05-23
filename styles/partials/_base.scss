@@ -61,15 +61,15 @@ button { //default button
     text-transform: uppercase;
     font-weight: 500;
 }
-button:hover {
+button:hover, button:focus {
     color: $light-black;
     background-color: $aqua;
+    outline: none;
 }
 button:active {
     outline: none;
     transform: scale(0.98)
 }
-button:focus { outline: none; }
 .active {
     div { box-shadow: inset 3px 3px 7px rgba(0,0,0,0.15), inset -3px -3px 7px rgba(255,255,255,0.09); }
     div:hover { transform: scale(1) !important; }
