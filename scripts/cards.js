@@ -8,22 +8,23 @@ const houses = [
     "House Tyrell of Highgarden", //filenames card seven(7): icons__HouseTyrellofHighgarden || images__HouseTyrellofHighgarden
     "House Goodbrother of Hammerhorn", //filenames card eight(8): icons__HouseGoodbrotherofHammerhorn || images__HouseGoodbrotherofHammerhorn
     "House Nymeros Martell of Sunspear", //filenames card nine(9): icons__HouseNymerosMartellofSunspear || images__HouseNymerosMartellofSunspear
-    "House Greyjoy of Pyke" ]; //filenames card ten(10): icons__HouseGreyjoyofPyke || images__HouseGreyjoyofPyke
+    "House Greyjoy of Pyke"]; //filenames card ten(10): icons__HouseGreyjoyofPyke || images__HouseGreyjoyofPyke
 
 //fetch API house data (https://github.com/joakimskoog/AnApiOfIceAndFire/blob/master/data/characters.json)
 async function fetchData() {
     for (const house of houses) {
         await fetch(`https://anapioficeandfire.com/api/houses?name=${house}`)
-        .then(response => response.json())
-        .then(data => {
-            console.log('fetch successful');
-            if (house === "") { createCards(data[1]); } 
-            else { createCards(data[0]); } })
-        .catch(error => { 
-            console.log(error);
-            alert('Error fetching API, see console for more details'); 
-        }) 
-    } 
+            .then(response => response.json())
+            .then(data => {
+                console.log('fetch successful');
+                if (house === "") { createCards(data[1]); }
+                else { createCards(data[0]); }
+            })
+            .catch(error => {
+                console.log(error);
+                alert('Error fetching API, see console for more details');
+            })
+    }
 }
 fetchData();
 
@@ -35,7 +36,7 @@ function createCards(house) {
     const card = document.createElement('div'); //create div
     card.className = 'card-container'; //give div a class 
     const cardContent = //card html
-    `<div class="cards">
+        `<div class="cards">
         <div class="card-front">
             <img class="card-image" src="styles/images/icons__${filename}.svg" alt="${house.name}">
         </div>
@@ -59,14 +60,14 @@ let playerTwo = '';
 let playerOne = '';
 
 function confimationMessage(selected) {
-    if (duplicate) { return `You can not pick the same player twice`; } 
-    else if (!playerOne) { return `You have selected ${selected} to be your player, pick again to choose your opponent and start the game`; } 
-    else { return `You have selected ${selected} to be your opponent, click OK to start the game`; }
+    if (duplicate) { return "You can not pick the same player twice"; }
+    if (!playerOne) { return `You have selected ${selected} to be your player, pick again to choose your opponent and start the game`; }
+    return `You have selected ${selected} to be your opponent, click OK to start the game`;
 }
 
 function openModal(selected) {
     duplicate = playerOne && selected === playerOne; //mark as duplicate if same card is selected twice
-    let modalMessage = confimationMessage(selected);
+    const modalMessage = confimationMessage(selected);
     let confirmBtn = { label: 'OK', clickHandler: () => confirm(selected) }; //confirm choice button
     if (duplicate) { //buttons when duplicate selected
         confirmBtn = { label: 'Repick', clickHandler: cancel };
@@ -78,15 +79,15 @@ function openModal(selected) {
 function confirm(selected) { //confirm choice of player
     if (!playerOne || duplicate) {
         playerOne = selected;
-        playerTwo = `?player=${playerOne}`; 
-    } 
+        playerTwo = `?player=${playerOne}`;
+    }
     else {
         playerTwo += `&autoPlayer=${selected}`;
-        window.location.assign(`game.html${playerTwo}`); 
-    } 
+        window.location.assign(`game.html${playerTwo}`);
+    }
 }
 
 function cancel() { //cancel choice of player
-    if (duplicate) { playerOne = ''; } 
-    else { return; } 
+    if (duplicate) { playerOne = ''; }
+    else { return; }
 };
