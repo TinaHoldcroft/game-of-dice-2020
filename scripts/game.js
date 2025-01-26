@@ -1,22 +1,22 @@
-if (!window.location.search) { //no player selected 
-    if (window.confirm('You have not selected a player, please go back')) { window.open('index.html'); };
+if (!window.location.search) {
+    // No player selected, redirect to home
+    if (window.confirm('You have not selected a player, please go back.')) {
+        window.location.assign('index.html');
+    }
 }
 
-function diceLog(createLog, number) { //create player log
+function diceLog(isOpponent, roll) {
+    const logContainer = isOpponent ? opponentLog : playerLog;
+    const logId = isOpponent ? `opponent-dice-${roll}` : `player-dice-${roll}`;
+    const title = isOpponent
+        ? `Your opponent rolled a ${roll}`
+        : `You rolled a ${roll}`;
     const paragraph = document.createElement('p');
     paragraph.className = 'dice-paragraph';
-    if (!createLog) {
-        playerLog.insertAdjacentElement('afterbegin', paragraph);
-        paragraph.id = `player-dice-${number}`;
-        paragraph.title = `You rolled a ${number}`;
-        console.log(`Player rolled: ${number}`);
-    }
-    else {
-        opponentLog.insertAdjacentElement('afterbegin', paragraph);
-        paragraph.id = `opponent-dice-${number}`;
-        paragraph.title = `Your opponent rolled a ${number}`;
-        console.log(`Opponent rolled: ${number}`);
-    }
+    paragraph.id = logId;
+    paragraph.title = title;
+    logContainer.insertAdjacentElement('afterbegin', paragraph);
+    console.log(title);
 }
 
 class Avatar {
@@ -24,20 +24,18 @@ class Avatar {
         this.name = name;
         this.id = id;
         this.tileNumber = 0;
-        this.token = '';
+        this.token = this.createToken();
         this.moveTimeOut = 500;
         this.isComputerControlled = isComputerControlled;
         this.hasToWaitTurn = false;
         this.rolledSix = false;
-        this.createToken();
     }
 
     createToken() {
-        const tokenImagePath = `styles/images/icons__${this.id}.svg`;
         const tokenElement = document.createElement('img');
-        tokenElement.src = tokenImagePath;
+        tokenElement.src = `styles/images/icons__${this.id}.svg`;
         tokenElement.className = 'token';
-        this.token = tokenElement;
+        return tokenElement;
     }
 
     placeTokenOnBoard(board, top, left) {
@@ -46,167 +44,168 @@ class Avatar {
     }
 
     async moveToken(top, left) {
-        if (!this.isComputerControlled) {
-            this.token.style.top = `${top}px`;
-            this.token.style.left = `${left}px`;
-        }
-        else {
-            const offsetTop = 70 / 2;
-            const offsetLeft = 110 / 2;
-            this.token.style.top = `${top + offsetTop}px`;
-            this.token.style.left = `${left + offsetLeft}px`;
-        }
+        const offset = this.isComputerControlled ? { top: 35, left: 55 } : { top: 0, left: 0 };
+        this.token.style.top = `${top + offset.top}px`;
+        this.token.style.left = `${left + offset.left}px`;
     }
 
     async moveForwards(diceRoll, tiles) {
-        const lastTileToMoveTo = this.tileNumber + diceRoll;
-        const lastTile = tiles.length - 1;
-        let moveIndex = 1;
-        let adjustedDiceRoll = diceRoll;
-        if (lastTileToMoveTo > lastTile) { adjustedDiceRoll = diceRoll - (lastTileToMoveTo - lastTile); }
-        while (moveIndex <= diceRoll) {
-            const tileToMoveTo = tiles[moveIndex + this.tileNumber];
-            await this.wait(this.moveTimeOut).then(() => this.moveToken(tileToMoveTo.offsetTop, tileToMoveTo.offsetLeft));
-            if (tileToMoveTo.className === 'tile-throne' && !this.isComputerControlled) {
-                const messageModal = new Modal(tileToMoveTo.dataset.message, { label: 'OK' }); //throne 
-                await messageModal.answer();
+        const targetTile = Math.min(this.tileNumber + diceRoll, tiles.length - 1);
+        for (let i = this.tileNumber + 1; i <= targetTile; i++) {
+            const tile = tiles[i];
+            await this.wait(this.moveTimeOut).then(() =>
+                this.moveToken(tile.offsetTop, tile.offsetLeft)
+            );
+
+            // Handle special "throne" tile
+            if (tile.classList.contains('tile-throne') && !this.isComputerControlled) {
+                const modal = new Modal(tile.dataset.message, { label: 'OK' });
+                await modal.answer();
             }
-            moveIndex++;
         }
-        this.tileNumber = this.tileNumber + diceRoll;
+        this.tileNumber = targetTile;
     }
 
     async moveBackwards(penalty, tiles) {
-        const lastTileToMoveTo = this.tileNumber - penalty;
-        let moveIndex = this.tileNumber;
-        while (moveIndex !== lastTileToMoveTo) {
-            moveIndex--;
-            const tileToMoveTo = tiles[moveIndex];
-            await this.wait(this.moveTimeOut).then(() => this.moveToken(tileToMoveTo.offsetTop, tileToMoveTo.offsetLeft));
+        const targetTile = Math.max(this.tileNumber - penalty, 0);
+        for (let i = this.tileNumber - 1; i >= targetTile; i--) {
+            const tile = tiles[i];
+            await this.wait(this.moveTimeOut).then(() =>
+                this.moveToken(tile.offsetTop, tile.offsetLeft)
+            );
         }
-        this.tileNumber = moveIndex;
+        this.tileNumber = targetTile;
     }
 
-    async wait(miliseconds) { return new Promise(resolve => setTimeout(resolve, miliseconds)); }
+    async wait(milliseconds) {
+        return new Promise(resolve => setTimeout(resolve, milliseconds));
+    }
 }
 
+// Game Setup
 const board = document.querySelector('.board');
-const tiles = Array.from(document.querySelectorAll('div[class^="tile"]')); //^ = class starting with
-const firstTile = tiles[0];
-const lastTileNumber = tiles.length - 1;
-const lastTile = tiles[lastTileNumber];
-const overview = document.querySelectorAll('.player-wrapper');
-const diceBtn = document.querySelector('.dice-btn');
+const tiles = Array.from(document.querySelectorAll('div[class^="tile"]'));
 const playerLog = document.querySelector('#playerLog');
 const opponentLog = document.querySelector('#opponentLog');
+const diceBtn = document.querySelector('.dice-btn');
 const playerData = fetchCards('player');
 const opponentData = fetchCards('autoPlayer');
 const player = new Avatar(playerData.name, playerData.id);
 const autoPlayer = new Avatar(opponentData.name, opponentData.id, true);
 let waitPenalty = 0;
 
-createBoardGame();
+initializeGame();
 
-function createBoardGame() {
-    createAvatar(player);
-    createAvatar(autoPlayer);
-    diceBtn.addEventListener('click', onDiceRollClick);
+function initializeGame() {
+    setupAvatars();
+    setupBoard();
+    diceBtn.addEventListener('click', handleDiceRoll);
+}
+
+function setupAvatars() {
+    addAvatarToOverview(player, 0);
+    addAvatarToOverview(autoPlayer, 1);
+    const startTile = tiles[0];
+    player.placeTokenOnBoard(board, startTile.offsetTop, startTile.offsetLeft);
+    autoPlayer.placeTokenOnBoard(board, startTile.offsetTop, startTile.offsetLeft);
+}
+
+function addAvatarToOverview(avatar, index) {
+    const overview = document.querySelectorAll('.player-wrapper')[index];
+    const avatarHtml = `<img title="${avatar.name}" src="styles/images/icons__${avatar.id}.svg">`;
+    overview.insertAdjacentHTML('afterbegin', avatarHtml);
+}
+
+function setupBoard() {
     tiles.forEach((tile, index) => {
         tile.innerHTML = `<p title="${index}" class="tile-number">${index}</p>`;
     });
-    const firstTileTop = firstTile.offsetTop;
-    const firstTileLeft = firstTile.offsetLeft;
-    player.placeTokenOnBoard(board, firstTileTop, firstTileLeft);
-    autoPlayer.placeTokenOnBoard(board, firstTileTop, firstTileLeft);
 }
 
-function createAvatar(house) {
-    const htmlString = `
-        <img title="${house.name}" src="styles/images/icons__${house.id}.svg">`;
-    if (!house.isComputerControlled) { overview[0].insertAdjacentHTML('afterbegin', htmlString); }
-    else { overview[1].insertAdjacentHTML('afterbegin', htmlString); }
-}
-
-function fetchCards(player) {
-    const pattern = new RegExp(`${player}\\=[a-zA-z\\s']+`, 'g');
-    const decodedUri = decodeURIComponent(window.location.search);
-    const houseName = decodedUri.match(pattern)[0].split('=')[1];
-    const houseFilename = houseName.replace(/\s/g, '');
-    return { name: houseName, id: houseFilename };
-}
-
-function rollDice() {
-    const randomNumber = Math.floor(Math.random() * 6 + 1);
-    return randomNumber;
-}
-
-async function onDiceRollClick() {
+async function handleDiceRoll() {
     diceBtn.disabled = true;
+
+    // Handle player turn
     if (autoPlayer.hasToWaitTurn && waitPenalty > 0) {
-        await runTurn(player);
-        diceBtn.disabled = false;
+        await executeTurn(player);
         waitPenalty--;
-        if (!player.hasToWaitTurn) { return; }
-        autoPlayer.hasToWaitTurn = false;
-        diceBtn.disabled = true;
-    }
-    else { await runTurn(player); }
-    if (player.rolledSix && !player.hasToWaitTurn) {
-        alert('You rolled a 6! You get another turn');
-        console.log('6 rolled: bonus roll alert');
+        if (waitPenalty === 0) autoPlayer.hasToWaitTurn = false;
         diceBtn.disabled = false;
         return;
     }
+
+    await executeTurn(player);
+    if (player.rolledSix) {
+        alert('You rolled a 6! You get another turn.');
+        diceBtn.disabled = false;
+        return;
+    }
+
+    // Handle opponent turn
     if (player.hasToWaitTurn && waitPenalty > 0) {
         while (waitPenalty > 0) {
-            await runTurn(autoPlayer);
+            await executeTurn(autoPlayer);
             waitPenalty--;
-            if (autoPlayer.hasToWaitTurn) {
-                player.hasToWaitTurn = false;
-                break;
-            }
         }
         player.hasToWaitTurn = false;
-    }
-    else { await runTurn(autoPlayer); }
-    if (autoPlayer.rolledSix && !autoPlayer.hasToWaitTurn) {
+    } else {
+        await executeTurn(autoPlayer);
         while (autoPlayer.rolledSix) {
-            await runTurn(autoPlayer);
+            await executeTurn(autoPlayer);
         }
     }
+
     diceBtn.disabled = false;
 }
 
-async function runTurn(house) {
-    const number = rollDice();
-    house.rolledSix = number === 6;
-    diceLog(house.isComputerControlled, number);
-    await house.moveForwards(number, tiles);
+async function executeTurn(avatar) {
+    const diceRoll = rollDice();
+    avatar.rolledSix = diceRoll === 6;
+    diceLog(avatar.isComputerControlled, diceRoll);
+    await avatar.moveForwards(diceRoll, tiles);
     await sleep(600);
-    if (house.tileNumber === lastTileNumber) { return sleep(500).then(() => endGame(!house.isComputerControlled)); }
-    const didLandOntrapTile = tiles[house.tileNumber].className === 'tile-trap';
-    if (didLandOntrapTile) { await applyPenalty(house); }
+
+    if (avatar.tileNumber === tiles.length - 1) {
+        return endGame(!avatar.isComputerControlled);
+    }
+
+    if (tiles[avatar.tileNumber].classList.contains('tile-trap')) {
+        await applyPenalty(avatar);
+    }
 }
 
-async function applyPenalty(house) {
-    const trapTile = tiles[house.tileNumber];
-    const tileMessage = trapTile.dataset.message;
-    const confirmBtn = { label: 'OK' };
-    if (house.isComputerControlled) { confirmBtn.label = 'OK'; }
-    const messageModal = new Modal(tileMessage, confirmBtn);
+async function applyPenalty(avatar) {
+    const trapTile = tiles[avatar.tileNumber];
+    const penalty = Number.parseInt(trapTile.dataset.penalty, 10);
     const penaltyType = trapTile.dataset.type;
-    const penalty = Number.parseInt(trapTile.dataset.penalty);
-    await messageModal.answer();
+
+    const modal = new Modal(trapTile.dataset.message, { label: 'OK' });
+    await modal.answer();
+
     if (penaltyType === 'wait') {
         waitPenalty = penalty + 1;
-        house.hasToWaitTurn = true;
+        avatar.hasToWaitTurn = true;
+    } else {
+        await avatar.moveBackwards(penalty, tiles);
     }
-    else { await house.moveBackwards(penalty, tiles); }
 }
 
-function sleep(miliseconds) { return new Promise(resolve => setTimeout(resolve, miliseconds)); }
+function rollDice() {
+    return Math.floor(Math.random() * 6) + 1;
+}
 
-async function endGame(final) { //move to winner/loser screen
-    if (final) { window.location.assign('winner.html'); }
-    else { window.location.assign('loser.html'); }
+async function endGame(isWinner) {
+    const destination = isWinner ? 'winner.html' : 'loser.html';
+    window.location.assign(destination);
+}
+
+function fetchCards(playerType) {
+    const searchPattern = new RegExp(`${playerType}=([a-zA-Z\\s']+)`);
+    const match = decodeURIComponent(window.location.search).match(searchPattern);
+    const name = match ? match[1] : '';
+    return { name, id: name.replace(/\s+/g, '') };
+}
+
+function sleep(milliseconds) {
+    return new Promise(resolve => setTimeout(resolve, milliseconds));
 }
