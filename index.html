@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="utf-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- SEO -->
     <meta name="author" content="Tina Mary Holdcroft">
-	<meta name="description" content="Game of Dice">
-	<meta name="keywords" content="Game of Dice, Game, Dice, Board Game">
-	<!-- style -->
+    <meta name="description" content="Game of Dice">
+    <meta name="keywords" content="Game of Dice, Game, Dice, Board Game">
+    <!-- style -->
     <link rel="stylesheet" type="text/css" href="styles/styles.css">
     <link rel="stylesheet" href="https://use.typekit.net/xjc5qtk.css"> <!-- adobe fonts -->
     <script src="https://kit.fontawesome.com/a83d77d417.js" crossorigin="anonymous"></script> <!-- fontawesome icons -->
@@ -20,22 +21,29 @@
     <meta property="og:url" content="http://tinamary.com/portfolio/game-of-dice/index.html">
     <meta property="og:type" content="website">
     <!-- browser design -->
-	<link rel="icon" href="styles/images/dice-logo.svg" type="image/svg" sizes="16x16"> <!-- favicon -->
+    <link rel="icon" href="styles/images/dice-logo.svg" type="image/svg" sizes="16x16"> <!-- favicon -->
     <meta name="theme-color" content="#242424"> <!-- color of browser banner on phone -->
-	<title>Game of Dice</title> <!-- page title -->
+    <title>Game of Dice</title> <!-- page title -->
 </head>
+
 <body>
     <header>
-		<div class="nav-container">
-			<!-- logo desktop-->
-			<a href="index.html"><div class="logo"><p id="logo__txt">Game of<br><span>Dice</span></p><img src="styles/images/dice-logo.svg" alt="Logo"></div></a>
-			<!-- desktop navigation bar -->
-			<nav>
-				<ul>
-                    <!-- active page --><li class="active"><a href="index.html#characterCards"><i class="fas fa-dice-five"></i><span>Play</span></a></li>
-					<li><a href="about.html"><i class="fas fa-question-circle"></i><span>About</span></a></li>
-				</ul>
-			</nav>
+        <div class="nav-container">
+            <!-- logo desktop-->
+            <a href="index.html">
+                <div class="logo">
+                    <p id="logo__txt">Game of<br><span>Dice</span></p><img src="styles/images/dice-logo.svg" alt="Logo">
+                </div>
+            </a>
+            <!-- desktop navigation bar -->
+            <nav>
+                <ul>
+                    <!-- active page -->
+                    <li class="active"><a href="index.html#characterCards"><i
+                                class="fas fa-dice-five"></i><span>Play</span></a></li>
+                    <li><a href="about.html"><i class="fas fa-question-circle"></i><span>About</span></a></li>
+                </ul>
+            </nav>
         </div>
         <!-- phone navigation side bar panel -->
         <div class="panel-container">
@@ -45,7 +53,8 @@
             <div id="navToggle" class="unicode"><i id="unicode__toggle" class="fa"></i></div>
             <nav>
                 <ul>
-                    <!-- active page --><li class="active"><a href="index.html">Play<i class="fa fa-play"></i></a></li>
+                    <!-- active page -->
+                    <li class="active"><a href="index.html">Play<i class="fa fa-play"></i></a></li>
                     <li id="dropdown">
                         <a>About</a>
                         <i class="fas fa-question-circle"></i>
@@ -59,43 +68,46 @@
                 </ul>
             </nav>
         </div>
-	</header>
+    </header>
 
-	<main id="index">
+    <main id="index">
         <div class="intro-container">
-            <div id="intro__box"><h1>Game <span>of Dice</span></h1></div>
+            <div id="intro__box">
+                <h1>Game <span>of Dice</span></h1>
+            </div>
             <img id="intro__img" src="styles/images/dice-white.png">
             <div id="intro__txt">
                 <h1>Game of Dice</h1>
-                <p>Step into the wonderful world of online board games with Game of Dice. Simply pick two players and roll the dice to play!</p>
-                    <div class="intro-btn">
-                        <a href="index.html#characterCards"><button>Play game</button></a>
-                        <a href="about.html"><button>Learn more</button></a>
-                    </div>
+                <p>Step into the wonderful world of online board games with Game of Dice. Simply pick two players and
+                    roll the dice to play!</p>
+                <div class="intro-btn">
+                    <a href="index.html#characterCards"><button>Play game</button></a>
+                    <a href="about.html"><button>Learn more</button></a>
+                </div>
             </div>
         </div>
         <!-- character cards -->
-	    <h2>Choose Your Player</h2>
-	    <div id="characterCards" class="character-container"></div>
+        <h2>Choose Your Player</h2>
+        <div id="characterCards" class="character-container"></div>
     </main>
 
     <footer>
         <div class="copy-container">Copyright &copy; Game of Dice 2020</div>
-		<div class="bubble-container">
+        <div class="bubble-container">
             <div class="bubble active"> <!-- active page-->
-				<div><a id="Play" href="index.html#characterCards"><i class="fas fa-play"></i></a></div>
-			</div>
-			<div class="bubble">
-				<div><a id="About" href="about.html"><i class="fas fa-info"></i></a></div>
-			</div>
-			<div class="bubble">
+                <div><a id="Play" href="index.html#characterCards"><i class="fas fa-play"></i></a></div>
+            </div>
+            <div class="bubble">
+                <div><a id="About" href="about.html"><i class="fas fa-info"></i></a></div>
+            </div>
+            <div class="bubble">
                 <div><a id="Contact" href="contact.html"><i class="fas fa-envelope"></i></a></div>
-			</div>
-		</div>
-	</footer>
-	<!-- JavaScript -->
-    <script src="scripts/base.js"></script>
+            </div>
+        </div>
+    </footer>
+    <!-- JavaScript -->
     <script src="scripts/cards.js"></script>
     <script src="scripts/modals.js"></script>
-</body>	
+</body>
+
 </html>

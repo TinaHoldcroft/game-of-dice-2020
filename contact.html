@@ -1,36 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="utf-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- SEO -->
     <meta name="author" content="Tina Mary Holdcroft">
-	<meta name="description" content="Contact | Game of Dice">
-	<meta name="keywords" content="Game of Dice, Game, Dice, Board Game, Contact">
-	<!-- style -->
+    <meta name="description" content="Contact | Game of Dice">
+    <meta name="keywords" content="Game of Dice, Game, Dice, Board Game, Contact">
+    <!-- style -->
     <link rel="stylesheet" type="text/css" href="styles/styles.css">
     <link rel="stylesheet" href="https://use.typekit.net/xjc5qtk.css"> <!-- adobe fonts -->
     <script src="https://kit.fontawesome.com/a83d77d417.js" crossorigin="anonymous"></script> <!-- fontawesome icons -->
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- browser design -->
-	<link rel="icon" href="styles/images/dice-logo.svg" type="image/svg" sizes="16x16"> <!-- favicon -->
-	<meta name="theme-color" content="#242424"> <!-- color of browser banner on phone -->
-	<title>Contact | Game of Dice</title> <!-- page title -->
+    <link rel="icon" href="styles/images/dice-logo.svg" type="image/svg" sizes="16x16"> <!-- favicon -->
+    <meta name="theme-color" content="#242424"> <!-- color of browser banner on phone -->
+    <title>Contact | Game of Dice</title> <!-- page title -->
 </head>
 
 <body>
     <header>
         <div class="nav-container">
-			<!-- logo desktop-->
-			<a href="index.html"><div class="logo"><p id="logo__txt">Game of<br><span>Dice</span></p><img src="styles/images/dice-logo.svg" alt="Logo"></div></a>
-			<!-- desktop navigation bar -->
-			<nav>
-				<ul>
+            <!-- logo desktop-->
+            <a href="index.html">
+                <div class="logo">
+                    <p id="logo__txt">Game of<br><span>Dice</span></p><img src="styles/images/dice-logo.svg" alt="Logo">
+                </div>
+            </a>
+            <!-- desktop navigation bar -->
+            <nav>
+                <ul>
                     <li><a href="index.html#characterCards"><i class="fas fa-dice-five"></i><span>Play</span></a></li>
-					<li><a href="about.html"><i class="fas fa-question-circle"></i><span>About</span></a></li>
-				</ul>
-			</nav>
+                    <li><a href="about.html"><i class="fas fa-question-circle"></i><span>About</span></a></li>
+                </ul>
+            </nav>
         </div>
         <!-- navigation side bar panel -->
         <div class="panel-container">
@@ -54,16 +59,18 @@
                 </ul>
             </nav>
         </div>
-	</header>
+    </header>
 
-	<main id="contact">
+    <main id="contact">
         <div class="contact">
             <form>
                 <h2>Contact Us</h2>
                 <p>We would love to hear from you!</p>
-                <input placeholder="name" type="name" name="name" pattern="[A-Za-z ]{2,}" required/>
-                <input placeholder="example@domain.com" type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required/>
-                <textarea placeholder="write your message here" type="text" name="message" pattern=".{3,}" required></textarea>
+                <input placeholder="name" type="name" name="name" pattern="[A-Za-z ]{2,}" required />
+                <input placeholder="example@domain.com" type="email" name="email"
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required />
+                <textarea placeholder="write your message here" type="text" name="message" pattern=".{3,}"
+                    required></textarea>
                 <div class="btn-group">
                     <button type="reset">Reset</button>
                     <button type="submit">Send</button>
@@ -74,23 +81,23 @@
 
     <footer>
         <div class="copy-container">Copyright &copy; Game of Dice 2020</div>
-		<div class="bubble-container">
-            <div class="bubble"> 
-				<div><a id="Play" href="index.html#characterCards"><i class="fas fa-play"></i></a></div>
-			</div>
-			<div class="bubble">
-				<div><a id="About" href="about.html"><i class="fas fa-info"></i></a></div>
-			</div>
-			<div class="bubble active"><!-- active page-->
-                <div><a id="Contact" href="contact.html"><i class="fas fa-envelope"></i></a></div>
-			</div>
+        <div class="bubble-container">
             <div class="bubble">
-				<div><a id="GitHub" target="_blank" href="https://github.com/TinaHoldcroft/2020-09_GameofDice#2020-09_gameofdice"><i class="fab fa-github"></i></a></div>
-			</div>
-		</div>
+                <div><a id="Play" href="index.html#characterCards"><i class="fas fa-play"></i></a></div>
+            </div>
+            <div class="bubble">
+                <div><a id="About" href="about.html"><i class="fas fa-info"></i></a></div>
+            </div>
+            <div class="bubble active"><!-- active page-->
+                <div><a id="Contact" href="contact.html"><i class="fas fa-envelope"></i></a></div>
+            </div>
+            <div class="bubble">
+                <div><a id="GitHub" target="_blank"
+                        href="https://github.com/TinaHoldcroft/2020-09_GameofDice#2020-09_gameofdice"><i
+                            class="fab fa-github"></i></a></div>
+            </div>
+        </div>
     </footer>
-    
-	<!-- JavaScript -->
-    <script src="scripts/base.js"></script>
-</body>	
+</body>
+
 </html>

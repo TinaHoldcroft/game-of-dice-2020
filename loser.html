@@ -1,66 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- SEO -->
-    <meta name="author" content="Tina Mary Holdcroft">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- SEO -->
+	<meta name="author" content="Tina Mary Holdcroft">
 	<meta name="description" content="Loser | Game of Dice">
 	<!-- style -->
-    <link rel="stylesheet" type="text/css" href="styles/styles.css">
-    <link rel="stylesheet" href="https://use.typekit.net/xjc5qtk.css"> <!-- adobe fonts -->
-    <script src="https://kit.fontawesome.com/a83d77d417.js" crossorigin="anonymous"></script> <!-- fontawesome icons -->
-    <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- browser design -->
+	<link rel="stylesheet" type="text/css" href="styles/styles.css">
+	<link rel="stylesheet" href="https://use.typekit.net/xjc5qtk.css"> <!-- adobe fonts -->
+	<script src="https://kit.fontawesome.com/a83d77d417.js" crossorigin="anonymous"></script> <!-- fontawesome icons -->
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<!-- browser design -->
 	<link rel="icon" href="styles/images/dice-logo.svg" type="image/svg" sizes="16x16"> <!-- favicon -->
 	<meta name="theme-color" content="#242424"> <!-- color of browser banner on phone -->
 	<title>Loser | Game of Dice</title> <!-- page title -->
 </head>
 
 <body id="loser__body">
-    <header>
+	<header>
 		<div class="nav-container">
 			<!-- logo desktop-->
-			<a href="index.html"><div class="logo"><p id="logo__txt">Game of<br><span>Dice</span></p><img src="styles/images/dice-logo.svg" alt="Logo"></div></a>
+			<a href="index.html">
+				<div class="logo">
+					<p id="logo__txt">Game of<br><span>Dice</span></p><img src="styles/images/dice-logo.svg" alt="Logo">
+				</div>
+			</a>
 			<!-- desktop navigation bar -->
 			<nav>
 				<ul>
-                    <li><a href="index.html#characterCards"><i class="fas fa-dice-five"></i><span>Play</span></a></li>
+					<li><a href="index.html#characterCards"><i class="fas fa-dice-five"></i><span>Play</span></a></li>
 					<li><a href="about.html"><i class="fas fa-question-circle"></i><span>About</span></a></li>
 				</ul>
 			</nav>
-        </div>
+		</div>
 	</header>
 
 	<main id="loser">
-        <div class="loser-container">
-            <h1 class="flash">Game Over</h1>
-            <h2>Sorry, you lost!</h2>
-            <div class="loser-btn">
-                <button id="replayBtn">Replay</button>
-                <a href="index.html"><button>Home</button></a>
-            </div>
-        </div>
-    </main>
-    
-    <footer>
-        <div class="copy-container">Copyright &copy; Game of Dice 2020</div>
+		<div class="loser-container">
+			<h1 class="flash">Game Over</h1>
+			<h2>Sorry, you lost!</h2>
+			<div class="loser-btn">
+				<button id="replayBtn">Replay</button>
+				<a href="index.html"><button>Home</button></a>
+			</div>
+		</div>
+	</main>
+
+	<footer>
+		<div class="copy-container">Copyright &copy; Game of Dice 2020</div>
 		<div class="bubble-container">
-            <div class="bubble">
+			<div class="bubble">
 				<div><a id="Play" href="index.html#characterCards"><i class="fas fa-play"></i></a></div>
 			</div>
 			<div class="bubble">
 				<div><a id="About" href="about.html"><i class="fas fa-info"></i></a></div>
 			</div>
 			<div class="bubble">
-                <div><a id="Contact" href="contact.html"><i class="fas fa-envelope"></i></a></div>
+				<div><a id="Contact" href="contact.html"><i class="fas fa-envelope"></i></a></div>
 			</div>
 		</div>
 	</footer>
 
 	<!-- JavaScript -->
-    <script src="scripts/base.js"></script>
-    <script src="scripts/replay.js"></script>
-</body>	
+	<script src="scripts/replay.js"></script>
+</body>
+
 </html>

@@ -1,36 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="utf-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- SEO -->
     <meta name="author" content="Tina Mary Holdcroft">
-	<meta name="description" content="Game | Game of Dice">
-	<meta name="keywords" content="Game of Dice, Game, Dice, Board Game, Play">
-	<!-- style -->
+    <meta name="description" content="Game | Game of Dice">
+    <meta name="keywords" content="Game of Dice, Game, Dice, Board Game, Play">
+    <!-- style -->
     <link rel="stylesheet" type="text/css" href="styles/styles.css">
     <link rel="stylesheet" href="https://use.typekit.net/xjc5qtk.css"> <!-- adobe fonts -->
     <script src="https://kit.fontawesome.com/a83d77d417.js" crossorigin="anonymous"></script> <!-- fontawesome icons -->
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- browser design -->
-	<link rel="icon" href="styles/images/dice-logo.svg" type="image/svg" sizes="16x16"> <!-- favicon -->
-	<meta name="theme-color" content="#242424"> <!-- color of browser banner on phone -->
-	<title>Game | Game of Dice </title> <!-- page title -->
+    <link rel="icon" href="styles/images/dice-logo.svg" type="image/svg" sizes="16x16"> <!-- favicon -->
+    <meta name="theme-color" content="#242424"> <!-- color of browser banner on phone -->
+    <title>Game | Game of Dice </title> <!-- page title -->
 </head>
 
 <body id="game__body">
     <header>
-		<div class="nav-container">
-			<!-- logo desktop-->
-			<a href="index.html"><div class="logo"><p id="logo__txt">Game of<br><span>Dice</span></p><img src="styles/images/dice-logo.svg" alt="Logo"></div></a>
-			<!-- desktop navigation bar -->
-			<nav>
-				<ul>
-                    <!-- active page --><li class="active"><a href="index.html#characterCards"><i class="fas fa-dice-five"></i><span>Play</span></a></li>
-					<li><a href="about.html"><i class="fas fa-question-circle"></i><span>About</span></a></li>
-				</ul>
-			</nav>
+        <div class="nav-container">
+            <!-- logo desktop-->
+            <a href="index.html">
+                <div class="logo">
+                    <p id="logo__txt">Game of<br><span>Dice</span></p><img src="styles/images/dice-logo.svg" alt="Logo">
+                </div>
+            </a>
+            <!-- desktop navigation bar -->
+            <nav>
+                <ul>
+                    <!-- active page -->
+                    <li class="active"><a href="index.html#characterCards"><i
+                                class="fas fa-dice-five"></i><span>Play</span></a></li>
+                    <li><a href="about.html"><i class="fas fa-question-circle"></i><span>About</span></a></li>
+                </ul>
+            </nav>
         </div>
         <!-- player overveiw pannel -->
         <div class="player-container">
@@ -38,39 +45,47 @@
             <div id="playerLog" class="player-wrapper player-one"></div>
             <div id="opponentLog" class="player-wrapper player-two"></div>
         </div>
-	</header>
+    </header>
 
-	<main id="game">
+    <main id="game">
         <!-- board -->
         <div class="board">
             <div class="tile-start"></div>
             <div class="tile-default"></div>
             <div class="tile-default"></div>
             <div class="tile-default"></div>
-            <div class="tile-trap" data-message="You have fallen into a trap: Wait 3 turns" data-penalty="3" data-type="wait"></div>
+            <div class="tile-trap" data-message="You have fallen into a trap: Wait 3 turns" data-penalty="3"
+                data-type="wait"></div>
             <div class="tile-default"></div>
             <div class="tile-default"></div>
-            <div id="throne-1" class="tile-throne" data-message="You have reached Sunspear, keep going to be the first player to reach King's Landing and win the game!"></div>
+            <div id="throne-1" class="tile-throne"
+                data-message="You have reached Sunspear, keep going to be the first player to reach King's Landing and win the game!">
+            </div>
             <div class="tile-default"></div>
             <div class="tile-default"></div>
             <div class="tile-default"></div>
-            <div class="tile-trap" data-message="You have fallen into a trap: Move back 5 spaces" data-penalty="5" data-type="back"></div>
+            <div class="tile-trap" data-message="You have fallen into a trap: Move back 5 spaces" data-penalty="5"
+                data-type="back"></div>
             <div class="tile-default"></div>
             <div class="tile-default"></div>
             <div class="tile-default"></div>
-            <div id="throne-2" class="tile-throne" data-message="Well done! You have reached Highgarden, you're halfway to victory!"></div>
+            <div id="throne-2" class="tile-throne"
+                data-message="Well done! You have reached Highgarden, you're halfway to victory!"></div>
             <div class="tile-default"></div>
             <div class="tile-default"></div>
-            <div class="tile-trap" data-message="You have fallen into a trap: Go back to start" data-penalty="18" data-type="back"></div>
+            <div class="tile-trap" data-message="You have fallen into a trap: Go back to start" data-penalty="18"
+                data-type="back"></div>
             <div class="tile-default"></div>
             <div class="tile-default"></div>
-            <div class="tile-trap" data-message="You have fallen into a trap: Wait 2 turns" data-penalty="2" data-type="wait"></div>
+            <div class="tile-trap" data-message="You have fallen into a trap: Wait 2 turns" data-penalty="2"
+                data-type="wait"></div>
             <div class="tile-default"></div>
             <div id="throne-3" class="tile-throne" data-message="You have reached Storm's End, victory is close!"></div>
             <div class="tile-default"></div>
             <div class="tile-default"></div>
             <div class="tile-default"></div>
-            <div class="tile-trap" data-message="You have fallen into a trap: Move back 3 spaces" data-penalty="3" data-type="back"></div>
+            <div class="tile-trap" data-message="You have fallen into a trap: Move back 3 spaces" data-penalty="3"
+                data-type="back"></div>
             <div class="tile-default"></div>
             <div class="tile-default"></div>
             <div id="throne-iron" class="tile-end"></div>
@@ -79,22 +94,22 @@
 
     <footer>
         <div class="copy-container">Copyright &copy; Game of Dice 2020</div>
-		<div class="bubble-container">
+        <div class="bubble-container">
             <div class="bubble active"> <!-- active page-->
-				<div><a id="Stop" href="index.html#characterCards"><i class="fas fa-stop"></i></a></div>
-			</div>
-			<div class="bubble">
-				<div><a id="About" href="about.html"><i class="fas fa-info"></i></a></div>
-			</div>
-			<div class="bubble">
+                <div><a id="Stop" href="index.html#characterCards"><i class="fas fa-stop"></i></a></div>
+            </div>
+            <div class="bubble">
+                <div><a id="About" href="about.html"><i class="fas fa-info"></i></a></div>
+            </div>
+            <div class="bubble">
                 <div><a id="Contact" href="contact.html"><i class="fas fa-envelope"></i></a></div>
             </div>
-		</div>
-	</footer>
+        </div>
+    </footer>
 
-	<!-- JavaScript -->
-    <script src="scripts/base.js"></script>
+    <!-- JavaScript -->
     <script src="scripts/game.js"></script>
     <script src="scripts/modals.js"></script>
-</body>	
+</body>
+
 </html>
